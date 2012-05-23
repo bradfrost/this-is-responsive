@@ -1,0 +1,23 @@
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section { 
+	margin: 0; 
+	padding: 0; 
+} 
+ol, ul { 
+	list-style: none; 
+} 
+table { 
+	border-collapse: collapse; 
+	border-spacing: 0; 
+}
+header, footer, nav, section, article, hgroup, figure {
+	display: block;	
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif; 
+}
+h1 {
+	font-size: 4em;
+}
