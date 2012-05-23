@@ -1,9 +1,18 @@
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section { 
+/*
+colors
+red: #e51837;
+gray: #808080;
+*/
+
+/************Reset**************/
+html, body, div, object, iframe { 
 	margin: 0; 
 	padding: 0; 
 } 
 ol, ul { 
-	list-style: none; 
+	list-style: none;
+	margin: 0;
+	padding: 0;
 } 
 table { 
 	border-collapse: collapse; 
@@ -12,12 +21,88 @@ table {
 header, footer, nav, section, article, hgroup, figure {
 	display: block;	
 }
+/************End Reset**************/
 
+/************Global**************/
 body {
 	background: #fff;
 	color: #000;
-	font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif; 
+	font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	padding: 1em 1em 0;
+}
+a {
+	color: #e51837;
+	text-decoration: none;
+}
+p {
+	margin: 0 0 1em;
 }
 h1 {
-	font-size: 4em;
+	font-size: 7.84em;
+	line-height: 0.8;
+	letter-spacing: -0.02em;
+}
+/************End Global**************/
+
+/************Structure**************/
+.container {
+	max-width: 70em;
+	margin: 0 auto;
+}
+.intro {
+	font-size: 2em;
+	color: #808080;
+}
+
+/*Footer*/
+footer[role=contentinfo] {
+	color: #fff;
+	background: #000;
+	margin: 0 -1em;
+}
+footer[role=contentinfo] > div {
+	max-width: 70em;
+	padding: 0.5em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+footer[role=contentinfo] p {
+	margin: 0;
+}
+footer[role=contentinfo] a {
+	color: #808080;
+}
+footer[role=contentinfo] a:hover, footer[role=contentinfo] a:focus {
+	color: #e51837;
+}
+footer[role=contentinfo] .f-rga {
+	float: right;
+}
+footer[role=contentinfo] img {
+	max-width: 4.4em;
+	display: block;
+}
+/*End Footer*/
+
+@media screen and (min-width:40em) {
+	.container {
+		padding-bottom: 3em;
+	}
+	.intro {
+		width: 70%;
+	}
+	footer[role=contentinfo] {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		margin: 0;
+	}
+	footer[role=contentinfo] .nav {
+		float: left;
+	}
+	footer[role=contentinfo] .nav li {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
 }
