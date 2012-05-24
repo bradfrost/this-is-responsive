@@ -10,12 +10,17 @@
 <body>
 	<div class="container">
 		<div id="main_content" role="main">
-			#RWD Tips
+			<h1>RWD Resources.</b></h1>
 			<section id="frameworks">
-				- http://lessframework.com/
-				- http://foundation.zurb.com/
-			    - http://twitter.github.com/bootstrap/
-				- http://html5boilerplate.com/mobile
+				<h2>Frameworks/Boilerplates</h2>
+				<ul>
+					<li>http://lessframework.com/</li>
+					<li>http://foundation.zurb.com/
+					<li>http://twitter.github.com/bootstrap/
+					<li>http://html5boilerplate.com/mobile
+					<li>http://stuffandnonsense.co.uk/projects/320andup/
+					<li>http://framelessgrid.com
+					<li>http://fbg.40horse.com/
 			</section>
 		</div>
 		<footer role="contentinfo">   

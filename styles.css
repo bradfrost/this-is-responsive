@@ -72,6 +72,11 @@ footer[role=contentinfo] p {
 footer[role=contentinfo] a {
 	color: #808080;
 }
+footer[role=contentinfo] a.nav-home {
+	color: #fff;
+}
+
+
 footer[role=contentinfo] a:hover, footer[role=contentinfo] a:focus {
 	color: #e51837;
 }
@@ -103,6 +108,6 @@ footer[role=contentinfo] img {
 	}
 	footer[role=contentinfo] .nav li {
 		display: inline-block;
-		margin-right: 0.5em;
+		margin-right: 0.8em;
 	}
 }
