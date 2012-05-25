@@ -50,6 +50,10 @@ h1 {
 	line-height: 0.8;
 	letter-spacing: -0.02em;
 }
+h2 {
+	font-size: 2em;
+	margin-bottom: 0.2em;
+}
 h3 {
 	font-weight: normal;
 	padding-bottom: 0.4em;
@@ -109,7 +113,7 @@ footer[role=contentinfo] img {
 	overflow: hidden;
 }
 .grid > h2 {
-	margin-left: 0.7em;
+	margin-left: 0.45em;
 }
 .grid > section {
 	padding: 1em 1em 0;
