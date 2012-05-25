@@ -5,6 +5,11 @@ gray: #808080;
 */
 
 /************Reset**************/
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
 html, body, div, object, iframe { 
 	margin: 0; 
 	padding: 0; 
@@ -31,8 +36,11 @@ body {
 	padding: 1em 1em 0;
 }
 a {
-	color: #e51837;
+	color: #808080;
 	text-decoration: none;
+}
+a:hover, a:focus {
+	color: #e51837;
 }
 p {
 	margin: 0 0 1em;
@@ -62,7 +70,7 @@ footer[role=contentinfo] {
 }
 footer[role=contentinfo] > div {
 	max-width: 70em;
-	padding: 0.5em;
+	padding: 0 0.5em;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -71,6 +79,8 @@ footer[role=contentinfo] p {
 }
 footer[role=contentinfo] a {
 	color: #808080;
+	display: inline-block;
+	padding: 0.5em 0;
 }
 footer[role=contentinfo] a.nav-home {
 	color: #fff;
