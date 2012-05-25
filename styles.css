@@ -46,9 +46,18 @@ p {
 	margin: 0 0 1em;
 }
 h1 {
-	font-size: 7.84em;
+	font-size: 7.6em;
 	line-height: 0.8;
 	letter-spacing: -0.02em;
+}
+h3 {
+	font-weight: normal;
+	padding-bottom: 0.4em;
+	border-bottom: 1px solid #ccc;
+}
+
+small {
+	color: #e51837;
 }
 /************End Global**************/
 
@@ -56,10 +65,11 @@ h1 {
 .container {
 	max-width: 70em;
 	margin: 0 auto;
+	padding: 0 1em;
 }
 .intro {
 	font-size: 2em;
-	color: #808080;
+	max-width: 23em;
 }
 
 /*Footer*/
@@ -70,7 +80,7 @@ footer[role=contentinfo] {
 }
 footer[role=contentinfo] > div {
 	max-width: 70em;
-	padding: 0 0.5em;
+	padding: 0 1em;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -78,17 +88,11 @@ footer[role=contentinfo] p {
 	margin: 0;
 }
 footer[role=contentinfo] a {
-	color: #808080;
 	display: inline-block;
 	padding: 0.5em 0;
 }
 footer[role=contentinfo] a.nav-home {
 	color: #fff;
-}
-
-
-footer[role=contentinfo] a:hover, footer[role=contentinfo] a:focus {
-	color: #e51837;
 }
 footer[role=contentinfo] .f-rga {
 	float: right;
@@ -99,12 +103,28 @@ footer[role=contentinfo] img {
 }
 /*End Footer*/
 
+/*Grid*/
+.grid {
+	margin: 0 -1em;
+	overflow: hidden;
+}
+.grid > h2 {
+	margin-left: 0.7em;
+}
+.grid > section {
+	padding: 1em 1em 0;
+}
+.grid li {
+	margin-bottom: 0.3em;
+}
+.featured:after {
+	content: "*";
+	color: #e51837;
+}
+
 @media screen and (min-width:40em) {
 	.container {
 		padding-bottom: 3em;
-	}
-	.intro {
-		width: 70%;
 	}
 	footer[role=contentinfo] {
 		position: fixed;
@@ -121,3 +141,13 @@ footer[role=contentinfo] img {
 		margin-right: 0.8em;
 	}
 }
+
+@media screen and (min-width: 50em) {
+	.grid > section {
+		float: left;
+		width: 33.3333333%;
+	}
+	.grid > section:nth-child(3n+2) {
+		clear: left;
+	}
+}	
