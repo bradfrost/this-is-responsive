@@ -33,7 +33,7 @@ body {
 	background: #fff;
 	color: #000;
 	font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-	padding: 1em 1em 0;
+	padding: 1em 0 0;
 }
 a {
 	color: #808080;
@@ -46,7 +46,7 @@ p {
 	margin: 0 0 1em;
 }
 h1 {
-	font-size: 7.6em;
+	font-size: 3.6em;
 	line-height: 0.8;
 	letter-spacing: -0.02em;
 }
@@ -76,6 +76,10 @@ small {
 	max-width: 23em;
 }
 
+div[role=main] {
+	padding-bottom: 1em;
+}
+
 /*Footer*/
 footer[role=contentinfo] {
 	color: #fff;
@@ -103,7 +107,8 @@ footer[role=contentinfo] .f-rga {
 }
 footer[role=contentinfo] img {
 	max-width: 4.4em;
-	display: block;
+	display: inline-block;
+	margin-bottom: -0.22em;
 }
 /*End Footer*/
 
@@ -118,7 +123,10 @@ footer[role=contentinfo] img {
 .grid > section {
 	padding: 1em 1em 0;
 }
-.grid li {
+.grid ul {
+	overflow: hidden;
+}
+.grid ul li {
 	margin-bottom: 0.3em;
 }
 .featured:after {
@@ -127,8 +135,11 @@ footer[role=contentinfo] img {
 }
 
 @media screen and (min-width:40em) {
+	h1 {
+		font-size: 5.6em;
+	}
 	.container {
-		padding-bottom: 3em;
+		padding-bottom: 4em;
 	}
 	footer[role=contentinfo] {
 		position: fixed;
@@ -144,14 +155,33 @@ footer[role=contentinfo] img {
 		display: inline-block;
 		margin-right: 0.8em;
 	}
+	
+	.grid ul li {
+		width: 50%;
+		float: left;
+	}
+	.grid ul li:nth-child(odd) {
+		padding-right: 1em;
+		clear: left;
+	}
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 54em) {
+	h1 {
+		font-size: 7.6em;
+	}
 	.grid > section {
 		float: left;
 		width: 33.3333333%;
 	}
 	.grid > section:nth-child(3n+2) {
 		clear: left;
+	}
+	.grid ul li {
+		width: auto;
+		float: none;
+	}
+	.grid ul li:nth-child(odd) {
+		padding-right: 0;
 	}
 }	
