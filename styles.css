@@ -141,6 +141,7 @@ footer[role=contentinfo] img {
 	position: relative;
 	z-index: 1;
 	color: #fff;
+	color: rgba(255,255,255,0.9);
 	display: table;
 }
 .home > div {
@@ -157,6 +158,7 @@ footer[role=contentinfo] img {
 }
 .intro a {
 	color: #fff;
+	color: rgba(255,255,255,0.9);
 	border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 .intro a:hover ,.intro a:focus {
