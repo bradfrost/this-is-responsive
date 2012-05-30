@@ -330,8 +330,8 @@ footer[role=contentinfo] img {
 }
 @-webkit-keyframes box-resize5 {
 	0% { top: 24%; right: 24%; bottom: 24%; left: 24%; }
-	50% { top: 10%; right: 6%; bottom: 10%; left: 6%; }
-	100% { top: 15%; right: 18.8%; bottom: 10%; left: 18.8%; }
+	50% { top: 10%; right: 8%; bottom: 10%; left: 8%; }
+	100% { top: 3%; right: 18.8%; bottom: 3%; left: 18.8%; }
 }
 @-webkit-keyframes box-resize6 {
 	0% { top: 5%; right: 25%; bottom: 5%; left: 25%; }
