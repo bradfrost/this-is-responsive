@@ -36,12 +36,36 @@
 			display: table-cell;
 			vertical-align: middle;
 			width: 70%;
+			padding-right: 1em;
 		}
 		.li-head {
 			margin: 0;
 		}
-		.li-sub {
+		.li-summary {
+			display: none;
 			margin: 0;
+		}
+		.li-action {
+			margin: 0;
+		}
+		
+		@media screen and (min-width: 40em) {
+			.list li {
+				background: none;
+			}
+			.li-summary {
+				display: block;
+			}
+		}
+		
+		@media screen and (min-width: 60em) {
+			.list li {
+				float: left;
+				width: 50%;
+			}
+			.inner {
+				padding-right: 1em;
+			}
 		}
 	</style>
 	
@@ -55,29 +79,8 @@
 					</div>
 					<div class="li-text">
 						<h4 class="li-head">Title of Content</h4>
-						<p class="li-sub">Summary of content</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of More Content</h4>
-						<p class="li-sub">Summary of more content</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of Even More Content</h4>
-						<p class="li-sub">Summary of even more content</p>
+						<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
+						<p class="li-action">Read More</p>
 					</div>
 				</a>
 			</li>
@@ -88,29 +91,8 @@
 					</div>
 					<div class="li-text">
 						<h4 class="li-head">Title of Content</h4>
-						<p class="li-sub">Summary of content</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of More Content</h4>
-						<p class="li-sub">Summary of more content</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of Even More Content</h4>
-						<p class="li-sub">Summary of even more content</p>
+						<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
+						<p class="li-action">Learn More</p>
 					</div>
 				</a>
 			</li>
@@ -121,7 +103,8 @@
 					</div>
 					<div class="li-text">
 						<h4 class="li-head">Title of Content</h4>
-						<p class="li-sub">Summary of content</p>
+						<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
+						<p class="li-action">Read More</p>
 					</div>
 				</a>
 			</li>
@@ -131,8 +114,9 @@
 						<img src="images/fpo_square.png" alt="Image Alt Text" />
 					</div>
 					<div class="li-text">
-						<h4 class="li-head">Title of More Content</h4>
-						<p class="li-sub">Summary of more content</p>
+						<h4 class="li-head">Title of Content</h4>
+						<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
+						<p class="li-action">Learn More</p>
 					</div>
 				</a>
 			</li>
@@ -142,8 +126,21 @@
 						<img src="images/fpo_square.png" alt="Image Alt Text" />
 					</div>
 					<div class="li-text">
-						<h4 class="li-head">Title of Even More Content</h4>
-						<p class="li-sub">Summary of even more content</p>
+						<h4 class="li-head">Title of Content</h4>
+						<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
+						<p class="li-action">Read More</p>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="inner">
+					<div class="li-img">
+						<img src="images/fpo_square.png" alt="Image Alt Text" />
+					</div>
+					<div class="li-text">
+						<h4 class="li-head">Title of Content</h4>
+						<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
+						<p class="li-action">Read More</p>
 					</div>
 				</a>
 			</li>
@@ -160,10 +157,12 @@
 	
 	<div class="container">	
 		<section class="pattern-description">
-			<h1>List with Thumbnails</h1>
-			<p>A list of items that contain a thumbnail image and a block of text, which could be as simple as a headline, but could also contain sub-text or calls to action.</p>
+			<h1>List with Thumbnails and Summary Text</h1>
+			<p>A list of items that contain a thumbnail image and a large block of text. Small screens hide the summary content but gets exposed once screen space becomes available. </p>
 			<h2>Considerations</h2>
 			<ul>
+				<li>Normally it's not a good idea to hide content for small screens, so make sure the content being hidden (article excerpt, further product info, etc) is supplementary and not essential for the user to make an informed decision. </li>
+				<li>Make sure that hidden content is still accessible somewhere (it would most likely live on the linked page).</li>
 				<li>Read: <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/" rel="external">The media object saves hundreds of lines of code</a></li>
 			</ul>
 		</section>
