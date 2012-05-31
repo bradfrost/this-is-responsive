@@ -171,48 +171,8 @@ footer[role=contentinfo] img {
 	bottom: 5%;
 	left: 5%;
 	background: rgba(229,24,55,0.22);
-	
 }
-.ani div.a1 b {
-	-webkit-animation: box-resize 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a2 b {
-	-webkit-animation: box-resize2 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a3 b {
-	-webkit-animation: box-resize3 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a4 b {
-	-webkit-animation: box-resize4 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a5 b {
-	-webkit-animation: box-resize5 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a6 b {
-	-webkit-animation: box-resize6 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a7 b {
-	-webkit-animation: box-resize7 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a8 b {
-	-webkit-animation: box-resize8 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a9 b {
-	-webkit-animation: box-resize9 10s infinite;
-	-webkit-animation-direction: alternate;
-}
-.ani div.a10 b {
-	-webkit-animation: box-resize10 10s infinite;
-	-webkit-animation-direction: alternate;
-}
+
 
 /*Patterns*/
 .pattern {
