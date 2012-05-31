@@ -33,7 +33,7 @@ body {
 	background: #fff;
 	color: #000;
 	font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-	padding: 1em 0 0;
+	padding: 0;
 }
 a {
 	color: #808080;
@@ -141,10 +141,8 @@ footer[role=contentinfo] img {
 	margin: 0 auto;
 	max-width: 40em;
 }
-.home {
-	
-}
 
+/*Homepage*/
 .home h1 {
 	margin-bottom: 0.2em;
 }
@@ -214,6 +212,16 @@ footer[role=contentinfo] img {
 .ani div.a10 b {
 	-webkit-animation: box-resize10 10s infinite;
 	-webkit-animation-direction: alternate;
+}
+
+/*Patterns*/
+.pattern {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #808080;
+	margin-bottom: 1em;
+}
+.pattern-description h1 {
+	font-size: 3.4em;
 }
 
 @media screen and (min-width:40em) {
@@ -369,3 +377,7 @@ footer[role=contentinfo] img {
 	border-bottom: 1px solid #808080;
 	margin-bottom: 1em;
 } 
+.posts h2 {
+	font-size: 1.6em;
+	font-weight: normal;
+}

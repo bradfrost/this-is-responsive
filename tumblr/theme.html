@@ -13,7 +13,10 @@
     </head>
     <body>
     	<div class="container">
-	        <h1><a href="/">This Is Responsive</a></h1>
+    		<header role="banner">
+    			<div class="logo"></div>
+	        	<h1><a href="/">This Is Responsive.</a></h1>
+	        </header>
 	
 	        {block:Description}
 	            <p class="description intro">{Description}</p>
@@ -68,6 +71,13 @@
 	                        {block:Description}
 	                            <div class="description">{Description}</div>
 	                        {/block:Description}
+	                        <ul class="tags">
+		                        {block:Tags}
+		                            <li>
+		                                <a href="{TagURL}">{Tag}</a>
+		                            </li>
+		                        {/block:Tags}
+		                    </ul>
 	                    </li>
 	                {/block:Link}
 	
@@ -122,7 +132,7 @@
 	                <a href="{NextPage}">Next &#187;</a>
 	            {/block:NextPage}
 	
-	            <a href="/archive">Archive</a>
+	            <a href="/archive" class="archive">Archive</a>
 	        </nav>
 	        <footer role="contentinfo">   
 				<div>
