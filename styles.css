@@ -49,6 +49,7 @@ h1 {
 	font-size: 3em;
 	line-height: 0.8;
 	letter-spacing: -0.02em;
+	margin-bottom: 0.2em;
 }
 h2 {
 	font-size: 2em;
@@ -176,7 +177,6 @@ footer[role=contentinfo] img {
 
 /*Patterns*/
 .pattern {
-	padding-bottom: 1em;
 	border-bottom: 1px solid #808080;
 	margin-bottom: 1em;
 	overflow: hidden;
