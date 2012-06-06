@@ -300,6 +300,7 @@ footer[role=contentinfo] img {
 .blog header[role=banner] {
 	overflow: hidden;
 	margin-bottom: 2em;
+	padding-top: 2em;
 }
 .blog .logo {
 	position: relative;
