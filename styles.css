@@ -186,6 +186,92 @@ footer[role=contentinfo] img {
 	font-size: 3.4em;
 }
 
+
+/*Blog*/
+/*Blog Header*/
+.blog header[role=banner] {
+	overflow: hidden;
+	margin-bottom: 2em;
+	padding-top: 2em;
+}
+.blog .logo {
+	position: relative;
+	min-height: 11em;
+}
+
+/*Posts*/
+.posts ol > li {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1em;
+	overflow: hidden;
+} 
+.posts h2 {
+	font-size: 1.6em;
+	margin-bottom: 0.8em;
+	font-weight: normal;
+}
+.posts a {
+	border-bottom: 1px solid #808080;
+}
+.posts h2  a, .tags a, .posts a.permalink {
+	border: 0;
+}
+.posts blockquote {
+	margin: 0 0 0 1em;
+	color: #666;
+	border-left: 0.25em solid #ccc;
+	padding-left: 1em;
+	
+}
+.tags {
+	float: left;
+}
+.tags li {
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 0.5em;
+}
+.permalink {
+	float: right;
+	display: inline-block;
+	font-size: 0.8em;
+	padding-top: 0.38em;
+}
+.posts ol > li .tags a, .permalink {
+	color: #ccc;
+	-webkit-transition: color 0.3s ease-out;  
+     -moz-transition: color 0.3s ease-out;  
+      -ms-transition: color 0.3s ease-out;  
+       -o-transition: color 0.3s ease-out;  
+          transition: color 0.3s ease-out;
+}
+.posts ol > li:hover .tags a, .posts ol > li:hover .permalink {
+	color: #808080;
+}
+.blog-nav {
+	text-align: center;
+}
+.posts .blog-nav a {
+	border: 0;
+}
+
+/*Aside*/
+.blog-description {
+	background: #f7f7f7;
+	padding: 1em;
+	color: #808080;
+	margin: 1em 0;
+}
+.blog-description a {
+	color: #333;
+}
+.blog-description p:last-child {
+	margin: 0;
+}
+
+
+/******Media Queries*******/
 @media screen and (min-width:40em) {
 	h1 {
 		font-size: 5.6em;
@@ -257,21 +343,23 @@ footer[role=contentinfo] img {
 	/*Blog*/
 	.blog .logo {
 		float: left;
-		width: 25%;
+		width: 23%;
+		margin-right: 2%;
 	}
 	.blog header[role=banner] h1 {
 		float: left;
-		font-size: 5.6em;
+		font-size: 3.4em;
+		max-width: 7em;
+		margin-top: 0.45em;
 	}
 	.posts {
 		float: left;
-		padding-left: 25%;
 		width: 75%;
 	}
 	.blog-description {
 		float: right;
 		width: 23%;
-		margin-top: 2em;
+		margin: 1em 0;
 	}
 }
 
@@ -293,70 +381,16 @@ footer[role=contentinfo] img {
 	.grid ul li:nth-child(odd) {
 		padding-right: 0;
 	}
+	
+	/*Blog*/
+	.blog header[role=banner] h1 {
+		font-size: 5.6em;
+		margin-top: 0.47em;
+		max-width: none;
+	}
+	
+	.posts {
+		padding-left: 25%;
+	}
 }	
 
-/*Blog*/
-/*Blog Header*/
-.blog header[role=banner] {
-	overflow: hidden;
-	margin-bottom: 2em;
-	padding-top: 2em;
-}
-.blog .logo {
-	position: relative;
-	min-height: 11em;
-}
-
-/*Posts*/
-.posts ol > li {
-	padding-bottom: 1em;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 1em;
-	overflow: hidden;
-} 
-.posts h2 {
-	font-size: 1.6em;
-	margin-bottom: 0.8em;
-	font-weight: normal;
-}
-.tags {
-	float: left;
-}
-.tags li {
-	display: inline-block;
-	font-size: 0.8em;
-	margin-right: 0.5em;
-}
-.permalink {
-	float: right;
-	display: inline-block;
-	font-size: 0.8em;
-	padding-top: 0.38em;
-}
-.posts ol > li .tags a, .permalink {
-	color: #ccc;
-	-webkit-transition: color 0.3s ease-out;  
-     -moz-transition: color 0.3s ease-out;  
-      -ms-transition: color 0.3s ease-out;  
-       -o-transition: color 0.3s ease-out;  
-          transition: color 0.3s ease-out;
-}
-.posts ol > li:hover .tags a, .posts ol > li:hover .permalink {
-	color: #808080;
-}
-.blog-nav {
-	text-align: center;
-}
-
-/*Aside*/
-.blog-description {
-	background: #f7f7f7;
-	padding: 1em;
-	color: #808080;
-}
-.blog-description a {
-	color: #333;
-}
-.blog-description p:last-child {
-	margin: 0;
-}
