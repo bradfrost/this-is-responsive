@@ -75,6 +75,7 @@ small {
 	max-width: 70em;
 	margin: 0 auto;
 	padding: 0 1em;
+	overflow: hidden;
 }
 div[role=main] {
 	padding-bottom: 1em;
@@ -252,6 +253,26 @@ footer[role=contentinfo] img {
 		color: #000;
 		border-bottom-color: #000;
 	}
+	
+	/*Blog*/
+	.blog .logo {
+		float: left;
+		width: 25%;
+	}
+	.blog header[role=banner] h1 {
+		float: left;
+		font-size: 5.6em;
+	}
+	.posts {
+		float: left;
+		padding-left: 25%;
+		width: 75%;
+	}
+	.blog-description {
+		float: right;
+		width: 23%;
+		margin-top: 2em;
+	}
 }
 
 @media screen and (min-width: 54em) {
@@ -275,21 +296,66 @@ footer[role=contentinfo] img {
 }	
 
 /*Blog*/
+/*Blog Header*/
+.blog header[role=banner] {
+	overflow: hidden;
+	margin-bottom: 2em;
+}
 .blog .logo {
 	position: relative;
-	float: left;
-	width: 20em;
-	height: 11em;
+	min-height: 11em;
 }
-.posts {
-	padding-left: 30em;
-}
-.posts > li {
+
+/*Posts*/
+.posts ol > li {
 	padding-bottom: 1em;
-	border-bottom: 1px solid #808080;
+	border-bottom: 1px solid #ccc;
 	margin-bottom: 1em;
+	overflow: hidden;
 } 
 .posts h2 {
 	font-size: 1.6em;
+	margin-bottom: 0.8em;
 	font-weight: normal;
+}
+.tags {
+	float: left;
+}
+.tags li {
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 0.5em;
+}
+.permalink {
+	float: right;
+	display: inline-block;
+	font-size: 0.8em;
+	padding-top: 0.38em;
+}
+.posts ol > li .tags a, .permalink {
+	color: #ccc;
+	-webkit-transition: color 0.3s ease-out;  
+     -moz-transition: color 0.3s ease-out;  
+      -ms-transition: color 0.3s ease-out;  
+       -o-transition: color 0.3s ease-out;  
+          transition: color 0.3s ease-out;
+}
+.posts ol > li:hover .tags a, .posts ol > li:hover .permalink {
+	color: #808080;
+}
+.blog-nav {
+	text-align: center;
+}
+
+/*Aside*/
+.blog-description {
+	background: #f7f7f7;
+	padding: 1em;
+	color: #808080;
+}
+.blog-description a {
+	color: #333;
+}
+.blog-description p:last-child {
+	margin: 0;
 }
