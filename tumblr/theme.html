@@ -7,6 +7,7 @@
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
         <link rel="stylesheet" href="http://bradfrost.github.com/this-is-responsive/styles.css">
+        <link rel="stylesheet" type="text/css" media="all" href="http://bradfrost.github.com/this-is-responsive/animation.css">
         {block:Description}
             <meta name="description" content="{MetaDescription}" />
         {/block:Description}
@@ -14,14 +15,20 @@
     <body>
     	<div class="container">
     		<header role="banner">
-    			<div class="logo"></div>
+    			<div class="logo">
+	    			<div class="ani">
+						<div class="a1"><span><b></b></span></div>
+						<div class="a2"><span><b></b></span></div>
+						<div class="a3"><span><b></b></span></div>
+						<div class="a4"><span><b></b></span></div>
+						<div class="a5"><span><b></b></span></div>
+						<div class="a6"><span><b></b></span></div>
+						<div class="a7"><span><b></b></span></div>
+						<div class="a8"><span><b></b></span></div>
+					</div>
+				</div>
 	        	<h1><a href="/">This Is Responsive.</a></h1>
 	        </header>
-	
-	        {block:Description}
-	            <p class="description intro">{Description}</p>
-	        {/block:Description}
-	
 	        <ol class="posts">
 	            {block:Posts}
 	                {block:Text}
@@ -134,17 +141,14 @@
 	
 	            <a href="/archive" class="archive">Archive</a>
 	        </nav>
+	        <aside class="blog-description">
+		        {block:Description}
+		            <p class="description intro">{Description}</p>
+		        {/block:Description}
+
+	        </aside>
 	        <footer role="contentinfo">   
 				<div>
-					<nav id="menu">
-						<ul role="navigation" class="nav">
-							<li><a href="index.html" class="nav-home">This Is <strong>Responsive.</strong></p>
-							<li><a href="patterns.html">Patterns</a></li>
-							<li><a href="tips.html">Tips</a></li>
-							<li><a href="resources.html">Resources</a></li>
-							<li><a href="http://thisisresponsive.tumblr.com">News</a></li>
-						</ul>
-					</nav>
 					<p class="f-rga"><a href="http://rga.com" rel="external"><img src="http://bradfrost.github.com/this-is-responsive/images/logo.png" alt="R/GA" /></a></p>
 				</div>
 			</footer>

@@ -275,6 +275,12 @@ footer[role=contentinfo] img {
 }	
 
 /*Blog*/
+.blog .logo {
+	position: relative;
+	float: left;
+	width: 20em;
+	height: 11em;
+}
 .posts {
 	padding-left: 30em;
 }
