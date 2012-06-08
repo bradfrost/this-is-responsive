@@ -177,15 +177,29 @@ footer[role=contentinfo] img {
 
 
 /*Patterns*/
+.mod {
+	padding: 1em;
+}
 .pattern {
+	background: #f7f7f7;
 	border-bottom: 1px solid #808080;
 	margin-bottom: 1em;
 	overflow: hidden;
 }
 .pattern-description h1 {
 	font-size: 3.4em;
+	margin-bottom: 0.5em;
 }
-
+.pattern-description {
+	max-width: 40em;
+	margin: 0 auto;
+}
+.pattern-description ul, .pattern-description ol {
+	margin-bottom: 2em;
+}
+.pattern-description li {
+	margin-bottom: 1em;
+}
 
 /*Blog*/
 /*Blog Header*/
