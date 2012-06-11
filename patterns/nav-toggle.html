@@ -17,13 +17,15 @@
 		}
 		nav[role=navigation] {
 			clear: both;
-			overflow: hidden;
-			max-height: 0;
 			-webkit-transition: all 0.3s ease-out;  
 			-moz-transition: all 0.3s ease-out;
 			-ms-transition: all 0.3s ease-out;
 			-o-transition: all 0.3s ease-out;
 			transition: all 0.3s ease-out;
+		}
+		.js nav[role=navigation] {
+			overflow: hidden;
+			max-height: 0;
 		}
 		nav[role=navigation].active {
 			max-height: 15em;
@@ -43,7 +45,7 @@
 			a.menu-link {
 			   display: none;
 			}
-			nav[role=navigation] {
+			.js nav[role=navigation] {
 				max-height: none;
 			}
 			nav[role=navigation] ul {
@@ -81,6 +83,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
+		  $('body').addClass('js');
 		  var $menu = $('#menu'),
 		  	$menulink = $('.menu-link');
 		$menulink.click(function() {
