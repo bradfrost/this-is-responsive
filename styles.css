@@ -47,7 +47,7 @@ p {
 }
 h1 {
 	font-size: 3em;
-	line-height: 0.8;
+	line-height: 1;
 	letter-spacing: -0.02em;
 	margin-bottom: 0.2em;
 }
@@ -98,6 +98,12 @@ footer[role=contentinfo] > div {
 footer[role=contentinfo] p {
 	margin: 0;
 }
+footer[role=contentinfo] .nav li a {
+	display: block;
+	border-bottom: 1px solid #808080;
+	padding: 1em;
+	margin: 0 -1em;
+}
 footer[role=contentinfo] a {
 	display: inline-block;
 	padding: 0.5em 0;
@@ -106,7 +112,7 @@ footer[role=contentinfo] a.nav-home {
 	color: #fff;
 }
 footer[role=contentinfo] .f-rga {
-	float: right;
+	padding: 0.6em 0;
 }
 footer[role=contentinfo] img {
 	max-width: 4.4em;
@@ -150,6 +156,7 @@ footer[role=contentinfo] img {
 }
 .intro {
 	font-size: 1.8em;
+	line-height: 1.2;
 	margin: 0 auto;
 }
 .ani {
@@ -306,7 +313,13 @@ footer[role=contentinfo] img {
 	footer[role=contentinfo] .nav li {
 		display: inline-block;
 		margin-right: 0.8em;
-	}	
+	}
+	footer[role=contentinfo] .nav li a {
+		border: 0;
+	}
+	footer[role=contentinfo] .f-rga {
+		float: right;
+	}
 	.grid ul li {
 		width: 50%;
 		float: left;
