@@ -11,22 +11,25 @@
 	<div class="container">
 		<div role="main">
 			<h1>Responsive Considerations</h1>
-			<div id="strategy" class="grid">	
+			<div id="strategy">	
 				<h2>Strategy</h2>
 				<section id="approach">
 					<h3>Getting Started</h3>
+					<h4>Understand why responsive web design matters</h4>
+					<p>The point of creating adaptive sites is to create functional (and hopefully optimal) user experiences for a growing number of web-enabled devices and contexts. More and more devices are accessing the web than ever before, and RWD provides ways to adapt a design to a device's screen size and capabilities. RWD has certainly gotten popular, but it's important to <a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">rise above the fad</a> and recognize the real opportunity of creating optimal user experiences for more contexts.</p>
+					
 				</section>
 				<section id="approach">
 					<h3>Approach</h3>
-					<ul>
-						<li>Determine whether or not responsive design is right for your project </li>
+					<h4>Determine whether or not responsive design is right for your project</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at augue lacus. Donec orci erat, bibendum non viverra eu, dictum a risus. Nunc ut massa libero. Ut lobortis dignissim ultricies. Proin scelerisque sagittis metus sit amet ornare. Suspendisse at libero ut tortor tristique consectetur. </p>
 					</ul>
 				</section>
 				<section id="process">
 					<h3>Process</h3>
 				</section>
 			</div>
-			<div id="design" class="grid">
+			<div id="design">
 				<h2>Design</h2>
 				<section>
 				<h3>Layout</h3>
@@ -45,7 +48,7 @@
 				</section>
 				<section>
 					<h3>Ergonomics</h3>
-					<h4>Be bindful of how people hold their devices</h4>
+					<h4>Be mindful of how people hold their devices</h4>
 				</section>
 				<section>
 					<h3>Touch</h3>
@@ -53,9 +56,21 @@
 				</section>
 				
 			</div>
-			<div id="development" class="grid">
+			<div id="development">
 				<h2>Development</h2>
 			</div>
+			
+			
+			- Start mobile-first: start with the lowest screen size 
+- Keep in mind that there's plenty of devices less than 320px
+- The absence of a media query is the first media query. - +Bryan Rieger 
+- Let the fluid grid do most of the work. You don't want to manage 100 layouts caused by 100 media queries, so let the fluidity of the web do its thang.
+- Use min-width, not max-width for the most part (again part of the mobile-first strategy)
+- Be mindful of media. Start with small images and swap them out for larger resolutions. Check out +Jason Grigsby 's fantastic in-depth look at techniques. http://www.cloudfour.com/responsive-imgs-part-2/
+- Don't lean on the DOM too much. Performance is your #1 feature and manipulating things with JS too much can bog down your site's performance.
+- Don't do 100 backflips to rearrange a bunch of shit. Make sure your design is smart enough to scale up without essentially designing multiple sites. 
+- Don't hide content for mobile. Mobile users want to access content just as much as desktop users.
+- Keep hit areas big. Design for touch input methods, and keep in mind that desktop users can benefit from increased hit areas as well. 
 		</div>
 		<footer role="contentinfo">   
 			<div>
