@@ -11,66 +11,41 @@
 	<div class="container">
 		<div role="main">
 			<h1>Responsive Considerations</h1>
-			<div id="strategy">	
-				<h2>Strategy</h2>
-				<section id="approach">
-					<h3>Getting Started</h3>
-					<h4>Understand why responsive web design matters</h4>
-					<p>The point of creating adaptive sites is to create functional (and hopefully optimal) user experiences for a growing number of web-enabled devices and contexts. More and more devices are accessing the web than ever before, and RWD provides ways to adapt a design to a device's screen size and capabilities. RWD has certainly gotten popular, but it's important to <a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">rise above the fad</a> and recognize the real opportunity of creating optimal user experiences for more contexts.</p>
-					
-				</section>
-				<section id="approach">
-					<h3>Approach</h3>
-					<h4>Determine whether or not responsive design is right for your project</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at augue lacus. Donec orci erat, bibendum non viverra eu, dictum a risus. Nunc ut massa libero. Ut lobortis dignissim ultricies. Proin scelerisque sagittis metus sit amet ornare. Suspendisse at libero ut tortor tristique consectetur. </p>
-					</ul>
-				</section>
-				<section id="process">
-					<h3>Process</h3>
-				</section>
-			</div>
-			<div id="design">
-				<h2>Design</h2>
-				<section>
-				<h3>Layout</h3>
-				<h4>Treat Layout as an enhancement</h4>
-				<h4>Start mobile-first</h4>
-				<p>"The absence of media query support is indeed the first media query". -Bryan Rieger</p>
-				
-				<h4>Let the content, not device dimensions, determine breakpoints.</h4>
-				<p>Don't get married to specific device dimensions, as they're subject to change and might not make the most sense for the layout. Instead find where it's natural for the content to adjust itself.</p>
-				</section>
-				<section id="viewport">
-				<h3>Viewport</h3>
-					<ul>
-						<li>Don't disable pinch-to-zoom - This is a feature, not a bug. Giving the user the option to zoom in on content is very important for legibility and accessibility</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Ergonomics</h3>
-					<h4>Be mindful of how people hold their devices</h4>
-				</section>
-				<section>
-					<h3>Touch</h3>
-					
-				</section>
-				
-			</div>
-			<div id="development">
-				<h2>Development</h2>
-			</div>
+			<h2 id="strategy">Strategy</h2>
+			<h3 id="approach">Approach</h3>
+			<h4 id="understand-what-responsive-design-is-and-how-it-can-help-you.">Understand what responsive design is and how it can help you.</h4>
+			<h4 id="understand-your-options">Understand your options</h4>
+			<h4 id="recognize-that-responsive-design-is-a-subset-of-adaptive-design">Recognize that responsive design is a subset of adaptive design</h4>
+			<h4 id="think-future-friendly">Think Future-Friendly</h4>
+			<h2 id="design">Design</h2>
+			<h3 id="layout">Layout</h3>
+			<h4 id="design-systems-not-pages">Design Systems, not Pages</h4>
+			<h4 id="start-mobile-first-address-contraints-first">Start Mobile-First: Address contraints first</h4>
+			<h3 id="media-queries">Media Queries</h3>
+			<h4 id="let-the-content-not-device-widths-determine-breakpoints">Let the content, not device widths, determine breakpoints</h4>
+			<h4 id="dont-assume-media-query-support-by-default">Don't assume media query support by default</h4>
+			<h4 id="build-up-media-queries-more-min-widths-than-max-widths">Build up media queries: more min-widths than max-widths</h4>
+			<h4 id="dont-arbitrarily-add-breakpoints">Don't arbitrarily add breakpoints</h4>
+			<h4 id="be-careful-of-manipulating-the-dom-for-presentation-purposes">Be careful of manipulating the DOM for presentation purposes</h4>
+			<h4 id="understand-matchmedia">Understand matchMedia</h4>
+			<h3 id="images">Images</h3>
+			<h4 id="apply-max-width-100-to-images-videos-and-options-to-create-flexible-media">Apply max-width: 100% to images, videos and options to create flexible media</h4>
+			<h4 id="avoid-putting-text-in-images">Avoid putting text in images</h4>
+			<h4 id="ensure-content-is-legigible-on-small-screens">Ensure content is legigible on small screens</h4>
+			<h4 id="be-mindful-of-the-number-of-images-on-a-page">Be mindful of the number of images on a page</h4>
+			<h3 id="adaptive-images">Adaptive Images</h3>
+			<h4 id="load-the-small-version-of-the-image-by-default">Load the small version of the image by default</h4>
+			<h4 id="only-make-one-request-per-image">Only make one request per image</h4>
+			<h2 id="testing">Testing</h2>
+			<h3 id="understand-the-difference-between-support-and-optimization">Understand the difference between support and optimization</h3>
+			<h3 id="establish-a-support-matrix">Establish a support matrix</h3>
+			<h2 id="performance">Performance</h2>
+			<h3 id="follow-basic-performance-best-practices">Follow basic performance best practices</h3>
+			<h3 id="avoid-sending-down-resources-that-will-never-be-used-by-small-screen-devices">Avoid sending down resources that will never be used by small screen devices</h3>
+			<h3 id="look-for-opportunities-to-conditionally-load-content">Look for opportunities to conditionally load content</h3>
 			
 			
-			- Start mobile-first: start with the lowest screen size 
-- Keep in mind that there's plenty of devices less than 320px
-- The absence of a media query is the first media query. - +Bryan Rieger 
-- Let the fluid grid do most of the work. You don't want to manage 100 layouts caused by 100 media queries, so let the fluidity of the web do its thang.
-- Use min-width, not max-width for the most part (again part of the mobile-first strategy)
-- Be mindful of media. Start with small images and swap them out for larger resolutions. Check out +Jason Grigsby 's fantastic in-depth look at techniques. http://www.cloudfour.com/responsive-imgs-part-2/
-- Don't lean on the DOM too much. Performance is your #1 feature and manipulating things with JS too much can bog down your site's performance.
-- Don't do 100 backflips to rearrange a bunch of shit. Make sure your design is smart enough to scale up without essentially designing multiple sites. 
-- Don't hide content for mobile. Mobile users want to access content just as much as desktop users.
-- Keep hit areas big. Design for touch input methods, and keep in mind that desktop users can benefit from increased hit areas as well. 
+			 
 		</div>
 		<footer role="contentinfo">   
 			<div>
