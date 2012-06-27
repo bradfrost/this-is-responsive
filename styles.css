@@ -45,6 +45,9 @@ a:hover, a:focus {
 p {
 	margin: 0 0 1em;
 }
+img, object, video {
+	max-width: 100%;
+}
 h1 {
 	font-size: 3em;
 	line-height: 1;

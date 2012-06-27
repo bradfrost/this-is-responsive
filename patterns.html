@@ -12,9 +12,9 @@
 		<div role="main">
 			<h1>Responsive Patterns</h1>
 			<p class="intro">A collection of patterns and modules for responsive designs.</p>
-			<div class="grid">
-				<section id="layout">
-					<h2>Layout</h2>
+			<div class="grid" id="layout">
+				<h2>Layout</h2>
+				<section id="equal-width">
 					<h3>Equal Width</h3>
 					<ul>
 						<li><a href="patterns/layout-2-col.html">2 equal-width columns</a></li>
@@ -22,22 +22,22 @@
 						<li><a href="patterns/layout-4-col.html">4 equal-width columns</a></li>
 						<li><a href="patterns/layout-5-col.html">5 equal-width columns</a></li>
 					</ul>
-				</section>	
-				<section id="navigation">
-					<h3>Navigation</h3>
+				</section>
+				<section id="equal-width">
+					<h3>Unequal Width</h3>
 					<ul>
-						<li><a href="patterns/nav-toggle.html">Toggle</a></li>
-						<li><a href="patterns/nav-footer-anchor.html">Footer Anchor</a></li>
-						<li><a href="patterns/nav-select.html">Select Menu</a></li>
-						<li><a href="patterns/nav-top.html">Top Links</a></li>
-						<li><a href="patterns/nav-left-flyout.html">Left Nav Flyout</a></li>
+						<li><a href="patterns/layout-unequal-2-col.html">Main column with sidebar</a></li>
 					</ul>
 				</section>
-				<section id="media">
-					<h3>Media</h3>
+				<section id="off-canvas">
+					<h3>Off Canvas</h3>
 					<ul>
-						<li><a href="patterns/img-landscape.html">Landscape Image</a></li>
-						<li><a href="patterns/video-fluid.html">Fluid Video</a></li>
+						<li><a href="patterns/layout-offscreen.html">Footer Nav & Off Canvas Column</a></li>
+						<li><a href="patterns/layout-offscreen.html">Off Canvas Column & Nav</a></li>
+						<li><a href="patterns/layout-offscreen.html">Combined Off Canvas Column</a></li>
+						<li><a href="patterns/layout-offscreen.html">Two Columns Off Canvas</a></li>
+						<li><a href="patterns/layout-offscreen.html">Vertical/Horizontal Off Canvas</a></li>
+						<li><a href="patterns/layout-offscreen.html">Ajax Vertical/Horizontal Off Canvas</a></li>	
 					</ul>
 				</section>
 				<section id="lists">
@@ -48,14 +48,6 @@
 						<li><a href="patterns/list-img-summary.html">List with Thumbnails and Summary</a></li>
 					</ul>
 				</section>
-				<section id="forms" class="disabled">
-					<h3>Forms</h3>
-					<ul>
-						<li><a href="#">Form with Left Labels</a></li>
-						<li><a href="#">Search Form</a></li>
-						<li><a href="#">Login Form</a></li>
-					</ul>
-				</section>
 				<section id="lists" class="disabled">
 					<h3>Tables</h3>
 					<ul>
@@ -63,21 +55,79 @@
 					</ul>
 				</section>
 			</div>
-		</div>
-		<footer role="contentinfo">   
-			<div>
-				<nav id="menu">
-					<ul role="navigation" class="nav">
-						<li><a href="index.html" class="nav-home">This Is <strong>Responsive.</strong></p>
-						<li><a href="patterns.html">Patterns</a></li>
-						<li><a href="tips.html">Tips</a></li>
-						<li><a href="resources.html">Resources</a></li>
-						<li><a href="http://thisisresponsive.tumblr.com">News</a></li>
+			<div class="grid" id="navigation">
+				<h2>Navigation</h2>
+				<section id="primary">
+					<h3>Primary</h3>
+					<ul>
+						<li><a href="patterns/nav-toggle.html">Toggle</a></li>
+						<li><a href="patterns/nav-footer-anchor.html">Footer Anchor</a></li>
+						<li><a href="patterns/nav-select.html">Select Menu</a></li>
+						<li><a href="patterns/nav-top.html">Top Links</a></li>
+						<li><a href="patterns/nav-left-flyout.html">Left Nav Flyout</a></li>
 					</ul>
-				</nav>
-				<p class="f-rga"><a href="http://rga.com" rel="external"><img src="images/logo.png" alt="R/GA" /></a></p>
+				</section>
+				<section id="breadcrumbs">
+					<h3>Breadcrumbs</h3>
+					<ul>
+						<li><a href="patterns/nav-toggle.html">Breadcrumbs Top</a></li>
+						<li><a href="patterns/nav-toggle.html">Breadcrumbs Slideout</a></li>
+					</ul>
+				</section>
 			</div>
-		</footer>
+			<div class="grid" id="media">
+				<h2>Media</h2>
+				<section id="images">
+					<h3>Images</h3>
+					<ul>
+						<li><a href="patterns/img-landscape.html">Landscape Image</a></li>
+					</ul>
+				</section>
+				<section id="images">
+					<h3>Video</h3>
+					<ul>
+						<li><a href="patterns/video-fluid.html">Fluid Video</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="grids" id="forms">
+				<h2>Forms</h2>
+				<section id="forms">
+					<ul>
+						<li><a href="#">Form with Left Labels</a></li>
+						<li><a href="#">Search Form</a></li>
+						<li><a href="#">Login Form</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="grid" id="interactions">
+				<h2>Interactions</h2>
+				<section id="carousel">
+					<h3>Carousel</h3>
+					<ul>
+						<li><a href="#">Growing Carousel</a></li>
+						<li><a href="#">Car</a></li>
+						<li><a href="#">Login Form</a></li>
+					</ul>
+				</section>
+			</div>
+			
+		</div>
+	</div>
+	<footer role="contentinfo">   
+		<div>
+			<nav id="menu">
+				<ul role="navigation" class="nav">
+					<li><a href="index.html" class="nav-home">This Is <strong>Responsive.</strong></p>
+					<li><a href="patterns.html">Patterns</a></li>
+					<li><a href="tips.html">Tips</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="http://thisisresponsive.tumblr.com">News</a></li>
+				</ul>
+			</nav>
+			<p class="f-rga"><a href="http://rga.com" rel="external"><img src="images/logo.png" alt="R/GA" /></a></p>
+		</div>
+	</footer>
 	</div>
 </body>
 </html>

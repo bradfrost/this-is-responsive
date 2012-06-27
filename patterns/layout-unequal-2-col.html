@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.col-group > div {
+			padding: 1em;
+			margin-bottom: 1em;	
+		}
+		@media screen and (min-width: 50em) {
+			.col-group {
+				overflow: hidden;
+			}
+			.main {
+				width: 70%;
+				float: left;
+			}
+			.sidebar {
+				width: 30%;
+				float: right;
+			}
+		}
+
+	</style>
+	
+	<!--Pattern HTML-->
+	<section id="pattern" class="pattern">
+		<div class="col-group">
+			<div class="main">
+				<h2>Here's a column of text</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis dignissim orci viverra venenatis. Nulla sit amet quam at nisl sagittis adipiscing in a ligula. Nam in nisi neque. Ut in ipsum eget justo dignissim accumsan a sit amet neque. Nulla facilisi. Aliquam erat volutpat. Aliquam aliquet bibendum mollis. Aliquam erat volutpat. Sed commodo elit ac neque eleifend in commodo justo elementum. Curabitur tristique, odio id convallis aliquet, nibh augue sollicitudin lacus, at fermentum sem dolor eu lacus. Proin gravida dui in libero aliquet quis egestas odio dictum. Fusce in ligula vitae ante mollis viverra. Curabitur nibh felis, ornare ut tempor sed, lobortis id elit. Phasellus nec semper lorem. Pellentesque erat augue, tincidunt sed vulputate et, congue nec felis. Sed ligula metus, condimentum non commodo et, varius varius nisi.</p>
+				
+				<p>Nunc arcu justo, elementum ac accumsan id, porttitor ac sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lectus eros, dignissim sit amet viverra et, vulputate gravida dui. Donec at mattis tellus. Suspendisse nisi purus, porttitor in lacinia ornare, malesuada non dolor. Praesent ligula massa, blandit nec consequat et, sagittis ut purus. Aliquam erat volutpat. Maecenas a arcu ligula. Proin vitae eros purus, eu adipiscing orci. Nunc vestibulum, ante quis venenatis facilisis, lacus arcu gravida arcu, eget varius nibh lacus et leo. Aliquam lacinia, mi et convallis tincidunt, massa tellus accumsan felis, at consequat lacus ligula non leo. Pellentesque auctor ipsum lorem, ut feugiat purus. Mauris sed tellus orci, in pharetra dui. Morbi vestibulum lectus nec nulla bibendum mollis.</p>
+				
+				<p>Donec nulla nisi, dictum auctor aliquet a, ultrices quis ipsum. Nam bibendum arcu in quam condimentum ut aliquet odio luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacus nulla, laoreet a fermentum vel, scelerisque sed mi. In consectetur magna sed leo scelerisque id mattis enim vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus vulputate mauris et semper. Nam sed rhoncus justo. Duis quis orci quis lorem egestas mattis et in risus. Aenean justo eros, luctus sit amet ultricies et, interdum non est.</p>
+				
+				<p>Donec vulputate leo quis odio faucibus dignissim. Proin sit amet sem massa. Pellentesque sed nisi lacus, dictum condimentum purus. Praesent aliquam volutpat nulla, non adipiscing urna tempor nec. Praesent eu nulla sem. Aenean sed velit vitae justo lobortis mattis. Integer vitae orci quis quam varius imperdiet in et eros. Cras at justo a nunc vulputate mattis. Nam at quam odio, vel egestas sapien. Duis facilisis eros non diam iaculis in mattis orci tincidunt. Mauris adipiscing sollicitudin vestibulum.</p>
+				
+				<p>Curabitur dignissim lacinia nibh eu laoreet. Cras vitae mauris ligula. Curabitur sodales orci in neque pretium non ultricies arcu condimentum. Suspendisse sit amet felis vitae tortor molestie gravida sed sit amet sapien. Sed eget dui ante. Phasellus vel odio tellus. Proin euismod enim ut velit ultricies vestibulum.</p>
+			</div>
+			<div class="sidebar">
+				<h2>Sidebar Stuff</h2>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<h3>Header</h3>
+				<ul>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+					<li>List Item 4</li>
+					<li>List Item 5</li>
+				</ul>
+				<h3>Related</h3>
+				<ul>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+					<li>List Item 4</li>
+					<li>List Item 5</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Main column with sidebar</h1>
+			<p>Content that becomes two equal columns when space allows.</p>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
