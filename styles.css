@@ -213,6 +213,9 @@ footer[role=contentinfo] img {
 
 /*Blog*/
 /*Blog Header*/
+.footer role="contentinfo" {
+	
+}
 .blog header[role=banner] {
 	overflow: hidden;
 	margin-bottom: 2em;
@@ -232,11 +235,11 @@ footer[role=contentinfo] img {
 } 
 .posts h2 {
 	font-size: 1.6em;
-	margin-bottom: 0.8em;
+	margin: 0.28em 0;
 	font-weight: normal;
 }
 .posts a {
-	border-bottom: 1px solid #808080;
+	border-bottom: 1px solid #ccc;
 }
 .posts h2  a, .tags a, .posts a.permalink {
 	border: 0;
@@ -372,9 +375,12 @@ footer[role=contentinfo] img {
 	
 	/*Blog*/
 	.blog .logo {
-		float: left;
-		width: 23%;
+		float: right;
+		width: 20%;
 		margin-right: 2%;
+	}
+	.blog header[role=banner] {
+		padding-top: 6em;
 	}
 	.blog header[role=banner] h1 {
 		float: left;
@@ -384,12 +390,16 @@ footer[role=contentinfo] img {
 	}
 	.posts {
 		float: left;
-		width: 75%;
+		width: 64%;
 	}
 	.blog-description {
 		float: right;
 		width: 23%;
 		margin: 1em 0;
+	}
+	.blog footer[role=contentinfo] {
+		bottom: auto;
+		top: 0;
 	}
 }
 
@@ -417,10 +427,6 @@ footer[role=contentinfo] img {
 		font-size: 5.6em;
 		margin-top: 0.47em;
 		max-width: none;
-	}
-	
-	.posts {
-		padding-left: 25%;
 	}
 }	
 
