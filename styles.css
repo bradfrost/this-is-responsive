@@ -73,6 +73,12 @@ small {
 }
 /************End Global**************/
 
+/************Classes**************/
+.inactive {
+	color: #ddd;
+}
+/************End Classes**************/
+
 /************Structure**************/
 .container {
 	max-width: 70em;
@@ -384,9 +390,9 @@ footer[role=contentinfo] img {
 	}
 	.blog header[role=banner] h1 {
 		float: left;
+		margin-top: 0;
 		font-size: 3.4em;
-		max-width: 7em;
-		margin-top: 0.45em;
+		max-width: 50%;
 	}
 	.posts {
 		float: left;

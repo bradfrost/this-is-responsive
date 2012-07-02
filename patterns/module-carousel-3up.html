@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.c {
+			overflow: hidden;
+		}
+		.c li {
+			float: left;
+			width: 320px;
+		}
+		.c li a {
+			display: block;
+		}
+		.c img {
+			display: block;
+		}
+		.c h2 {
+			margin-top: 0;
+		}
+		.summary {
+			padding: 1em;
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="c">
+			<ul class="c-list">
+				<li>
+					<a href="#">
+						<img src="images/fpo_landscape.png" alt="FPO Image" />
+						<div class="summary">
+							<h2>This is the first title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/fpo_landscape.png" alt="FPO Image" />
+						<div class="summary">
+							<h2>This is the first title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/fpo_landscape.png" alt="FPO Image" />
+						<div class="summary">
+							<h2>This is the first title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			buildCarousel();
+		});
+		
+		function buildCarousel() {
+			alert('hello');
+		}
+		
+	</script>
+	<!--End Pattern JS-->	
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>3-up Carousel</h1>
+			<p>A carousel that shows one panel on smaller screens, and reveals three panels when space becomes available.</p>
+			<h2>Considerations</h2>
+			<ul>
+				<li>Assumes small screen by default</li>
+				<li>Swipe-enabled for </li>
+				<li>Avoid text in images, especially for fluid images whose size are subject to change.</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
