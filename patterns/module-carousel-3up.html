@@ -12,10 +12,21 @@
 	<style id="s" type="text/css">
 		.c {
 			overflow: hidden;
+			position: relative;
+			max-width: 74em;
+			margin: 0 auto;
+		}
+		.c-list {
+			width: 99999em;
+			position: relative;
+			left: 0;
+			-webkit-transition: left 0.5s ease-out; 
+     		-moz-transition: left 0.5s ease-out;  
+       		-o-transition: left 0.5s ease-out; 
+        	transition: left 0.5s ease-out;
 		}
 		.c li {
 			float: left;
-			width: 320px;
 		}
 		.c li a {
 			display: block;
@@ -28,6 +39,37 @@
 		}
 		.summary {
 			padding: 1em;
+		}
+		.c-nav {
+			clear: both;
+			overflow: hidden;
+			border-top: 1px solid #808080;
+		}
+		.c-nav a {
+			float: left;
+			width: 50%;
+			padding: 1em;
+			-webkit-transition: opacity 0.5s ease-out; 
+     		-moz-transition: opacity 0.5s ease-out;  
+       		-o-transition: opacity 0.5s ease-out; 
+        	transition: opacity 0.5s ease-out;
+		}
+		.c-nav a.next {
+			border-left: 1px solid #808080;
+			text-align: right;
+		}
+		.c-nav a.inactive {
+			opacity: 0.2;
+			
+		}
+		
+		@media screen and (min-width: 56.25em) {
+			.c {
+				padding: 1em 0.5em 0;
+			}
+			.c li {
+				padding: 0 0.5em;
+			}
 		}
 	</style>
 	<!--End Pattern CSS-->
@@ -49,7 +91,7 @@
 					<a href="#">
 						<img src="images/fpo_landscape.png" alt="FPO Image" />
 						<div class="summary">
-							<h2>This is the first title</h2>
+							<h2>This is the second title</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
 						</div>
 					</a>
@@ -58,12 +100,43 @@
 					<a href="#">
 						<img src="images/fpo_landscape.png" alt="FPO Image" />
 						<div class="summary">
-							<h2>This is the first title</h2>
+							<h2>This is the third title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/fpo_landscape.png" alt="FPO Image" />
+						<div class="summary">
+							<h2>This is the fourth title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/fpo_landscape.png" alt="FPO Image" />
+						<div class="summary">
+							<h2>This is the fifth title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/fpo_landscape.png" alt="FPO Image" />
+						<div class="summary">
+							<h2>This is the sixth title</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
 						</div>
 					</a>
 				</li>
 			</ul>
+			<nav class="c-nav">
+				<a href="#" class="prev">&larr; Previous</a>
+				<a href="#" class="next">Next &rarr;</a>
+			</nav>
 		</div>
 		
 	</div>
@@ -72,14 +145,69 @@
 	<!--Pattern JS-->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			buildCarousel();
-		});
-		
-		function buildCarousel() {
-			alert('hello');
-		}
-		
+		(function(w){
+			var sw = document.body.clientWidth,
+				current = 0,
+				breakpoint = 900,
+				multiplier = 3, /*Determines the number of panels*/
+				$carousel = $('.c'),
+				$cList = $('.c-list'),
+				$cWidth = $carousel.width(),
+				$li = $('.c li'),
+				$liLength = $li.size(),
+				numPages = $liLength/multiplier,
+				$prev = $('.c-nav .prev'),
+				$next = $('.c-nav .next');
+			
+			$(document).ready(function() {
+				buildCarousel();
+			});
+			
+			
+			$(window).resize(function(){ //On Resize
+				sw = document.body.clientWidth;
+				$cWidth = $carousel.width();
+				sizeCarousel();
+				posCarousel();
+			});
+			
+			function sizeCarousel() { //
+				if (sw > breakpoint) {
+					$li.width($cWidth/multiplier);
+					animLimit = $liLength/multiplier-1;
+					current = 0;
+				} else {
+					$li.width($cWidth);
+					animLimit = $liLength;
+				}
+				
+			}
+			
+			function buildCarousel() {
+				sizeCarousel();
+			}
+			
+			function posCarousel() {
+				var pos = -current * $cWidth;
+				$cList.css("left",pos);
+			}
+			
+			$prev.click(function(e){
+				e.preventDefault();
+				if(current>0) {
+					current--;
+				}
+				posCarousel();
+				
+			});
+			$next.click(function(e){
+				e.preventDefault();
+				if(current<animLimit) {
+					current++;
+				}
+				posCarousel();
+			});
+		})(this);
 	</script>
 	<!--End Pattern JS-->	
 	
