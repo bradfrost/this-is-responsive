@@ -15,18 +15,6 @@
     <body>
     	<div class="container">
     		<header role="banner">
-    			<div class="logo">
-	    			<div class="ani">
-						<div class="a1"><span><b></b></span></div>
-						<div class="a2"><span><b></b></span></div>
-						<div class="a3"><span><b></b></span></div>
-						<div class="a4"><span><b></b></span></div>
-						<div class="a5"><span><b></b></span></div>
-						<div class="a6"><span><b></b></span></div>
-						<div class="a7"><span><b></b></span></div>
-						<div class="a8"><span><b></b></span></div>
-					</div>
-				</div>
 	        	<h1><a href="/">This Is Responsive.</a></h1>
 	        </header>
 	        <div class="posts">
@@ -181,14 +169,14 @@
 		        </ol>
 		        <nav class="blog-nav">
 		        	{block:PreviousPage}
-		                <a href="{PreviousPage}">&larr;Previous Page</a>
+		                <a href="{PreviousPage}" class="nav-prev">&larr;Previous</a>
 		                {/block:PreviousPage}
 		            	{block:NextPage}
-		                <a href="{NextPage}">Next Page&rarr;</a>
+		                <a href="{NextPage}">Next Page &rarr;</a>
 		            	{/block:NextPage}
 		        </nav>
 	        </div>
-	        <aside class="sidebar">
+	        <div class="sidebar">
 		        <div class="about">
 			        {block:Description}
 			            <h3>About</h3>
@@ -203,8 +191,8 @@
 					<h3>RWD Resources</h3>
 					<p>View <a href="http://bradfrost.github.com/this-is-responsive/patterns.html">responsive patterns</a>, <a href="">tips</a> and <a href="http://bradfrost.github.com/this-is-responsive/resources.html">resources</a>.</p>
 				</div>
-	        </aside>
-	        <footer role="contentinfo">   
+	        </div>
+	        <footer class="footer" role="contentinfo">   
 				<div>
 					<nav id="menu">
 						<ul role="navigation" class="nav">
