@@ -291,9 +291,6 @@ footer[role=contentinfo] img {
 
 /*Aside*/
 .blog-description {
-	background: #f7f7f7;
-	padding: 1em;
-	color: #808080;
 	margin: 1em 0;
 }
 .blog-description a {
@@ -383,7 +380,6 @@ footer[role=contentinfo] img {
 	.blog .logo {
 		float: right;
 		width: 20%;
-		margin-right: 2%;
 	}
 	.blog header[role=banner] {
 		padding-top: 6em;
@@ -398,10 +394,13 @@ footer[role=contentinfo] img {
 		float: left;
 		width: 64%;
 	}
-	.blog-description {
+	.sidebar {
 		float: right;
 		width: 23%;
 		margin: 1em 0;
+	}
+	.sidebar h3 {
+		border-bottom: 1px solid #000;
 	}
 	.blog footer[role=contentinfo] {
 		bottom: auto;
