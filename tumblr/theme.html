@@ -6,7 +6,7 @@
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
-        <link rel="stylesheet" href="http://bradfrost.github.com/this-is-responsive/styles.css">
+        <link rel="stylesheet" href="http://bradfrostweb.com/this-is-responsive/styles.css">
         <link rel="stylesheet" type="text/css" media="all" href="http://bradfrost.github.com/this-is-responsive/animation.css">
         {block:Description}
             <meta name="description" content="{MetaDescription}" />
@@ -172,11 +172,11 @@
 		                <a href="{PreviousPage}" class="nav-prev">&larr;Previous</a>
 		                {/block:PreviousPage}
 		            	{block:NextPage}
-		                <a href="{NextPage}">Next Page &rarr;</a>
+		                <a href="{NextPage}" class="nav-next">Next Page &rarr;</a>
 		            	{/block:NextPage}
 		        </nav>
 	        </div>
-	        <div class="sidebar">
+	        <aside class="sidebar">
 		        <div class="about">
 			        {block:Description}
 			            <h3>About</h3>
@@ -191,7 +191,7 @@
 					<h3>RWD Resources</h3>
 					<p>View <a href="http://bradfrost.github.com/this-is-responsive/patterns.html">responsive patterns</a>, <a href="">tips</a> and <a href="http://bradfrost.github.com/this-is-responsive/resources.html">resources</a>.</p>
 				</div>
-	        </div>
+	        </aside>
 	        <footer class="footer" role="contentinfo">   
 				<div>
 					<nav id="menu">

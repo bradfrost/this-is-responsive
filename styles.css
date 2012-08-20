@@ -222,7 +222,7 @@ footer[role=contentinfo] img {
 .blog header[role=banner] {
 	overflow: hidden;
 	margin-bottom: 2em;
-	padding-top: 2em;
+	padding-top: 1em;
 }
 .blog .logo {
 	position: relative;
@@ -248,7 +248,7 @@ footer[role=contentinfo] img {
 	border: 0;
 }
 .posts blockquote {
-	margin: 0 0 0 1em;
+	margin: 0 0 1em 1em;
 	color: #666;
 	border-left: 0.25em solid #ccc;
 	padding-left: 1em;
@@ -288,18 +288,25 @@ footer[role=contentinfo] img {
 
 /* Sidebar */
 .sidebar {
-	margin: 1em 0;
+	font-size: 0.8em;
+	padding-bottom: 1.4em;
+}
+.sidebar h3 {
+	font-weight: bold;
+	font-size: 0.9em;
+	line-height: 1;
+	border-bottom: 1px solid #000;
 }
 .sidebar a {
-	color: #333;
+	color: #808080;
 }
-.sidebar p:last-child {
-	margin: 0;
+.sidebar a:hover, .sidebar a:focus {
+	color: #e51837;
 }
 
 
 /******Media Queries*******/
-@media screen and (min-width:40em) {
+@media all and (min-width:40em) {
 	h1 {
 		font-size: 5.6em;
 	}
@@ -397,16 +404,26 @@ footer[role=contentinfo] img {
 		margin: 1em 0;
 		padding-left: 0.8em;
 	}
-	.sidebar h3 {
-		border-bottom: 1px solid #000;
-	}
 	.blog footer[role=contentinfo] {
 		bottom: auto;
 		top: 0;
 	}
 }
 
-@media screen and (min-width: 54em) {
+/*Blog*/
+@media all and (min-width: 45em) {
+	.blog header[role=banner] {
+		padding-top: 4em;
+	}
+	.blog header[role=banner] h1 {
+		font-size: 5.6em;
+		margin-top: 0.47em;
+		max-width: none;
+	}
+	
+}
+
+@media all and (min-width: 54em) {
 	h1 {
 		font-size: 6.4em;
 	}
@@ -423,13 +440,6 @@ footer[role=contentinfo] img {
 	}
 	.grid ul li:nth-child(odd) {
 		padding-right: 0;
-	}
-	
-	/*Blog*/
-	.blog header[role=banner] h1 {
-		font-size: 5.6em;
-		margin-top: 0.47em;
-		max-width: none;
 	}
 }	
 
