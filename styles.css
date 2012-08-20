@@ -398,6 +398,7 @@ footer[role=contentinfo] img {
 		float: right;
 		width: 23%;
 		margin: 1em 0;
+		padding-left: 1em;
 	}
 	.sidebar h3 {
 		border-bottom: 1px solid #000;
