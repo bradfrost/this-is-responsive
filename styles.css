@@ -289,14 +289,14 @@ footer[role=contentinfo] img {
 	border: 0;
 }
 
-/*Aside*/
-.blog-description {
+/* Sidebar */
+.sidebar {
 	margin: 1em 0;
 }
-.blog-description a {
+.sidebar a {
 	color: #333;
 }
-.blog-description p:last-child {
+.sidebar p:last-child {
 	margin: 0;
 }
 
