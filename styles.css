@@ -219,9 +219,6 @@ footer[role=contentinfo] img {
 
 /*Blog*/
 /*Blog Header*/
-.footer role="contentinfo" {
-	
-}
 .blog header[role=banner] {
 	overflow: hidden;
 	margin-bottom: 2em;
