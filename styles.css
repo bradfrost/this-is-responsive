@@ -71,6 +71,16 @@ h1 a {
 small {
 	color: #e51837;
 }
+input[type=search] {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+::-webkit-input-placeholder {
+	color: #808080;
+}
+:-moz-placeholder {  
+    color: #808080;
+}
 /************End Global**************/
 
 /************Classes**************/
@@ -178,9 +188,6 @@ footer[role=contentinfo] img {
 .ani div {
 	width: 100%;
 }
-.ani div span {
-
-}
 .ani div b {
 	display: block;
 	position: absolute;
@@ -217,16 +224,59 @@ footer[role=contentinfo] img {
 	margin-bottom: 1em;
 }
 
+
 /*Blog*/
 /*Blog Header*/
+.blog .container {
+	max-width: 62em;
+}
 .blog header[role=banner] {
 	overflow: hidden;
 	margin-bottom: 2em;
-	padding-top: 1em;
+	padding: 2em 0 1em;
+	border-bottom: 1px solid #000;
 }
-.blog .logo {
-	position: relative;
-	min-height: 11em;
+.blog-logo {
+	font-weight: normal;
+	font-size: 1.2em;
+	margin: 0 0 1em;
+}
+.blog-logo img {
+	width: 3.3em;
+}
+.blog-logo a {
+	color: #000;
+}
+.search-form {
+	width: 100%;
+	margin-bottom: 1em;
+}
+.search-field {
+	width: 100%;
+	padding: 0.5em 0;
+	border: 0;
+	border-bottom: 1px solid #808080;
+	outline: none;
+}
+.search-field:focus {
+	background: #e51837;
+	color: #fff;
+}
+.search-field:focus::-webkit-input-placeholder {
+   color: #fff;
+}
+
+.search-field:focus :-moz-placeholder {  
+   color: #fff; 
+}
+
+.blog .nav {
+	clear: both;
+}
+.blog .nav a {
+	display: block;
+	font-weight: bold;
+	color: #000;
 }
 
 /*Posts*/
@@ -237,22 +287,29 @@ footer[role=contentinfo] img {
 	overflow: hidden;
 } 
 .posts h2 {
-	font-size: 1.6em;
-	margin: 0.28em 0;
+	font-size: 1.4em;
+	margin: 0.28em 0 0.1em;
 	font-weight: normal;
 }
-.posts a {
+.posts h2 a {
+	color: #000;
+}
+.posts h2 a:hover, .posts h2 a:focus {
+	color: #e51837;
+}
+.permalink {
+	display: block;
+	font-size: 0.8em;
+	margin-bottom: 1.2em;
+}
+.post-body a {
 	border-bottom: 1px solid #ccc;
 }
-.posts h2  a, .tags a, .posts a.permalink {
-	border: 0;
-}
 .posts blockquote {
-	margin: 0 0 1em 1em;
+	margin: 0 0 1em;
 	color: #666;
 	border-left: 0.25em solid #ccc;
 	padding-left: 1em;
-	
 }
 .tags {
 	float: left;
@@ -262,12 +319,7 @@ footer[role=contentinfo] img {
 	font-size: 0.8em;
 	margin-right: 0.5em;
 }
-.permalink {
-	float: right;
-	display: inline-block;
-	font-size: 0.8em;
-	padding-top: 0.38em;
-}
+
 .posts ol > li .tags a, .permalink {
 	color: #ccc;
 	-webkit-transition: color 0.3s ease-out;  
@@ -281,15 +333,26 @@ footer[role=contentinfo] img {
 }
 .blog-nav {
 	text-align: center;
+	overflow: hidden;
+	padding: 1em 0;
 }
 .posts .blog-nav a {
 	border: 0;
+}
+.nav-next {
+	float: right;
+}
+.nav-prev {
+	float: left;
 }
 
 /* Sidebar */
 .sidebar {
 	font-size: 0.8em;
 	padding-bottom: 1.4em;
+}
+.sidebar div {
+	margin-bottom: 2em;
 }
 .sidebar h3 {
 	font-weight: bold;
@@ -306,6 +369,16 @@ footer[role=contentinfo] img {
 
 
 /******Media Queries*******/
+@media all and (min-width: 35em) {
+	.blog-logo {
+		float: left;
+		font-size: 2em;
+		margin: 0 0 1em;
+	}
+	.blog-logo img {
+		width: auto;
+	}
+}
 @media all and (min-width:40em) {
 	h1 {
 		font-size: 5.6em;
@@ -381,46 +454,26 @@ footer[role=contentinfo] img {
 	}
 	
 	/*Blog*/
-	.blog .logo {
+	
+	.search-form {
 		float: right;
-		width: 20%;
+		width: 30%;
+		max-width: 16em;
+		padding-left: 0.8em;
+		margin-top: 0.4em;
 	}
-	.blog header[role=banner] {
-		padding-top: 6em;
-	}
-	.blog header[role=banner] h1 {
-		float: left;
-		margin-top: 0;
-		font-size: 3.4em;
-		max-width: 50%;
-	}
+	
 	.posts {
 		float: left;
 		width: 64%;
 	}
 	.sidebar {
 		float: right;
-		width: 23%;
-		margin: 1em 0;
+		width: 30%;
+		max-width: 20em;
+		margin: 0 0 1em;
 		padding-left: 0.8em;
 	}
-	.blog footer[role=contentinfo] {
-		bottom: auto;
-		top: 0;
-	}
-}
-
-/*Blog*/
-@media all and (min-width: 45em) {
-	.blog header[role=banner] {
-		padding-top: 4em;
-	}
-	.blog header[role=banner] h1 {
-		font-size: 5.6em;
-		margin-top: 0.47em;
-		max-width: none;
-	}
-	
 }
 
 @media all and (min-width: 54em) {

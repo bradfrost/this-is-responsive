@@ -15,7 +15,17 @@
     <body>
     	<div class="container">
     		<header role="banner">
-	        	<h1><a href="/">This Is Responsive.</a></h1>
+	        	<h4 class="blog-logo"><a href="/"><img src="http://bradfrostweb.com/this-is-responsive/images/logo_white.png" alt="R/GA" /> This Is Responsive</a></h4>
+	        	<form class="search-form" action="/search" method="get">
+				    <input class="search-field" type="search" placeholder="Search" name="q" value="{SearchQuery}"/>
+				</form>
+				<nav>
+					<ul role="navigation" class="nav">
+						<li><a href="/archive" class="archive">Archive</a></li>
+						<li><a href="/rss">RSS</a></li>
+						<li><a href="/submit">Submit</a></li>
+					</ul>
+				</nav>
 	        </header>
 	        <div class="posts">
 		        <ol>
@@ -25,8 +35,9 @@
 		                        {block:Title}
 		                            <h2>{Title}</h2>
 		                        {/block:Title}
-		
+								<div class="post-body">
 		                        {Body}
+		                        </div>
 		                        <ul class="tags">
 			                        {block:Tags}
 			                            <li>
@@ -94,10 +105,11 @@
 		
 		                {block:Link}
 		                    <li class="post link">
+		                    	
 		                        <h2><a href="{URL}" class="link" {Target}>{Name}</a></h2>
-		
+								{block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
 		                        {block:Description}
-		                            <div class="description">{Description}</div>
+		                        <div class="post-body">{Description}</div>
 		                        {/block:Description}
 		                        <ul class="tags">
 			                        {block:Tags}
@@ -106,7 +118,7 @@
 			                            </li>
 			                        {/block:Tags}
 			                    </ul>
-			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+			                    
 		                    </li>
 		                {/block:Link}
 		
@@ -169,10 +181,10 @@
 		        </ol>
 		        <nav class="blog-nav">
 		        	{block:PreviousPage}
-		                <a href="{PreviousPage}" class="nav-prev">&larr;Previous</a>
+		                <a href="{PreviousPage}" class="nav-prev">/Previous</a>
 		                {/block:PreviousPage}
 		            	{block:NextPage}
-		                <a href="{NextPage}" class="nav-next">Next Page &rarr;</a>
+		                <a href="{NextPage}" class="nav-next">/Next</a>
 		            	{/block:NextPage}
 		        </nav>
 	        </div>
@@ -192,19 +204,6 @@
 					<p>View <a href="http://bradfrost.github.com/this-is-responsive/patterns.html">responsive patterns</a>, <a href="">tips</a> and <a href="http://bradfrost.github.com/this-is-responsive/resources.html">resources</a>.</p>
 				</div>
 	        </aside>
-	        <footer class="footer" role="contentinfo">   
-				<div>
-					<nav id="menu">
-						<ul role="navigation" class="nav">
-							<li><a href="http://rga.com" class="rga-logo" rel="external"><img src="http://bradfrost.github.com/this-is-responsive/images/logo.png"  alt="R/GA" /></a></li>
-							<li><a href="/" class="nav-home">This Is <strong>Responsive.</strong></p>
-							<li><a href="/archive" class="archive">Archive</a></li>
-							<li><a href="/rss">RSS</a></li>
-						</ul>
-					</nav>
-					
-				</div>
-			</footer>
 	    </div>
 	    
     </body>
