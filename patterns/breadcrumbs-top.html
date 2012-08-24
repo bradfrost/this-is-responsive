@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.crumbs {
+			padding: 1em;
+		}
+		.crumbs li {
+			display: inline-block;
+		}
+		.crumbs li:after {
+			content: '→';
+			padding: 0 0.25em 0 0.5em;
+			color: #999;
+		}
+		.crumbs li.last:before, .crumbs li.last:after {
+			content: '';
+		}
+	</style>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern HTML-->
+	<section id="pattern" class="pattern">
+		<ul class="crumbs">
+			<li><a href="#">Grandparent</a></li>
+			<li><a href="#">Parent</a></li>
+			<li><a href="#">Child</a></li>
+			<li><a href="#">Grandchild</a></li>
+			<li class="last"><a href="#">Great-Grandchild</a></li>
+		</ul>
+		
+	</section>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  
+		});
+	</script>-->
+	
+	<div class="container">	
+		<!--Pattern Description-->
+		<section class="pattern-description">
+			<h1>Across the Top Breadcrumbs</h1>
+			<p>A breadcrumb trail that simply wraps onto a new line.</p>
+			<h2>Pros</h2>
+			<ul>
+				<li>Simple to implement. Flows as is.</li>
+				<li>Provides access to full breadcrumb trail.</li>
+			</ul>
+			<h2>Cons</h2>
+			<ul>
+				<li>Can occupy multiple lines, therefore obscuring the core page content.</li>
+				<li>Proximity taps may result when breadcrumbs occupy multiple lines.</li>
+			</ul>
+		</section>
+		<!--End Pattern Description-->
+		
+		<!--Footer-->
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+		<!--End Footer-->
+	</div>
+</body>
+</html>

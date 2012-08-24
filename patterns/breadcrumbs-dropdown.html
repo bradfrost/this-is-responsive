@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.crumbs-container {
+			position: relative;
+			overflow: hidden;
+			height: 3.2em;
+			-webkit-transition: height 0.5s ease-out; 
+			-moz-transition: height 0.5s ease-out;  
+			-o-transition: height 0.5s ease-out; 
+			transition: height 0.5s ease-out;
+		}
+		.crumbs-container.active {
+			height: 13.6em;
+		}
+		.crumbs {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			
+		}
+		.crumbs li a {
+			display: block;
+			padding: 1em;
+			border-bottom: 1px solid #000;
+		}
+		.crumbs li:last-child a {
+			border-bottom: 0;
+		}
+		#crumbs-trigger {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: block;
+			font-size: 2em; 
+			padding: 0 0.5em 0.2em;
+		}
+		
+		@media all and (min-width: 32em) {
+			.crumbs-container.active {
+				height: 3.2em;
+			}
+			.crumbs {
+				padding: 1em;
+			}
+			.crumbs li {
+				display: inline-block;
+			}
+			.crumbs li a {
+				display: inline;
+				border: 0;
+				padding: 0;
+			}
+			.crumbs li:after {
+				content: '→';
+				padding: 0 0.25em 0 0.5em;
+				color: #999;
+			}
+			.crumbs li.last:before, .crumbs li.last:after {
+				content: '';
+			}
+			#crumbs-trigger {
+				display: none;
+			}
+		}
+	</style>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern HTML-->
+	<section id="pattern" class="pattern">
+		<div class="crumbs-container">
+			<ul class="crumbs">
+				<li><a href="#">Grandparent</a></li>
+				<li><a href="#">Parent</a></li>
+				<li><a href="#">Child</a></li>
+				<li class="last"><a href="#">Grandchild</a></li>
+			</ul>
+		</div>
+	</section>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		(function(w){
+			var $crumbsContainer = $('.crumbs-container');
+			$(document).ready(function() {
+				buildCrumbs();
+			});
+			
+			function buildCrumbs() {
+				$('<a href="#" id="crumbs-trigger">+</a>').appendTo($crumbsContainer);
+				
+				$('#crumbs-trigger').bind('click', function(e) {
+					e.preventDefault();
+					var $this = $(this);
+					$crumbsContainer.toggleClass('active');
+					
+					if($crumbsContainer.hasClass('active')) {
+						$this.text('-');
+					} else {
+						$this.text('+');
+					}
+				});
+
+			}
+			
+			
+		})(this);
+	</script>
+	
+	<div class="container">	
+		<!--Pattern Description-->
+		<section class="pattern-description">
+			<h1>Dropdown Breadcrumbs</h1>
+			<p>A breadcrumb solution that exposes the last item for small screens and reveals the rest of the items in the trail when clicked. The entire trail is exposed when space becomes available.</p>
+			<h2>Pros</h2>
+			<ul>
+				<li>Saves space by only exposing the last element in the breadcrumb trail.</li>
+				<li>Small screen users are still able to traverse the breadcrumb trail</li>
+			</ul>
+			<h2>Cons</h2>
+			<ul>
+				<li>Small screen users require a full-page refresh in order to go back multiple levels</li>
+				<li>Small screens still download the extra markup even though it's not used</li>
+			</ul>
+		</section>
+		<!--End Pattern Description-->
+		
+		<!--Footer-->
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+		<!--End Footer-->
+	</div>
+</body>
+</html>
