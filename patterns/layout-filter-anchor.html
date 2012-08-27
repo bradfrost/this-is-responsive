@@ -37,6 +37,9 @@
 			font-weight: bold;
 			border-bottom: 1px solid #808080;
 		}
+		.hide {
+			display: none;
+		}
 		
 		@media all and (min-width: 50em){
 		     
@@ -124,6 +127,7 @@
 		$(document).ready(function() {
       		var sw = document.body.clientWidth,
       			bp = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
+      			$btnSet = $('.btn-set'),
       			$filterBtn = $('#filter-btn'),
       			$sortBtn = $('#sort-btn');
       			
@@ -137,7 +141,11 @@
       		
       		
       		function loadFragment(el) {
-      			
+      			var $el = $(el),
+      				$form = $el.find('form');
+      			$('<div id="form-container" />').insertAfter($btnSet);
+      			$form.clone().appendTo('#form-container');
+      			$(el).addClass('hide');
       		}
 		});
 	</script>
