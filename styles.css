@@ -10,9 +10,10 @@ gray: #808080;
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box; 
 }
-html, body, div, object, iframe { 
+html, body, div, object, iframe, fieldset { 
 	margin: 0; 
 	padding: 0; 
+	border: 0;
 } 
 ol, ul { 
 	list-style: none;
@@ -25,6 +26,9 @@ table {
 }
 header, footer, nav, section, article, hgroup, figure {
 	display: block;	
+}
+legend {
+	display: none;
 }
 /************End Reset**************/
 
