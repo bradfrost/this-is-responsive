@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.col-group > div {
+			padding: 1em;
+			margin-bottom: 1em;	
+		}
+		@media screen and (min-width: 44em) {
+			.col-group {
+				overflow: hidden;
+			}
+			.col-group > div {
+				float: left;
+				width: 50%;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div>
+			<div>
+				<h2>Here's a column of text</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+			</div>
+			<div>
+				<h2>Here's another column of text</h2>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+			</div>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Source-Order Shift</h1>
+			<p>Content that becomes two equal columns when space allows.</p>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

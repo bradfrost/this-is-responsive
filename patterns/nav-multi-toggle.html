@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		a.menu-link {
+		    float: right;
+		    display: block;
+		    padding: 1em;
+		}
+		.menu, .menu > ul ul {
+			clear: both;
+			-webkit-transition: all 0.3s ease-out;  
+			-moz-transition: all 0.3s ease-out;
+			-ms-transition: all 0.3s ease-out;
+			-o-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+		.js .menu, .js .menu > ul ul {
+			overflow: hidden;
+			max-height: 0;
+			background: rgba(0,0,0,0.1);
+		}
+		.menu.active, .js .menu > ul ul.active {
+			max-height: 55em;
+		}
+		.menu > ul {
+			border-top: 1px solid #808080;
+		}
+		.menu li a {
+			color: #000;
+			display: block;
+			padding: 0.8em;
+			border-bottom: 1px solid #808080;
+			position: relative;
+		}
+		.menu li.has-subnav > a:after {
+			content: '+';
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			font-size: 1.5em;
+			padding: 0.25em 0.5em;
+		}
+		.menu li.has-subnav > a.active:after {
+			content: "-";
+		}
+		
+		
+		@media screen and (min-width: 48.25em) {
+			.pattern {
+				overflow: visible;
+			}
+			a.menu-link {
+			   display: none;
+			}
+			.js .menu, .js .menu > ul ul {
+				max-height: none;
+				overflow: visible;
+				background: none;
+			}
+			.js .menu > ul ul {
+				background: #808080;
+				display: none;
+			}
+			.js .menu > ul li:hover > ul {
+				display: block;
+			}
+			.menu ul {
+				margin: 0 0 0 -0.25em;
+				border: 0;
+			}
+			.menu li a {
+				border: 0;
+			}
+			.menu li.has-subnav > a {
+				padding-right: 2em;
+			}
+			.menu li.has-subnav > a:after {
+				content: ">";
+				font-size: 1em;
+				padding: 0.8em 0.5em;
+			}
+			.menu .level-1 > li.has-subnav > a:after {
+				content: "▼";
+			}
+			.menu > ul li {
+				margin: 0 0.25em;
+			}
+			.menu > ul > li {
+				display: inline-block;
+				position: relative;
+			}
+			.menu > ul ul {
+				position: absolute;
+				top: 0;
+				left: 12em;
+				width: 12em;
+			}
+			.menu > ul ul li {
+				position: relative;
+			}
+			.menu > ul ul.level-2 {
+				top: 3em;
+				left: 0;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<a href="#menu" class="menu-link">Menu</a>
+		<nav id="menu" class="menu" role="navigation">
+			<ul class="level-1">
+				<!--Parent #1-->
+				<li class="has-subnav">
+					<a href="#">Parent #1</a>
+					<ul class="level-2">
+						<li class="has-subnav">
+							<a href="#">Child #1</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #2</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #3</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #4</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+					</ul>
+				</li>
+				
+				<!--Parent #2-->
+				<li class="has-subnav">
+					<a href="#">Parent #2</a>
+					<ul class="level-2">
+						<li class="has-subnav">
+							<a href="#">Child #1</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #2</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #3</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #4</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+					</ul>
+				</li>
+
+				<!--Parent #3-->
+				<li class="has-subnav">
+					<a href="#">Parent #3</a>
+					<ul class="level-2">
+						<li class="has-subnav">
+							<a href="#">Child #1</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #2</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #3</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #4</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+					</ul>
+				</li>
+
+				<!--Parent #4-->
+				<li class="has-subnav">
+					<a href="#">Parent #4</a>
+					<ul class="level-2">
+						<li class="has-subnav">
+							<a href="#">Child #1</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #2</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #3</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #4</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+					</ul>
+				</li>
+				
+				<!--Parent #5-->
+				<li class="has-subnav">
+					<a href="#">Parent #5</a>
+					<ul class="level-2">
+						<li class="has-subnav">
+							<a href="#">Child #1</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #2</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #3</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+						<li class="has-subnav">
+							<a href="#">Child #4</a>
+							<ul class="level-3">
+								<li><a href="#">Grandchild #1</a></li>
+								<li><a href="#">Grandchild #2</a></li>
+								<li class="has-subnav">
+									<a href="#">Grandchild #3</a>
+									<ul class="level-4">
+										<li><a href="#">Great-Grandchild #1</a></li>
+										<li><a href="#">Great-Grandchild #2</a></li>
+									</ul>
+								</li>
+							</ul>	
+						</li>
+					</ul>
+				</li>
+
+			</ul>
+		</nav>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $('body').addClass('js');
+		  var $menu = $('#menu'),
+		  	  $menulink = $('.menu-link'),
+		  	  $menuTrigger = $('.has-subnav > a');
+		
+		$menulink.click(function(e) {
+			e.preventDefault();
+			$menulink.toggleClass('active');
+			$menu.toggleClass('active');
+		});
+		
+		$menuTrigger.click(function(e) {
+			e.preventDefault();
+			var $this = $(this);
+			$this.toggleClass('active').next('ul').toggleClass('active');
+		});
+		
+		});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Multi-Toggle Navigation</h1>
+			<p>A multi-level accordion that becomes basic dropdowns for larger screens.</p>
+					</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
