@@ -105,8 +105,8 @@
 			});
 			
 			$('.pattern').delegate(".dismiss-btn", "click", function(e) {
-				e.preventDefault();
 				hideNotification();
+				return false;
 			});
 			
 			function showNotification() {
