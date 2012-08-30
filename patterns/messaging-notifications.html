@@ -117,6 +117,10 @@
 				$n.css('top',-nHeight);
 				setTimeout(function() { $n.removeClass('anim'); }, 1000);
 			}
+			
+			$(window).resize(function() {
+				nHeight = $n.outerHeight();
+			});
 		});
 	</script>
 	
