@@ -28,6 +28,15 @@
 				</nav>
 	        </header>
 	        <div class="posts">
+	        	{block:SearchPage}
+	        		{block:NoSearchResults}
+	        			<p>There were no results found for <strong>{SearchQuery}</strong>. Try again or <a href="/">head to the homepage</a>.</p>
+	        		{/block:NoSearchResults}
+	        	{/block:SearchPage}
+	        	
+	        	{block:TagPage}
+					<h2 style="margin-bottom: 1em">Posts tagged <strong><a href="{TagURL}">{Tag}</a></strong></h2>
+				{/block:TagPage} 
 		        <ol>
 		            {block:Posts}
 		                {block:Text}
@@ -199,9 +208,10 @@
 					<h3>Submit</h3>
 					<p>Have a responsive design resource worth sharing? <a href="/submit">Submit it here.</a></p>
 				</div>
-				<div class="Resources">
-					<h3>RWD Resources</h3>
-					<p>View <a href="http://bradfrost.github.com/this-is-responsive/patterns.html">responsive patterns</a>, <a href="">tips</a> and <a href="http://bradfrost.github.com/this-is-responsive/resources.html">resources</a>.</p>
+				<div class="about-rga">
+					<h3>About R/GA</h3>
+					<p>More than thirty years ago agency founders Bob and Richard Greenberg experimented with Academy Award-winning optical printing techniques. Today R/GA programmers continue the legacy of using technology to experiment and inspire.</p>
+					<p>View the <a href="http://techblog.rga.com/">R/GA Tech Blog</a> and <a href="http://www.rga.com/careers/apply/job-openings">available job openings</a>.</p>
 				</div>
 	        </aside>
 	    </div>

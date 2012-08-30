@@ -144,6 +144,7 @@
       			var $el = $(el),
       				$form = $el.find('form');
       			$('<div id="form-container" />').insertAfter($btnSet);
+      			if ($('#form-container').find($form).length)
       			$form.clone().appendTo('#form-container');
       			$(el).addClass('hide');
       		}
