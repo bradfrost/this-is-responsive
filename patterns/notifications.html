@@ -68,7 +68,7 @@
 	<div id="pattern" class="pattern">
 		<div class="main">
 		<!--Begin Pattern HTML-->
-			<h2>Actions</h2>
+			<h2>Notification Bar Demo</h2>
 			<ul>
 				<li><a href="#" class="action">Add Review</a></li>
 			</ul>
@@ -98,6 +98,7 @@
 				nHeight = $n.outerHeight();
 					
 				showNotification();
+				setTimeout(hideNotification,8000);
 			}
 			
 			$action.click(function(e) { //Trigger
@@ -123,7 +124,7 @@
 	<div class="container">	
 		<section class="pattern-description">
 			<h1>Slide-Down Notification Bar</h1>
-			<p>A Notification bar that slides down to provide users with feedback.</p>
+			<p>A fluid notification bar that slides down to provide users with feedback.</p>
 					</section>
 		<footer role="contentinfo">   
 			<div>
