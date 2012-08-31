@@ -187,6 +187,11 @@ footer[role=contentinfo] img {
 	line-height: 1.2;
 	margin: 0 auto;
 }
+.intro a:hover ,.intro a:focus {
+	color: #000;
+	border-bottom-color: #000;
+}
+
 .ani {
 	position: relative;
 	height: 15em;
@@ -378,6 +383,8 @@ footer[role=contentinfo] img {
 
 
 /******Media Queries*******/
+
+/* Medium Screens*/
 @media all and (min-width: 35em) {
 	.blog-logo {
 		float: left;
@@ -452,14 +459,11 @@ footer[role=contentinfo] img {
 		display: table-cell;
 		vertical-align: middle;
 	}
-	.intro a {
-		color: #808080;
-		border-bottom: 1px solid rgba(255,255,255,0.5);
+	.home .intro a {
+		color: #fff;
+		color: rgba(255,255,255,0.8);
 	}
-	.intro a:hover ,.intro a:focus {
-		color: #000;
-		border-bottom-color: #000;
-	}
+	
 	
 	/*Blog*/
 	
@@ -484,6 +488,8 @@ footer[role=contentinfo] img {
 	}
 }
 
+
+/* Large Screens */
 @media all and (min-width: 54em) {
 	h1 {
 		font-size: 6.4em;
