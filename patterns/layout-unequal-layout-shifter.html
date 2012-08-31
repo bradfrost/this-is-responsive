@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.c > div {
+			padding: 1em;
+		}
+		@media screen and (min-width: 56em) {
+			.c1 {
+				float: left;
+				width: 30%;
+			}
+			.c2, .c3 {
+				float: left;
+				width: 70%;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="c">
+			<div class="c1">
+				<h2>Column (1st in source order)</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
+			</div>
+			<div class="c2">
+				<h3>Column (2nd in source order)</h3>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				
+			</div>
+			<div class="c3">
+				<h3>Column (3nd in source order)</h3>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				
+			</div>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Layout Shifter	</h1>
+			<p>From Luke Wroblewski's <a href="http://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns</a>:</p>
+			<blockquote>
+				<p>This pattern does the most to adapt across different screen sizes. That is, different layouts are used on large, medium, and small screens. Because this inherently requires more work, it seems to be less popular than the previous two patterns I outlined.</p>
+				<p>Though I've tried to generalize this pattern into a simple illustration (above) based on the most common implementations I saw, the truth is this is where a lot of innovative design is happening. As a result, there's not one formula that encompasses everything that falls under this pattern.</p>
+			</blockquote>
+			
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
