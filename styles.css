@@ -380,7 +380,31 @@ footer[role=contentinfo] img {
 .sidebar a:hover, .sidebar a:focus {
 	color: #e51837;
 }
-
+.social-links {
+	overflow: hidden;
+}
+.social-links li {
+	float: left;
+	margin-right: 0.5em;
+}
+.social-links li a {
+	display: block;
+	height: 16px;
+	width: 16px;
+	background: url(images/sprite_social.png) no-repeat;
+}
+.social-links li a.s-fb {
+	background-position: -0px -0px;
+}
+.social-links li a.s-twitter {
+	background-position: -0px -0px;
+}
+.social-links li a.s-linkedin {
+	background-position: -0px -0px;
+}
+.social-links li a.s-rss {
+	background-position: -0px -0px;
+}
 
 /******Media Queries*******/
 
