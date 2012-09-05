@@ -394,7 +394,7 @@ footer[role=contentinfo] img {
 	display: block;
 	height: 16px;
 	width: 16px;
-	text-indent: -9999em;
+	text-indent: -99999em;
 	background: url(images/sprite_social.png) no-repeat;
 }
 .social-links li a.s-fb {
