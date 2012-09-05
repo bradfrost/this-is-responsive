@@ -392,7 +392,7 @@ footer[role=contentinfo] img {
 }
 .social-links li a {
 	display: block;
-	height: 16px;
+	height: 17px;
 	width: 16px;
 	text-indent: -99999em;
 	background: url(images/sprite_social.png) no-repeat;
