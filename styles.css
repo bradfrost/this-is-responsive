@@ -398,17 +398,31 @@ footer[role=contentinfo] img {
 	background: url(images/sprite_social.png) no-repeat;
 }
 .social-links li a.s-fb {
-	background-position: -0px -0px;
+	background-position: -0px -76px;
+}
+.social-links li a.s-fb:hover {
+	background-position: -16px -76px;
 }
 .social-links li a.s-twitter {
-	background-position: -0px -0px;
+	background-position: -0px -37px;
+}
+.social-links li a.s-twitter:hover {
+	background-position: -16px -37px;
 }
 .social-links li a.s-linkedin {
-	background-position: -0px -0px;
+	background-position: -0px -113px;
+}
+.social-links li a.s-linkedin:hover {
+	background-position: -16px -113px;
 }
 .social-links li a.s-rss {
 	background-position: -0px -0px;
 }
+.social-links li a.s-rss:hover {
+	background-position: -16px -0px;
+}
+
+
 
 .top {
 	clear: both;
