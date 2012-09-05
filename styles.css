@@ -412,6 +412,7 @@ footer[role=contentinfo] img {
 
 .top {
 	clear: both;
+	display: block;
 	padding: 1em 0;
 }
 .top:before {
