@@ -293,7 +293,7 @@ footer[role=contentinfo] img {
 	color: #000;
 }
 .blog .nav a:hover {
-
+	color: #e51837;
 }
 
 /*Posts*/
@@ -408,6 +408,16 @@ footer[role=contentinfo] img {
 }
 .social-links li a.s-rss {
 	background-position: -0px -0px;
+}
+
+.top {
+	clear: both;
+	display: block;
+	padding: 1em;
+	text-align: center;
+}
+.top:before {
+	content: '▲';
 }
 
 /******Media Queries*******/
