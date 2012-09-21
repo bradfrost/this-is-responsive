@@ -38,7 +38,7 @@ body {
 	color: #000;
 	font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 	padding: 0;
-	-webkit-text-size-adjust: none;
+	-webkit-text-size-adjust: 100%;
 }
 a {
 	color: #808080;
