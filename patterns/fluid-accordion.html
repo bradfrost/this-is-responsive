@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Pattern | This Is Responsive</title>
+    <title>Responsive Pattern | Fluid Accordion | This Is Responsive</title>
     <link rel="stylesheet" media="all" href="../styles.css">
     <!--Pattern CSS-->
     <style>
@@ -20,30 +20,21 @@
         .accordion .panel-title:hover {
             background: #CCC;
         }
-        .accordion .panel-title:active {
+        .accordion .panel-title:active,
+        .accordion .panel-title.active:active {
             background: #999;
         }
         .accordion .panel-title.active {
             background: #CCC;
         }
-        .accordion .panel-title.active:active {
-            background: #999;
-        }
         .accordion .accordion-innerwrap {
             margin: 0 auto;
-            width: 50%;
-            max-width: 30em;
+            width: 98%;
         }
 
         .accordion .panel-title .icon,
         .accordion .panel-title.active .icon {
             font-size: 1.25em;
-        }
-
-        @media screen and (max-width: 42em) {
-            .accordion .accordion-innerwrap {
-                width: 85%;
-            }
         }
 
         .panel-container {
@@ -53,13 +44,13 @@
         .panel-content {
             list-style-type: none;
             margin: 0;
-            padding: .75em 5%;
+            padding: .75em;
             background: #444;
             color: #EFEFEF;
         }
         .panel-content li {
             border-bottom: 1px dotted #AAA;
-            padding: .75em 5%;
+            padding: .75em;
         }
         .panel-content li:last-child {
             border-bottom: none;
@@ -210,17 +201,19 @@
 $(document).ready(function() {
     // Collapsible Menu
     function accordion(trigger) {
+
         //variables
         var $button = $(trigger),//trigger firing the event
             visible = true;//flag for wayfinding
 
-            $button.hover().css({'cursor': 'pointer'});
+            $button.hover().css({'cursor': 'pointer'}); // give the trigger a pointer on :hover
 
         //event
         $button.click(function() {
-            //conditional check
+
             if ( ! visible ) {
                 $button.removeClass('active');
+
                 $('.panel-title .icon').html('&oplus;');
 
                 $(this).next().slideUp('slow',function() {
@@ -229,16 +222,17 @@ $(document).ready(function() {
                 });
             }else {
                 $button.addClass('active');
+
                 $('.panel-title.active .icon').html('&otimes;');
 
-                $(this).next().slideUp(0,function() {
+                $(this).next().slideUp(0, function() {
                     $('.panel-content').attr( 'aria-expanded','true' );
                     $(this).removeClass('visuallyhidden').slideDown('slow');
                 });
             }
 
-            //flag dude
-            visible = !visible;
+            // the flag visibility dude
+            visible = ! visible;
             return false
         });
     }
