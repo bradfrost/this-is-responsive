@@ -70,8 +70,12 @@ h3 {
 	padding-bottom: 0.4em;
 	border-bottom: 1px solid #ccc;
 }
-h1 a {
+h1 a, h2 a, h3 a {
+	display: block;
 	color: #000;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+	color: #e51837;
 }
 blockquote {
 	border-left: 0.5em solid #ddd;
@@ -155,11 +159,23 @@ footer[role=contentinfo] img {
 	margin: 0 -1em;
 	overflow: hidden;
 }
+.grid:target {
+	-webkit-animation: fadeout 5s 1 ease-out;
+    -moz-animation: fadeout 5s 1 ease-out; 
+    -o-animation: fadeout 5s 1 ease-out;
+    animation: fadeout 5s 1 ease-out; 
+}
 .grid > h2 {
 	margin-left: 0.45em;
 }
 .grid > section {
-	padding: 1em 1em 0;
+	padding: 1em 1em 0.5em;
+}
+.grid > section:target {
+	-webkit-animation: fadeout 5s 1 ease-out;
+    -moz-animation: fadeout 5s 1 ease-out; 
+    -o-animation: fadeout 5s 1 ease-out;
+    animation: fadeout 5s 1 ease-out; 
 }
 .grid ul {
 	overflow: hidden;
@@ -567,3 +583,25 @@ footer[role=contentinfo] img {
 	}
 }	
 
+
+/* CSS Animations */
+@-webkit-keyframes fadeout {
+  0%   { background: #fff; }
+  10%   { background: #eee; }
+  100% { background: #fff; }
+}
+@-moz-keyframes fadeout {
+  0%   { background: #fff; }
+  10%   { background: #eee; }
+  100% { background: #fff; }
+}
+@-o-keyframes fadeout {
+  0%   { background: #fff; }
+  10%   { background: #eee; }
+  100% { background: #fff; }
+}
+@keyframes fadeout {
+  0%   { background: #fff; }
+  10%   { background: #eee; }
+  100% { background: #fff; }
+}
