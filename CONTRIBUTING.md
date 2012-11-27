@@ -9,7 +9,7 @@ So how can you help? Well, contribute! Here’s how:
 
 3. Create a new Pen for your pattern. Remember to keep it abstract in order for it to be helpful for as many people as possible.
 
-4. Submit the pattern by creating a [pull request][github-pq] here on GitHub.
+4. Submit the pattern by creating a [pull request][github-pq-help] here on GitHub.
 
 5. Lather. Rinse. Repeat.
 
