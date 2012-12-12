@@ -52,6 +52,11 @@ p {
 }
 img, object, video {
 	max-width: 100%;
+	border: 0;
+}
+a img {
+	border: 0;
+	outline: 0;
 }
 h1 {
 	font-size: 3em;
