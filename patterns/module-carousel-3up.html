@@ -239,6 +239,7 @@
 			
 			function sizeCarousel() { //Determine the size and number of panels to reveal
 				current = 0;
+				breakpointSize = breakpointSize.replace(/"/g,''); // Strips quotes
 				if (breakpointSize == 'medium') {
 					multiplier = 2;
 					
