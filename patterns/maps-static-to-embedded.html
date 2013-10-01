@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.map {
+		  margin: 0 auto;
+		  position: relative;
+		}
+		
+		@media screen and (min-width: 45em) {
+		    body:after { /*  */ 
+		        content: 'widescreen';
+		        display: none;
+		    }
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="map">
+		  <a href="https://maps.google.com/maps?q=Pittsburgh,+PA&hl=en&sll=40.697488,-73.979681&sspn=0.664273,1.454315&oq=Pittsburgh&hnear=Pittsburgh,+Allegheny,+Pennsylvania&t=m&z=12"><img src="http://maps.google.com/maps/api/staticmap?center=40.444465,-80.007076&zoom=13&markers=40.440625,-79.995886&size=500x300&sensor=false" alt="Map of Pittsburgh, PA" />
+		</div>
+		<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pittsburgh,+PA&amp;aq=0&amp;oq=Pittsburgh&amp;sll=40.697488,-73.979681&amp;sspn=0.664273,1.454315&amp;ie=UTF8&amp;hq=&amp;hnear=Pittsburgh,+Allegheny,+Pennsylvania&amp;t=m&amp;ll=40.440676,-79.995918&amp;spn=0.125422,0.219727&amp;z=12&amp;iwloc=A&amp;output=embed">
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var sw = document.body.clientWidth;
+			
+			if ()
+		});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Fluid Map Maintaining Aspect Ratio</h1>
+			<p>Creating a fluid map that preserves aspect ratio by using <a href="http://codepen.io/chriscoyier/pen/115">Google Maps with Uncle Dave's Ol' Padded Box</a></p>
+			<h2>Resources</h2>
+			<ul>
+				<li><a href="http://daverupert.com/2012/04/uncle-daves-ol-padded-box/">Uncle Dave’s Ol’ Padded Box</a></li>
+				<li><a href="http://codepen.io/chriscoyier/pen/115">Google Maps with Uncle Dave’s Ol’ Padded Box by Chris Coyier</a></li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

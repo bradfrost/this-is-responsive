@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.menu li {
+			display: inline-block;
+			margin: 0 0.25em;
+		}
+		.menu li.hidden {
+			display: none;
+		}
+		.menu li a {
+			display: block;
+			padding: 1em 0.5em;
+		}
+		
+		@media screen and (min-width: 48.25em) {
+			body:after {
+		        content: 'large';
+		        display: none;
+		    }
+		    #toggler {
+		    	display: none;
+		    }
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<nav id="menu" class="menu" role="navigation">
+			<ul>
+				<li class="priority"><a href="#">Link #1</a></li>
+				<li class="priority"><a href="#">Link #2</a></li>
+				<li class="priority"><a href="#">Link #3</a></li>
+				<li><a href="#">Link #4</a></li>
+				<li><a href="#">Link #5</a></li>
+				<li><a href="#">Link #6</a></li>
+				<li><a href="#">Link #7</a></li>
+				<li><a href="#">Link #8</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		/*
+		
+		Warning: extremely sloppy code.
+		
+		*/
+		$(document).ready(function() {
+			var $menu = $('#menu'),
+				$menuList = $menu.find('ul'),
+		  		bp = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
+		  		$toggler;
+		  	
+		  	
+		  	if(!$('#toggler').length) {
+				$('<li class="priority" id="toggler"><a href="#">More+</a></li>').appendTo($menuList);
+				$toggler = $('#toggler');
+			}
+			
+		  	
+		  	function checkSize() {
+		  		if(bp=='large') {
+		  			showNav();
+			  	} else {
+			  		hideNav();
+			  		$toggler.text('More+');
+			  	}
+		  	}
+		  	
+		  	function showNav() {
+		  		$menu.find('li:not(.priority)').removeClass('hidden');
+		  	}
+		  	
+		  	function hideNav() {
+		  		$menu.find('li:not(.priority)').addClass('hidden');
+			  	
+		  	}
+			
+			function changeNavLabel() {
+				$toggler.toggleClass('active');
+				if($toggler.hasClass('active')) {
+					$toggler.text('Less-');
+					showNav();
+				} else {
+					$toggler.text('More+');
+					hideNav();
+				}
+			}
+			
+			$menu.on("click", "#toggler", function(e){ //Clicking toggle
+				e.preventDefault();
+				changeNavLabel();
+			});
+		
+			$(window).resize(function() { //On Window resize
+				bp = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+				checkSize();
+				togglerVisibility();
+			});
+			
+			checkSize();
+			togglerVisibility();
+		});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Priority+ Navigation</h1>
+			<p>The <a href="http://justmarkup.com/log/2012/06/19/responsive-multi-level-navigation/">Priority+ pattern</a> was coined by <a href="http://justmarkup.com/">Michael Scharnagl</a> (<a href="http://twitter.com/justmarkup">@justmarkup</a>) to describe navigation that exposes what&#8217;s deemed to be the most important navigation elements and tucks away less important items behind a &#8220;more&#8221; link. The less important items are revealed when the user clicks the &#8220;more&#8221; link.</p>
+<h3>Pros</h3>
+<ul>
+<li><strong>Relatively simple to implement</strong> &#8211; The logic required to execute this technique isn&#8217;t terribly complicated. It&#8217;s just a basic show/hide toggle to reveal the hidden navigation items.</li>
+<li><strong>(hopefully) exposes the most accessed features</strong> &#8211; it&#8217;s hopefully revealing the three or four things the majority of users frequently access anyways.</li>
+</ul>
+<h3>Cons</h3>
+<ul>
+<li><strong>Hides potentially important nav items</strong> &#8211; what you may deem most important may not be what&#8217;s important to your users. Burying nav items means having to make some assumptions, and while it hopefully works out for most users, it might also piss some people off.</li>
+<li><strong>Doesn&#8217;t work well with multi-level navigation</strong> &#8211; The priority+ pattern seems good for navs that have a lot of items at the same hierarchy level, but unfortunately it doesn&#8217;t seem to solve the sub-nav dilemma.</li>
+</ul>
+<h3>Resources</h3>
+<ul>
+<li><a href="http://justmarkup.com/log/2012/06/19/responsive-multi-level-navigation/">Responsive Multi Level Navigation &mdash; let's try.</a></li>
+<li><a href="http://justmarkup.com/lab/juma/nav/example2/">Priority+ Demo</a></li>
+</ul>
+<h3>In the Wild</h3>
+<ul>
+<li><a href="http://www.wm.edu/">William and Mary</a></li>
+<li><a href="http://m.usatoday.com/sports">USA Today&#8217;s mobile site section pages</a> don&#8217;t follow this exactly, but expose the most important categories by default and an arrow or swipe reveals the remaining navigation items. Pretty slick.</li>
+</ul>		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

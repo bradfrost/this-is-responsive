@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.g {
+			padding: 0.25em;
+			overflow: hidden;
+		}
+		.g li {
+			float: left;
+			width: 50%;
+			padding: 0.25em;
+		}
+		.g img {
+			display: block;
+		}
+		.g li:nth-child(odd) {
+			clear: left;
+		}
+	
+		@media screen and (min-width: 40em) {
+			.g li {
+		    	width: 33.3333333333333333%; 
+		  	}
+		  	.g li:nth-child(3n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(odd) {
+				clear: none;
+			}
+		}
+		@media screen and (min-width: 55em) {
+			.g li {
+		    	width: 25%; 
+		  	}
+		  	.g li:nth-child(4n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(3n+1) {
+				clear: none;
+			}
+		}
+		@media screen and (min-width: 72em) {
+			.g li {
+		    	width: 20%; 
+		  	}
+		  	.g li:nth-child(5n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(4n+1) {
+				clear: none;
+			}
+		}
+		@media screen and (min-width: 90em) {
+			.g li {
+		    	width: 16.666666666%; 
+		  	}
+		  	.g li:nth-child(6n+1) {
+		  		clear: left;
+		  	}
+		  	.g li:nth-child(5n+1) {
+				clear: none;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<ul class="g">
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+			<li><a href="#"><img src="images/fpo_square.png" alt="Product Name" /></a></li>
+		</ul>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  
+		});
+	</script>-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Image Grid</h1>
+			<p>A list of images that by default is two-columns. As screen real estate becomes available, more columns are added.</p>
+			<h2>Considerations</h2>
+			<ul>
+				<li>Assume small screen by default. Add columns as necessary.</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="..//patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

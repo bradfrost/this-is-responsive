@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="blog">
+    <head>
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <link rel="stylesheet" href="http://bradfrost.github.com/this-is-responsive/styles.css">
+        <link rel="stylesheet" type="text/css" media="all" href="http://bradfrost.github.com/this-is-responsive/animation.css">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    <body>
+    	<div class="container" id="page">
+    		<header role="banner">
+	        	<h4 class="blog-logo"><a href="/"><img src="http://bradfrostweb.com/this-is-responsive/images/logo_white.png" alt="R/GA" /> This Is Responsive</a></h4>
+	        	<!--
+<form class="search-form" action="/search" method="get">
+				    <input class="search-field" type="search" placeholder="Search" name="q" value="{SearchQuery}"/>
+				</form>
+-->
+				<nav>
+					<ul role="navigation" class="nav">
+						<li><a href="/archive" class="archive">Archive</a></li>
+						<li><a href="/rss">RSS</a></li>
+						<li><a href="/submit">Submit</a></li>
+						<li><a href="http://techblog.rga.com/" rel="external">R/GA Tech Blog</a></li>
+					</ul>
+				</nav>
+	        </header>
+	        <div class="posts">
+	        	{block:SearchPage}
+	        		{block:NoSearchResults}
+	        			<p>There were no results found for <strong>{SearchQuery}</strong>. Try again or <a href="/">head to the homepage</a>.</p>
+	        		{/block:NoSearchResults}
+	        	{/block:SearchPage}
+	        	
+	        	{block:TagPage}
+					<h2 style="margin-bottom: 1em">Posts tagged <strong><a href="{TagURL}">{Tag}</a></strong></h2>
+				{/block:TagPage} 
+		        <ol>
+		            {block:Posts}
+		                {block:Text}
+		                    <li class="post text">
+		                        {block:Title}
+		                            <h2>{Title}</h2>
+		                        {/block:Title}
+								<div class="post-body">
+		                        {Body}
+		                        </div>
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                    </li>
+		                {/block:Text}
+		
+		                {block:Photo}
+		                    <li class="post photo">
+		                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                    </li>
+		                {/block:Photo}
+		
+		                {block:Photoset}
+		                    <li class="post photoset">
+		                        {Photoset-500}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                    </li>
+		                {/block:Photoset}
+		
+		                {block:Quote}
+		                    <li class="post quote">
+		                        "{Quote}"
+		
+		                        {block:Source}
+		                            <div class="source">{Source}</div>
+		                        {/block:Source}
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                    </li>
+		                {/block:Quote}
+		
+		                {block:Link}
+		                    <li class="post link">
+		                    	
+		                        <h2><a href="{URL}" class="link" {Target}>{Name}</a></h2>
+								{block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                        {block:Description}
+		                        <div class="post-body">{Description}</div>
+		                        {/block:Description}
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    
+		                    </li>
+		                {/block:Link}
+		
+		                {block:Chat}
+		                    <li class="post chat">
+		                        {block:Title}
+		                            <h3><a href="{Permalink}" class="permalink">{Title}</a></h3>
+		                        {/block:Title}
+		
+		                        <ul class="chat">
+		                            {block:Lines}
+		                                <li class="{Alt} user_{UserNumber}">
+		                                    {block:Label}
+		                                        <span class="label">{Label}</span>
+		                                    {/block:Label}
+		
+		                                    {Line}
+		                                </li>
+		                            {/block:Lines}
+		                        </ul>
+		                    </li>
+		                {/block:Chat}
+		
+		                {block:Video}
+		                    <li class="post video">
+		                        {Video-500}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                    </li>
+		                {/block:Video}
+		
+		                {block:Audio}
+		                    <li class="post audio">
+		                        {AudioPlayerBlack}
+		
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+		                        <ul class="tags">
+			                        {block:Tags}
+			                            <li>
+			                                <a href="{TagURL}">{Tag}</a>
+			                            </li>
+			                        {/block:Tags}
+			                    </ul>
+			                    {block:Date}<a href="{Permalink}" class="permalink">{TimeAgo}</a>{/block:Date}
+		                    </li>
+		                {/block:Audio}
+		            {/block:Posts}
+		        </ol>
+		        <nav class="blog-nav">
+		        	{block:PreviousPage}
+		                <a href="{PreviousPage}" class="nav-prev">/Previous</a>
+		                {/block:PreviousPage}
+		            	{block:NextPage}
+		                <a href="{NextPage}" class="nav-next">/Next</a>
+		            	{/block:NextPage}
+		        </nav>
+	        </div>
+	        <aside class="sidebar">
+		        <div class="about">
+			        {block:Description}
+			            <h3>About Responsive.RGA.com</h3>
+			            {Description}
+			        {/block:Description}
+				</div>
+				<div class="submit">
+					<h3>Submit</h3>
+					<p>Have a responsive design resource worth sharing? <a href="/submit">Submit it here.</a></p>
+				</div>
+				<div class="about-rga">
+					<h3>About R/GA</h3>
+					<p>Founded in 1977, <a href="http://rga.com">R/GA</a> is a full-service digital agency that transforms the way people interact with brands. A commitment to design, technology, and innovation has defined R/GA's continuing legacy in the world of communications and marketing.</p>
+					<ul class="social-links">
+						<li><a href="http://www.facebook.com/RGA" class="s-fb">Facebook</a></li>
+						<li><a href="https://twitter.com/rga" class="s-twitter">Twitter</a></li>
+						<li><a href="http://www.linkedin.com/company/r-ga" class="s-linkedin">LinkedIn</a></li>
+						<li><a href="/rss" class="s-rss">RSS</a></li>
+					</ul>
+				</div>
+	        </aside>
+	     	<a href="#page" class="top">Back to Top</a>
+	    </div>
+	    <script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-2687475-22']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+    </body>
+</html>

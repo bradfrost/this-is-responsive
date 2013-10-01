@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.c {
+			position: relative;
+			max-width: 74em;
+			margin: 0 auto;
+		}
+		.c-list-container {
+			overflow: hidden;
+			position: relative;
+		}
+		.c-list {
+			width: 99999em;
+			position: relative;
+			left: 0;
+			-webkit-transition: left 0.5s ease-out; 
+     		-moz-transition: left 0.5s ease-out;  
+       		-o-transition: left 0.5s ease-out; 
+        	transition: left 0.5s ease-out;
+		}
+		
+		.c li {
+			float: left;
+		}
+		.c li a {
+			display: block;
+		}
+		.c img {
+			display: block;
+		}
+		.c h2 {
+			margin-top: 0;
+		}
+		.summary {
+			padding: 1em;
+		}
+		.c-nav {
+			clear: both;
+			overflow: hidden;
+			border-top: 1px solid #808080;
+		}
+		.c-nav a {
+			float: left;
+			width: 50%;
+			padding: 1em;
+			-webkit-transition: opacity 0.5s ease-out; 
+     		-moz-transition: opacity 0.5s ease-out;  
+       		-o-transition: opacity 0.5s ease-out; 
+        	transition: opacity 0.5s ease-out;
+		}
+		.c-nav a.next {
+			border-left: 1px solid #808080;
+			text-align: right;
+		}
+		.c-nav a.inactive {
+			opacity: 0.2;
+			
+		}
+		
+		/* Medium */
+		@media screen and (min-width: 35em) {
+			.c {
+				padding: 1em 0.5em 0;
+			}
+			.c li {
+				padding: 0 0.5em;
+			}
+			body:after { /* Conditional CSS http://adactio.com/journal/5429/ */
+		        content: 'medium';
+		        display: none;
+	   		}
+		}
+
+		
+		/* Large */
+		@media screen and (min-width: 56.25em) {
+			body:after { /* Conditional CSS http://adactio.com/journal/5429/ */
+		        content: 'large';
+		        display: none;
+	   		}
+		}
+		
+		/*Large with room to spare on either side */
+		@media screen and (min-width: 82em) {
+			.c-nav a {
+				position: absolute;
+				top: 40%;
+				left: -4em;
+				width: 4em;
+				height: 2em;
+				padding: 0;
+				margin-top: -1em;
+			}
+			.c-nav a.next {
+				left: auto;
+				right: -4em;
+				border: 0;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="c">
+			<div class="c-list-container">
+				<ul class="c-list">
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the first title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the second title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the third title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the fourth title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the fifth title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the sixth title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the seventh title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the eighth title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/fpo_landscape.png" alt="FPO Image" />
+							<div class="summary">
+								<h2>This is the ninth title</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lacus erat, sit amet tempor nibh. Aliquam erat volutpat. Nulla et porta tortor. </p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="c-nav">
+				<a href="#" class="prev">&larr; Prev</a>
+				<a href="#" class="next">Next &rarr;</a>
+			</nav>
+		</div>
+		
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		(function(w){
+			var sw = document.body.clientWidth,
+				current = 0,
+				breakpointSize = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
+				multiplier = 1, /*Determines the number of panels*/
+				$carousel = $('.c'),
+				$cList = $('.c-list'),
+				$cWidth = $carousel.width(),
+				$li = $('.c li'),
+				$liLength = $li.size(),
+				numPages = $liLength/multiplier,
+				$prev = $('.c-nav .prev'),
+				$next = $('.c-nav .next');
+			
+			$(document).ready(function() {
+				buildCarousel();
+			});
+			
+			
+			$(window).resize(function(){ //On Window Resize
+				sw = document.body.clientWidth;
+				$cWidth = $carousel.width();
+				breakpointSize = window.getComputedStyle(document.body,':after').getPropertyValue('content');  /* Conditional CSS http://adactio.com/journal/5429/ */
+				sizeCarousel();
+				posCarousel();
+			});
+			
+			function sizeCarousel() { //Determine the size and number of panels to reveal
+				current = 0;
+				breakpointSize = breakpointSize.replace(/"/g,''); // Strips quotes
+				if (breakpointSize == 'medium') {
+					multiplier = 2;
+					
+				} else if (breakpointSize == 'large') {
+					multiplier = 3;
+				} else {
+					multiplier = 1;
+				}
+				
+				animLimit = $liLength/multiplier-1;
+				
+				$li.width($cWidth/multiplier); //Set panel widths
+				
+			}
+			
+			
+			function buildCarousel() { //Build the Carousel
+				sizeCarousel();
+			}
+			
+			function posCarousel() { //Animate Carousel. CSS transitions used for the actual animation.
+				var pos = -current * $cWidth;
+				$cList.css("left",pos);
+			}
+			
+			$prev.click(function(e){ //Previous Button Click
+				e.preventDefault();
+				if(current>0) {
+					current--;
+				}
+				posCarousel();
+				
+			});
+			$next.click(function(e){ //Next Button Click
+				e.preventDefault();
+				if(current<animLimit) {
+					current++;
+				}
+				posCarousel();
+			});
+		})(this);
+	</script>
+	<!--End Pattern JS-->	
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>3-up Carousel</h1>
+			<p>A carousel that shows one panel on smaller screens, and reveals three panels when space becomes available.</p>
+			<h2>Considerations</h2>
+			<ul>
+				<li>Assumes small screen by default</li>
+				<li>Swipe-enabled for devices with touch even support</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

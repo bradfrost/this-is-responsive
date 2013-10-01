@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.btn-set {
+			overflow: hidden;
+		}
+		.btn-set a {
+			display: block;
+			width: 50%;
+			float: left;
+			text-align: center;
+			padding: 1em;
+			border-bottom: 1px solid #808080;
+		}
+		.btn-set a:last-child {
+			border-left: 1px solid #808080;
+		}	
+		.aside {
+			padding: 1em;
+		}
+		.select {
+			display: block;
+			width: 100%;
+		}
+		.l li {
+			font-size: 2em;
+			padding: 0.5em;
+			font-weight: bold;
+			border-bottom: 1px solid #808080;
+		}
+		.hide {
+			display: none;
+		}
+		
+		@media all and (min-width: 50em){
+		     
+		     body:after { /*Conditional CSS http://adactio.com/journal/5429/*/
+		        content: 'large';
+		        display: none;
+		    }
+		    .btn-set {
+		    	display: none;
+		    }
+		    .main {
+		    	float: right;
+		    	width: 75%;
+		    }
+		    .aside {
+		    	float: left;
+		    	width: 25%;
+		    }
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="btn-set">
+	 		<a href="#filter" id="filter-btn" class="btn">Filter</a>
+	 		<a href="#sort" id="sort-btn" class="btn">Sort</a>
+	 	</div>
+		<div class="main"> 	
+			<ul class="l">
+				<li><a href="#">List Item #1</a></li>
+				<li><a href="#">List Item #2</a></li>
+				<li><a href="#">List Item #3</a></li>
+				<li><a href="#">List Item #4</a></li>
+				<li><a href="#">List Item #5</a></li>
+				<li><a href="#">List Item #6</a></li>
+				<li><a href="#">List Item #7</a></li>
+				<li><a href="#">List Item #8</a></li>
+				<li><a href="#">List Item #9</a></li>
+				<li><a href="#">List Item #10</a></li>
+				<li><a href="#">List Item #11</a></li>
+				<li><a href="#">List Item #12</a></li>
+			</ul>
+		 </div>
+		 <div class="aside">
+		 	<div id="filter" class="sup">
+		 		<h3>Filter</h3>
+		 		<form id="filter-form" method="post" action="#">
+		 			<fieldset>
+						  <div>
+						  	<input type="checkbox" id="check-1" name="check-1" />
+					      	<label for="check-1">Red</label>
+					      </div>
+					      <div>
+					      	<input type="checkbox" id="check-2" name="check-2" />
+					      	<label for="check-2">Blue</label>
+					      </div>
+					      <div>
+					      	<input type="checkbox" id="check-3" name="check-3" />
+					     	 <label for="check-3">Green</label>
+					      </div>
+		 			</fieldset>
+		 		</form>
+		 	</div>
+		 	<div id="sort" class="sup">
+		 		<h3>Sort by:</h3>
+		 		<form id="sort-form" method="post" action="#">
+		 			<fieldset>
+		 				<legend>Sort by:</legend>
+		 				<select class="select">
+		 					<option>Name</option>
+		 					<option>Date</option>
+		 					<option>Price</option>
+		 				</select>
+		 			</fieldset>
+		 		</form>
+		 	</div>
+		 </div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+      		var sw = document.body.clientWidth,
+      			bp = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
+      			$btnSet = $('.btn-set'),
+      			$filterBtn = $('#filter-btn'),
+      			$sortBtn = $('#sort-btn');
+      			
+      		$filterBtn.click(function(e){
+      			$this = $(this),
+      			$thisHref = $this.attr('href');
+      			
+      			e.preventDefault();
+      			loadFragment($thisHref);
+      		});
+      		
+      		
+      		function loadFragment(el) {
+      			var $el = $(el),
+      				$form = $el.find('form');
+      			$('<div id="form-container" />').insertAfter($btnSet);
+      			if ($('#form-container').find($form).length)
+      			$form.clone().appendTo('#form-container');
+      			$(el).addClass('hide');
+      		}
+		});
+	</script>
+	<!--End Pattern JS-->
+
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Content-First Filterable List</h1>
+			<p>The anchor pattern is similar to the footer navigation pattern, where the main content appears </p>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

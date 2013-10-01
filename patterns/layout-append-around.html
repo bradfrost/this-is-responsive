@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		/* the sample appendaround element */
+		.sample {
+		    padding: 1em;
+		    background: tan;
+		}
+		
+		.baz {
+		    display: block;
+		}
+		.foo,
+		.bar {
+		    display: none; 
+		}
+		
+		@media all and (min-width: 30em){
+		    .bar {
+		      display: block;
+		    }
+		    .foo, .baz {
+		      display: none; 
+		    }
+		}
+		
+		@media all and (min-width: 50em){
+		    div.foo {
+		      display: block;
+		    }
+		    div.bar, div.baz {
+		      display: none; 
+		    }
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		  <!-- potential container for appendAround -->
+		  <div class="foo" data-set="foobarbaz"></div>
+		
+		  <ul>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.</li>
+		   <li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+		
+		  <!-- potential container for appendAround -->
+		  <div class="bar" data-set="foobarbaz"></div>
+		
+		  <ul>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.</li>
+		   <li>Vestibulum auctor dapibus neque.</li>
+		</ul>
+		
+		
+		  <!-- initial container for appendAround -->
+		  <div class="baz" data-set="foobarbaz">
+		
+		    <p class="sample">Sample appendAround Element</p>
+		
+		  </div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		/*! appendAround markup pattern. [c]2012, @scottjehl, Filament Group, Inc. MIT/GPL 
+	how-to:
+		1. Insert potential element containers throughout the DOM
+		2. give each container a data-set attribute with a value that matches all other containers' values
+		3. Place your appendAround content in one of the potential containers
+		4. Call appendAround() on that element when the DOM is ready
+	*/
+(function( $ ){
+	$.fn.appendAround = function(){
+	  return this.each(function(){
+      
+	    var $self = $( this ),
+	        att = "data-set",
+	        $set = $( "["+ att +"='"+ $self.closest( "["+ att +"]" ).attr( att ) + "']" );
+      
+	    function appendToVisibleContainer(){
+	      if( $self.is( ":hidden" ) ){
+	        $self.appendTo( $set.filter( ":visible:eq(0)" ) );
+	      }
+	    }
+      
+	    appendToVisibleContainer();
+      
+	    $(window).resize( appendToVisibleContainer );
+      
+	  });
+	};
+	}( jQuery ));
+	</script>
+	<!--End Pattern JS-->
+
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>AppendAround</h1>
+			<p>Content that becomes two equal columns when space allows.</p>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

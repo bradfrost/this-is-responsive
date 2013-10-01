@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.wrap {
+			position: relative;
+			-webkit-transition: all 0.3s ease-out;  
+			-moz-transition: all 0.3s ease-out;
+			-ms-transition: all 0.3s ease-out;
+			-o-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+		.wrap.active {
+			left: 16em;
+		}
+		a.menu-link {
+		    float: left;
+		    display: block;
+		    padding: 1em;
+		}
+		nav[role=navigation] {
+			background: #808080;
+			clear: both;
+			overflow: hidden;
+		}
+		.js nav[role=navigation] {
+			width: 16em;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -16em;
+		}
+		nav[role=navigation] ul {
+			margin: 0;
+			padding: 0;
+			border-top: 1px solid #808080;
+		}
+		nav[role=navigation] li a {
+			display: block;
+			padding: 0.8em;
+			color: #fff;
+			border-bottom: 1px solid #fff;
+		}
+		.lorem {
+			clear: both;
+		}
+		
+		@media screen and (min-width: 41.25em) {
+			a.menu-link {
+			   display: none;
+			}
+			.js nav[role=navigation] {
+				max-width: none;
+				position: static;
+				width: auto;
+			}
+			.wrap.active {
+				left: 0;
+			}
+			nav[role=navigation] ul {
+				margin: 0;
+				border: 0;
+			}
+			
+			nav[role=navigation]  li {
+				display: inline-block;
+				margin: 0 0.25em;
+			}
+			nav[role=navigation] li a {
+				border: 0;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<div class="wrap" id="wrap">
+			<a href="#menu" class="menu-link">Menu</a>
+			<nav id="menu" role="navigation">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="lorem mod">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis dignissim orci viverra venenatis. Nulla sit amet quam at nisl sagittis adipiscing in a ligula. Nam in nisi neque. Ut in ipsum eget justo dignissim accumsan a sit amet neque. Nulla facilisi. Aliquam erat volutpat. Aliquam aliquet bibendum mollis. Aliquam erat volutpat. Sed commodo elit ac neque eleifend in commodo justo elementum. Curabitur tristique, odio id convallis aliquet, nibh augue sollicitudin lacus, at fermentum sem dolor eu lacus. Proin gravida dui in libero aliquet quis egestas odio dictum. Fusce in ligula vitae ante mollis viverra. Curabitur nibh felis, ornare ut tempor sed, lobortis id elit. Phasellus nec semper lorem. Pellentesque erat augue, tincidunt sed vulputate et, congue nec felis. Sed ligula metus, condimentum non commodo et, varius varius nisi.</p>
+						
+						<p>Nunc arcu justo, elementum ac accumsan id, porttitor ac sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lectus eros, dignissim sit amet viverra et, vulputate gravida dui. Donec at mattis tellus. Suspendisse nisi purus, porttitor in lacinia ornare, malesuada non dolor. Praesent ligula massa, blandit nec consequat et, sagittis ut purus. Aliquam erat volutpat. Maecenas a arcu ligula. Proin vitae eros purus, eu adipiscing orci. Nunc vestibulum, ante quis venenatis facilisis, lacus arcu gravida arcu, eget varius nibh lacus et leo. Aliquam lacinia, mi et convallis tincidunt, massa tellus accumsan felis, at consequat lacus ligula non leo. Pellentesque auctor ipsum lorem, ut feugiat purus. Mauris sed tellus orci, in pharetra dui. Morbi vestibulum lectus nec nulla bibendum mollis.</p>
+						
+						<p>Donec nulla nisi, dictum auctor aliquet a, ultrices quis ipsum. Nam bibendum arcu in quam condimentum ut aliquet odio luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacus nulla, laoreet a fermentum vel, scelerisque sed mi. In consectetur magna sed leo scelerisque id mattis enim vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus vulputate mauris et semper. Nam sed rhoncus justo. Duis quis orci quis lorem egestas mattis et in risus. Aenean justo eros, luctus sit amet ultricies et, interdum non est.</p>			
+			</div>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $('body').addClass('js');
+		  var $menu = $('#menu'),
+		  	$menulink = $('.menu-link'),
+		  	$wrap = $('#wrap');
+		$menulink.click(function() {
+			$menulink.toggleClass('active');
+			$wrap.toggleClass('active');
+			return false;
+		});});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h2 id="left">The Left Nav Flyout</h2>
+			<p>Facebook popularized a left navigation for mobile that&#8217;s quite unique. The nav is accessed by a menu icon, which reveals a tray that <a href="http://stephanierieger.com/wp-content/uploads/2012/01/sliding-menu.png">slides in from the left</a> and moves the main content over to the right. </p>
+			<h3>Pros</h3>
+			<ul>
+			<li><strong>Extendable</strong>- While other nav techniques don&#8217;t work very well if you have a lot of list items, this approach provides a lot of space to expand. I think that&#8217;s why Facebook took to it.</li>
+			<li><strong>Good looking</strong>- This menu is very sophisticated and advanced, so it definitely has a wow factor to it.</li>
+			<li><strong>Facebook conventions </strong>- Facebook mobile users will be used to this pattern already since the web and native Facebook mobile apps utilize this left tray system.</li>
+			</ul>
+			<h3>Cons</h3>
+			<ul>
+			<li><strong>Advanced</strong>- While the other methods modify simple elements, this shelf method has a lot of moving parts. As <a href="http://stephanierieger.com/a-plea-for-progressive-enhancement/">Stephanie Rieger pointed out</a>, the Obama site navigation broke on everything but the most sophisticated devices. If your project is meant for a broader audience, you want to be very careful if choosing this approach.</li>
+			<li><strong>Doesn&#8217;t scale well</strong>- this method is quite unique to mobile and doesn&#8217;t necessarily scale up to large screens easily. You can run a risk of essentially maintaining two separate navs for small and large screens.</li>
+			<li><strong>Potentially confusing</strong>- When I first saw Facebook&#8217;s new mobile nav, I actually thought it was broken. Keeping a hint of the content on the right seems a bit weird to me, but this is all personal preference.</li>
+			</ul>
+			<h3>In The Wild</h3>
+			<ul>
+			<li><a href="http://www.barackobama.com/">Barack Obama</a></li>
+			</ul>
+			<h3>Resources</h3>
+			<ul>
+			<li><a href="http://stephanierieger.com/a-plea-for-progressive-enhancement/">A Plea for Progressive Enhancement</a></li>
+			<li><a href="http://jasonweaver.name/lab/offcanvas/variations/">Off Canvas</a></li>
+			</ul>		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

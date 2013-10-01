@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.navigation {
+			padding: 1em;
+		}
+		select {
+			width: 100%;
+		}
+		.nav-list {
+			overflow: hidden;
+		}
+		.nav-list li {
+			float: left;
+			margin-right: 1em;
+		}
+		
+		/* styles for desktop */
+		.tinynav { display: none }
+		
+		/* styles for mobile */
+		@media screen and (max-width: 37.5em) {
+		    .tinynav { display: block }
+		    .nav-list { display: none }
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<nav class="navigation" role="navigation">
+			<ul class="nav-list">
+			     <li><a href="#">Home</a></li>
+			     <li><a href="#">Products</a></li>
+			     <li><a href="#">Services</a></li>
+			     <li><a href="#">Locations</a></li>
+			     <li><a href="#">About</a></li>
+			     <li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			  /*! http://tinynav.viljamis.com v1.03 by @viljamis */
+			(function ($, window, i) {
+			  $.fn.tinyNav = function (options) {
+			
+			    // Default settings
+			    var settings = $.extend({
+			      'active' : 'selected', // String: Set the "active" class
+			      'header' : false // Boolean: Show header instead of the active item
+			    }, options);
+			
+			    return this.each(function () {
+			
+			      // Used for namespacing
+			      i++;
+			
+			      var $nav = $(this),
+			        // Namespacing
+			        namespace = 'tinynav',
+			        namespace_i = namespace + i,
+			        l_namespace_i = '.l_' + namespace_i,
+			        $select = $('<select/>').addClass(namespace + ' ' + namespace_i);
+			
+			      if ($nav.is('ul,ol')) {
+			
+			        if (settings.header) {
+			          $select.append(
+			            $('<option/>').text('Navigation')
+			          );
+			        }
+			
+			        // Build options
+			        var options = '';
+			
+			        $nav
+			          .addClass('l_' + namespace_i)
+			          .find('a')
+			          .each(function () {
+			            options +=
+			              '<option value="' + $(this).attr('href') + '">' +
+			              $(this).text() +
+			              '</option>';
+			          });
+			
+			        // Append options into a select
+			        $select.append(options);
+			
+			        // Select the active item
+			        if (!settings.header) {
+			          $select
+			            .find(':eq(' + $(l_namespace_i + ' li')
+			            .index($(l_namespace_i + ' li.' + settings.active)) + ')')
+			            .attr('selected', true);
+			        }
+			
+			        // Change window location
+			        $select.change(function () {
+			          window.location.href = $(this).val();
+			        });
+			
+			        // Inject select
+			        $(l_namespace_i).after($select);
+			
+			      }
+			
+			    });
+			
+			  };
+			})(jQuery, this, 0);
+			
+			$(".nav-list").tinyNav();});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Select Menu</h1>
+			<p>One way of taming nav links gone wild is to transform a list of links into a select menu for small screens. This is a clever way to save real estate.</p>
+			<h3>Pros</h3>
+			<ul>
+				<li><strong>Frees up plenty of space</strong>- a select menu definitely takes up a lot less space than a horizontal or vertical list of links </li>
+				<li><strong>Keeps interactions in the header</strong>- instead of a footer nav, the select menu keeps the navigation functionality in the header, where users are used to seeing web navigation</li>
+				<li><strong>Easily Recognizable</strong>- a select menu with a clear label saying &#8220;navigation&#8221; or &#8220;menu&#8221; is definitely easy for users to figure out.  </li>
+				<li><strong>Pulls up native controls</strong>- each mobile browser will handle select menus their own way. Touch devices will pull up the nav in a touch friendly list, while trackball/d-pad/pearl devices will pull up a select menu more conducive to that particular input method.</li>
+			</ul>
+			<h3>Cons</h3>
+			<ul>
+				<li><strong>Lack of styling control</strong>- select menus are a pain in the ass to style. Each browser handles them in their own, usually clunky, way. Forget about cross-browser styling and coming out with anything that looks halfway consistent. As a result, the select menu can stick out like a sore thumb and really dirty up an otherwise good-lookin&#8217; design.</li>
+				<li><strong>Potentially confusing</strong> &#8211; Users are used to select menus in the context of filling out a form, but I&#8217;m not sure they&#8217;d grasp a form element out of that context. This is simply a hunch, so it would be interesting to test.</li>
+				<li><strong>Handling subnav items</strong>- nested lists handled by select menus can look weird. Child categories are usually handled by <a href="http://media.smashingmagazine.com/wp-content/uploads/2011/12/prog-resp-nav_13.jpg">indenting with dashes</a>, and while it might get the point across I see it as potentially confusing and a little ugly.</li>
+				<li><strong>Javascript dependency</strong>- It doesn&#8217;t require too much JS to convert the list to a select menu, but it&#8217;s worth pointing out simply because mobile browsers do the dardest things. But again, the technique is pretty cut and dry so there shouldn&#8217;t be too many hang ups using this approach.</li>
+			</ul>
+			<h3>Resources</h3>
+			<ul>
+				<li><a href="http://tinynav.viljamis.com/">TinyNav</a> by <a href="https://twitter.com/viljamis">@viljamis</a></li>
+				<li><a href="http://css-tricks.com/convert-menu-to-dropdown/">Convert a Menu to a Dropdown for Small Screens</a></li>
+				<li><a href="http://coding.smashingmagazine.com/2012/02/13/progressive-and-responsive-navigation/">Progressive and Responsive Navigation</a></li>
+				<li><a href="https://github.com/mattkersley/Responsive-Menu">Responsive Menu</a></li>
+			</ul>
+			<h3>In the Wild</h3>
+			<ul>
+				<li><a href="http://viljamis.com/">Viljami Salminen</a></li>
+				<li><a href="http://retreats4geeks.com/">Retreats 4 Geeks</a></li>
+				<li><a href="http://www.fivesimplesteps.com">Five Simple Steps</a></li>
+				<li><a href="http://www.performancemarketingawards.co.uk/">Performance Marketing Awards</a></li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

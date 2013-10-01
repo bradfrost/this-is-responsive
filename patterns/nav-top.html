@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.navigation li {
+			display: inline-block;
+			margin: 0 0.5em;
+		}
+		.navigation li a {
+			display: block;
+			padding: 1em 0.5em;
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<ul class="navigation" role="navigation">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  
+		});
+	</script>-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Top Links</h1>
+			<p>One of the easiest-to-implement solutions for navigation is to simply keep it at the top. Because of its ease of implementation, it's found on many (maybe even most) responsive sites right now.</p>
+			<h3>Pros</h3>
+			<ul>
+			<li><strong>Easy to implement</strong>- you can implement your large-screen site almost as-is.</li>
+			<li><strong>No Javascript dependencies</strong> &mdash; ensuring maximum compatibility</li>
+			<li><strong>No back-breaking CSS maneuvers required</strong></li>
+			<li><strong>No tripping over your source order</strong> &mdash; no need to jump through hoops to shift nav lists around in the source. It flows au naturel.</li>
+			</ul>
+			<h3>Cons</h3>
+			<ul>
+			<li><strong>Height issues</strong>- <a href="http://andmag.se/2012/01/height-matters/">Height matters in mobile</a>. As <a href="http://www.abookapart.com/products/mobile-first">Luke's book</a> explains, content-first, nav-second is preferred for mobile web experiences. You want to get the users to the meat-and-potatoes content as quickly as possible. That means getting the navigation out of user's way so they can focus on the core information on the page. It can also be confusing when all the core content is cut off</li>
+			<li><strong>Not scalable</strong> &mdash; What happens when you want to add a new section to your site? Where the nav fits neatly on one line now, what happens when your client says you need to add "products and services" to the nav? Or when you need to translate the menu to German?</li>
+			<li><strong>Fat Fingers</strong> &mdash; Cramming links too closely together can easily result in unwanted proximity clicks</li>
+			<li><strong>Cross-device issues</strong> &mdash; While text might look great on an iPhone, devices have different ways of rendering fonts. Sites can look great on an iPhone but break when viewed on other platforms:</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

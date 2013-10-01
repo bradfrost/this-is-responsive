@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.grid {
+			overflow: hidden;
+			padding: 0.5em 0 0 0.5em;
+			max-width: 76em;
+			margin: 0 auto;
+		}
+		.grid li {
+			padding: 0 0.5em 0.5em 0;
+		}
+		.grid li > div {
+			background: #808080;
+			padding: 7em 2em;
+			text-align: center;
+		}
+		.grid li.wide {
+			width: 100%;
+		}
+		.grid li a {
+			color: #fff;
+		}
+		
+		@media all and (min-width: 27em) {
+			.grid li {
+				width: 50%;
+				float: left;
+			}
+		}
+		
+		@media all and (min-width: 40em) {
+			.grid li {
+				width: 33.3333333%;
+			}
+			.grid li.wide {
+				width: 66.666666%;
+			}
+		}
+		@media all and (min-width: 60em) {
+			.grid li {
+				width: 25%;
+			}
+			.grid li.wide {
+				width: 50%;
+			}
+		}
+	</style>
+	
+	<!--Pattern HTML-->
+	<section id="pattern" class="pattern">
+		<ul class="grid">
+			<li>
+				<div>
+					<a href="#">1</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">2</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">3</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">4</a>
+				</div>
+			</li>
+			<li class="wide">
+				<div>
+					<a href="#">5</a>
+				</div>
+			</li>
+			<li class="wide">
+				<div>
+					<a href="#">6</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">7</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">8</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">9</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="#">10</a>
+				</div>
+			</li>
+		</ul>
+	</section>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Double Wide Grid Block</h1>
+			<p>A list of objects with several items that are twice as big.</p>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

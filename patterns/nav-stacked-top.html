@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.navigation li a {
+			display: block;
+			border-bottom: 1px solid #000;
+			padding: 1em;
+		}
+		
+		@media all and (min-width: 30em) {
+			.navigation li {
+				display: inline-block;
+				margin: 0 0.5em;
+			}
+			.navigation li a {
+				padding: 1em 0.5em;
+				border: 0;
+			}
+		}
+		
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<ul class="navigation" role="navigation">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Products</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  
+		});
+	</script>-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Stacked Top Links</h1>
+			<p>A navigation that vertically stacks navigation items on top of each other for small screens, and becomes a horizontal list when screen space becomes available.</p>
+			<h3>Pros</h3>
+			<ul>
+			<li><strong>Easy to implement</strong>- you can implement your large-screen site almost as-is.</li>								<li><strong>More touch-friendly than the top links pattern</strong> - Where links across the top can lead to unwanted proximity clicks, stacking the links provides a larger hit state</li>
+			</ul>
+			<h3>Cons</h3>
+			<ul>
+			<li><strong>Height issues</strong>- <a href="http://andmag.se/2012/01/height-matters/">Height matters in mobile</a>. As <a href="http://www.abookapart.com/products/mobile-first">Luke's book</a> explains, content-first, nav-second is preferred for mobile web experiences. You want to get the users to the meat-and-potatoes content as quickly as possible. That means getting the navigation out of user's way so they can focus on the core information on the page. It can also be confusing when all the core content is cut off</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

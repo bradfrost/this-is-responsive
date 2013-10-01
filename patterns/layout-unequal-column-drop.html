@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.c {
+			padding: 1em;
+		}
+		@media screen and (min-width: 42em) {
+			.main {
+				width: 75%;
+				float: left;
+				padding: 0 1em 0 0;
+			}
+			.sb {
+				float: left;
+				width: 25%;
+				
+			}
+			.sb-2 {
+				clear: both;
+			}
+		}
+		@media screen and (min-width: 62em) {
+			.main {
+				width: 50%;
+				margin-left: 25%;
+				padding: 0 1em;
+			}
+			.sb {
+				margin-left: -75%;
+			}
+			.sb-2 {
+				float: right;
+				width: 25%;
+				clear: none;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="c">
+			<div class="main">
+				<h2>Main Content (1st in source order)</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
+				<p>Proin quis dui eros. Morbi fringilla, ligula vitae interdum volutpat, est eros ultricies sem, vitae pellentesque lacus lorem vitae risus. In odio eros, placerat in fermentum sit amet, commodo eget magna. In suscipit velit pharetra neque consequat commodo congue risus eleifend. Aliquam tellus ligula, dapibus sed rutrum at, gravida vitae urna. Praesent volutpat molestie eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nulla urna, hendrerit in egestas ut, ullamcorper quis lectus. Phasellus faucibus metus ac nisl volutpat a lobortis lorem molestie. Ut bibendum vulputate tortor, a faucibus enim tempus ut. Fusce consectetur, ligula quis feugiat luctus, sapien tortor hendrerit enim, et tincidunt sapien augue in nibh. Curabitur ligula odio, ullamcorper ac fermentum eu, luctus vel mauris. Donec vehicula egestas urna, et hendrerit augue ultricies ac. Morbi urna elit, dignissim in sagittis congue, pretium eu eros. Sed blandit varius risus, pellentesque consequat lectus cursus in. Aenean pellentesque nibh ut odio euismod in sollicitudin neque laoreet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
+				<p>Proin quis dui eros. Morbi fringilla, ligula vitae interdum volutpat, est eros ultricies sem, vitae pellentesque lacus lorem vitae risus. In odio eros, placerat in fermentum sit amet, commodo eget magna. In suscipit velit pharetra neque consequat commodo congue risus eleifend. Aliquam tellus ligula, dapibus sed rutrum at, gravida vitae urna. Praesent volutpat molestie eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nulla urna, hendrerit in egestas ut, ullamcorper quis lectus. Phasellus faucibus metus ac nisl volutpat a lobortis lorem molestie. Ut bibendum vulputate tortor, a faucibus enim tempus ut. Fusce consectetur, ligula quis feugiat luctus, sapien tortor hendrerit enim, et tincidunt sapien augue in nibh. Curabitur ligula odio, ullamcorper ac fermentum eu, luctus vel mauris. Donec vehicula egestas urna, et hendrerit augue ultricies ac. Morbi urna elit, dignissim in sagittis congue, pretium eu eros. Sed blandit varius risus, pellentesque consequat lectus cursus in. Aenean pellentesque nibh ut odio euismod in sollicitudin neque laoreet.</p>
+							</div>
+			<div class="sb">
+				<h3>Column (2nd in source order)</h3>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				
+			</div>
+			<div class="sb-2">
+				<h3>Column (3nd in source order)</h3>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				
+			</div>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Column Drop</h1>
+			<p>From Luke Wroblewski's <a href="http://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns</a>:</p>
+			<blockquote>
+				<p>Another popular pattern starts with a multi-column layout and ends up with a single column layout, dropping columns along the way as screen sizes get narrower. Unlike the Mostly Fluid pattern, the overall size of elements in this layout tend to stay consistent. Adapting to various screen sizes instead relies on stacking columns.</p>
+				<p>When and how is each column is stacked at different resolution breakpoints differs for each design, but generally either navigation or content is placed at the top of narrow screens.</p>
+			</blockquote>
+			
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Pattern | Fluid Accordion | This Is Responsive</title>
+    <link rel="stylesheet" media="all" href="../styles.css">
+    <!--Pattern CSS-->
+    <style>
+        .accordion .panel-title {
+            margin: 0;
+            padding: .75em;
+            -webkit-transition: .3s all ease-in-out;
+             -moz-transition: .3s all ease-in-out;
+               -o-transition: .3s all ease-in-out;
+            transition: .3s all ease-in-out;
+            background: #EFEFEF;
+            color: #333333;
+        }
+        .accordion .panel-title:hover {
+            background: #CCC;
+        }
+        .accordion .panel-title:active,
+        .accordion .panel-title.active:active {
+            background: #999;
+        }
+        .accordion .panel-title.active {
+            background: #CCC;
+        }
+        .accordion .accordion-innerwrap {
+            margin: 0 auto;
+            width: 98%;
+        }
+
+        .accordion .panel-title .icon,
+        .accordion .panel-title.active .icon {
+            font-size: 1.25em;
+        }
+
+        .panel-container {
+            margin: .75em 0;
+        }
+
+        .panel-content {
+            list-style-type: none;
+            margin: 0;
+            padding: .75em;
+            background: #444;
+            color: #EFEFEF;
+        }
+        .panel-content li {
+            border-bottom: 1px dotted #AAA;
+            padding: .75em;
+        }
+        .panel-content li:last-child {
+            border-bottom: none;
+            padding-bottom: none;
+        }
+
+        .js .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .js .visuallyhidden.focusable,
+        .js .visuallyhidden.focusable,
+        .no-js .visuallyhidden {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+
+        .js .visuallyhidden.focusable:active,
+        .js .visuallyhidden.focusable:focus,
+        .no-js .visuallyhidden {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .list-reset {
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+    <!--End Pattern CSS-->
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+
+    <!--Pattern HTML-->
+    <div id="pattern" class="pattern">
+
+        <!--Begin Pattern HTML-->
+        <div class="accordion clearfix">
+            <div class="accordion-innerwrap">
+                <ul class="panel-container list-reset" tabindex="1">
+                    <li><h4 id="trigger1" class="panel-title"><b class="icon panel-closed" aria-hidden="true">&oplus;</b> Panel One</h4>
+                        <ul class="panel-content list-reset visuallyhidden" aria-expanded="false">
+                            <li><b class="icon"></b> <abbr title="cascading style sheet">CSS</abbr></li>
+                            <li><b class="icon"></b> <abbr title="hyper text markup language">HTML</abbr></li>
+                            <li><b class="icon"></b> Javascript</li>
+                            <li><b class="icon"></b> Color Theory</li>
+                            <li><b class="icon"></b> Information Architecture</li>
+                            <li><b class="icon"></b> <abbr title="User Interface">UI</abbr>, <abbr title="User Experience">UX</abbr></li>
+                            <li><b class="icon"></b> Database Design</li>
+                            <li><b class="icon"></b> <abbr title="hyper text pre-processor">PHP</abbr></li>
+                            <li><b class="icon"></b> My<abbr title="structured query language">SQL</abbr></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="panel-container list-reset" tabindex="2">
+                    <li><h4 id="trigger2" class="panel-title"><b class="icon panel-closed" aria-hidden="true">&oplus;</b> Panel Two</h4>
+                        <ul class="panel-content visuallyhidden list-reset" aria-expanded="false">
+                            <li><b class="icon"></b> Typography</li>
+                            <li><b class="icon"></b> 2D &amp; 3D Design</li>
+                            <li><b class="icon"></b> Studio Photography</li>
+                            <li><b class="icon"></b> Photojournalism</li>
+                            <li><b class="icon"></b> Darkroom Printing</li>
+                            <li><b class="icon"></b> Digital Imaging</li>
+                            <li><b class="icon"></b> History of Art</li>
+                            <li><b class="icon"></b> History of Photography</li>
+                            <li><b class="icon"></b> Critical Thinking</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="panel-container list-reset" tabindex="3">
+                    <li><h4 id="trigger3" class="panel-title"><b class="icon panel-closed" aria-hidden="true">&oplus;</b> Panel Three</h4>
+                        <ul class="panel-content visuallyhidden list-reset" aria-expanded="false">
+                            <li><b class="icon"></b> Advertising Art</li>
+                            <li><b class="icon"></b> Fundamentals of Drawing</li>
+                            <li><b class="icon"></b> Typography &amp; Letterforms</li>
+                            <li><b class="icon"></b> Intro To Psychology</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End Pattern HTML-->
+
+    <div class="container">
+        <div class="fluid-accordion content">
+            <h1>The Fluid Accordion</h1>
+
+            <p>We've seen them around the block once or twice. It's the ol' accordion panel widget, but done in a responsive manner</p>
+
+            <h2>Pros</h2>
+            <ul>
+                <li>&raquo; You don't have to keep building it over and over again.</li>
+                <li>&raquo; The width is fluid using percentages</li>
+                <li>&raquo; Semantic class names</li>
+                <li>&raquo; Builds on "Best Practices" for hidden elements</li>
+                <li>&raquo; Content Panels are still accessible without Javascript</li>
+                <li>&raquo; User feedback for "active" panel states</li>
+                <li>&raquo; Clean foundation making it easy to build upon</li>
+                <li>&raquo; Works on iPhone, Android, Opera Mobile Emulator</li>
+                <li>&raquo; Makes use of ARIA attributes. Using Javascript we adjust the accordion panels active/inactive states</li>
+            </ul>
+
+            <h2>Cons</h2>
+            <ul>
+                <li>&raquo; Tied down by jQuery</li>
+                <li>&raquo; Minimal Keyboard events (we'll let you do that yourself)</li>
+                <li>&raquo; Not built for touch support</li>
+                <li>&raquo; Tied down "<code>tabindex</code>" attribute values; you gotta change em yo' self</li>
+            </ul>
+        </div>
+    </div>
+
+<!--Pattern JS (if needed)-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script>
+$(document).ready(function() {
+    // Collapsible Menu
+    function accordion(trigger) {
+
+        //variables
+        var $button = $(trigger),//trigger firing the event
+            visible = true;//flag for wayfinding
+
+            $button.hover().css({'cursor': 'pointer'}); // give the trigger a pointer on :hover
+
+        //event
+        $button.click(function() {
+
+            if ( ! visible ) {
+                $button.removeClass('active');
+
+                $('.panel-title .icon').html('&oplus;');
+
+                $(this).next().slideUp('slow',function() {
+                    $(this).addClass('visuallyhidden').slideDown(0);
+                    $('.panel-content').attr( 'aria-expanded','false' );
+                });
+            }else {
+                $button.addClass('active');
+
+                $('.panel-title.active .icon').html('&otimes;');
+
+                $(this).next().slideUp(0, function() {
+                    $('.panel-content').attr( 'aria-expanded','true' );
+                    $(this).removeClass('visuallyhidden').slideDown('slow');
+                });
+            }
+
+            // the flag visibility dude
+            visible = ! visible;
+            return false
+        });
+    }
+
+    //call to widget trigger1
+    accordion('#trigger1');
+    //call to widget trigger2
+    accordion('#trigger2');
+    //call to widget trigger3
+    accordion('#trigger3');
+
+});//end document.ready()
+</script>
+</body>
+</html>

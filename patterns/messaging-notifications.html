@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.main {
+			padding: 1em;
+		}
+		.action {
+			display: inline-block;
+			padding: 0.5em;
+			border: 1px solid #000;
+		}
+		.notification {
+			position: fixed;
+			top: -20em;
+			left: 0;
+			width: 100%;
+			padding: 1em;
+			overflow: hidden;
+			background: #f9edbe;
+			border-bottom: 1px solid #f0c36d;
+		}
+		.notification.anim {
+			-webkit-transition: top 0.6s ease-out;  
+			-moz-transition: top 0.6s ease-out;
+			-ms-transition: top 0.6s ease-out;
+			-o-transition: top 0.6s ease-out;
+			transition: top 0.6s ease-out;
+		}
+		.notification.active {
+			top: 0;
+		}
+		.notification .actions {
+			margin-top: 0.5em;
+		}
+		.notification .btn {
+			border: 1px solid #f0c36d;
+			background: #f0c36d;
+			color: #fff;
+			display: inline-block;
+			padding: 0.3em;
+		}
+		
+		.notification .dismiss-btn {
+			display: inline-block;
+			margin-left: 1em;
+		}
+		
+		@media all and (min-width: 50em) {
+			.notification .msg {
+				float: left;
+				width: 70%;
+			}
+			.notification .actions {
+				float: right;
+				text-align: right;
+				width: 30%;
+				margin-top: -0.3em;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="main">
+		<!--Begin Pattern HTML-->
+			<h2>Notification Bar Demo</h2>
+			<p><a href="#" class="action">Click for Notification</a></p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
+				<p>Proin quis dui eros. Morbi fringilla, ligula vitae interdum volutpat, est eros ultricies sem, vitae pellentesque lacus lorem vitae risus. In odio eros, placerat in fermentum sit amet, commodo eget magna. In suscipit velit pharetra neque consequat commodo congue risus eleifend. Aliquam tellus ligula, dapibus sed rutrum at, gravida vitae urna. Praesent volutpat molestie eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nulla urna, hendrerit in egestas ut, ullamcorper quis lectus. Phasellus faucibus metus ac nisl volutpat a lobortis lorem molestie. Ut bibendum vulputate tortor, a faucibus enim tempus ut. Fusce consectetur, ligula quis feugiat luctus, sapien tortor hendrerit enim, et tincidunt sapien augue in nibh. Curabitur ligula odio, ullamcorper ac fermentum eu, luctus vel mauris. Donec vehicula egestas urna, et hendrerit augue ultricies ac. Morbi urna elit, dignissim in sagittis congue, pretium eu eros. Sed blandit varius risus, pellentesque consequat lectus cursus in. Aenean pellentesque nibh ut odio euismod in sollicitudin neque laoreet.</p>
+			<p><a href="#" class="action">Click for Notification</a></p>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $('body').addClass('js');
+		  var $action = $('.action'),
+		  	  $menulink = $('.menu-link'),
+		  	  $menuTrigger = $('.has-subnav > a'),
+		  	  $n,
+		  	  nHeight;
+		
+			function addMessage() {
+				$('<div class="notification" id="notification"><div class="msg">You must be signed in to complete this action.</div> <div class="actions"><a href="#" id="sign-in" class="btn">Sign In or Register</a> <a href="#" class="dismiss-btn">Dismiss</a></div></div>').prependTo('.pattern');
+				
+				$n = $('#notification'),
+				nHeight = $n.outerHeight();
+					
+				showNotification();
+				setTimeout(hideNotification,8000);
+			}
+			
+			$action.click(function(e) { //Trigger
+				e.preventDefault();
+				addMessage();
+			});
+			
+			$('.pattern').delegate(".dismiss-btn", "click", function(e) {
+				hideNotification();
+				return false;
+			});
+			
+			function showNotification() {
+				$n.css('top',-nHeight).addClass('anim').css('top',0);
+			}
+		
+			function hideNotification() {
+				$n.css('top',-nHeight);
+				setTimeout(function() { $n.removeClass('anim'); }, 1000);
+			}
+			
+			$(window).resize(function() {
+				nHeight = $n.outerHeight();
+			});
+		});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Slide-Down Notification Bar</h1>
+			<p>A fluid notification bar that slides down to provide users with feedback. The message disappears after a set time or when the user clicks the "dismiss" button.</p>
+					</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

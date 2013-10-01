@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.pattern {
+			padding: 1em;
+		}
+		@media all and (min-width: 40em) {
+			.t {
+				display: table;
+				caption-side: top;
+				width: 100%;
+			}
+			.nav {
+				display: table-caption;
+			}
+			.nav ol {
+				display: table-row;
+			}
+			.nav ol li {
+				display: inline-block;
+				margin-right: 1em;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="t">
+			<div class="main" role="main">
+				<h2>Main Content (first in source order)</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et eros ac neque pharetra tristique nec vel risus. Maecenas nec augue elit, vitae tincidunt lorem. Vivamus porta ultrices convallis. In tempor varius pulvinar. Etiam mattis nunc id risus suscipit non tincidunt nisi mattis. Nunc in lobortis risus. Phasellus et ante vitae tellus commodo pellentesque. Etiam vitae nisl tellus. Integer diam nulla, commodo eu mattis nec, ullamcorper sit amet arcu. Curabitur pellentesque commodo enim et imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec a sapien nunc.
+
+ the </p>
+			</div>
+			<nav class="nav" role="navigation">
+				<h4>Navigation (second in source order)</h4>
+				<ol>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Table Cell Source Order</h1>
+			<p>You can switch the order of elements using the magical powers of CSS's <code>table</code> properties. Jeremy Keith wrote <a href="http://adactio.com/journal/4780/">about this technique</a>, and you can check out a <a href="http://jsbin.com/axobun/92/edit">demo on JSBin</a>.</p>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

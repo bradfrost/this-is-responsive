@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		a.menu-link {
+		    float: right;
+		    display: block;
+		    padding: 1em;
+		}
+		nav[role=navigation] {
+			clear: both;
+			-webkit-transition: all 0.3s ease-out;  
+			-moz-transition: all 0.3s ease-out;
+			-ms-transition: all 0.3s ease-out;
+			-o-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+		.js nav[role=navigation] {
+			overflow: hidden;
+			max-height: 0;
+		}
+		nav[role=navigation].active {
+			max-height: 15em;
+		}
+		nav[role=navigation] ul {
+			margin: 0;
+			padding: 0;
+			border-top: 1px solid #808080;
+		}
+		nav[role=navigation] li a {
+			display: block;
+			padding: 0.8em;
+			border-bottom: 1px solid #808080;
+		}
+		
+		@media screen and (min-width: 48.25em) {
+			a.menu-link {
+			   display: none;
+			}
+			.js nav[role=navigation] {
+				max-height: none;
+			}
+			nav[role=navigation] ul {
+				margin: 0 0 0 -0.25em;
+				border: 0;
+			}
+			
+			nav[role=navigation]  li {
+				display: inline-block;
+				margin: 0 0.25em;
+			}
+			nav[role=navigation] li a {
+				border: 0;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<!--Begin Pattern HTML-->
+		<a href="#menu" class="menu-link">Menu</a>
+		<nav id="menu" role="navigation">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<!--Pattern JS (if needed)-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  $('body').addClass('js');
+		  var $menu = $('#menu'),
+		  	$menulink = $('.menu-link');
+		$menulink.click(function() {
+			$menulink.toggleClass('active');
+			$menu.toggleClass('active');
+			return false;
+		});});
+	</script>
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Toggle Navigation</h1>
+			<p>For small screens a &#8220;menu&#8221; button appears that, when clicked, expands an accordion style navigation. When more screen real estate becomes available</p>
+			<h3>Pros</h3>
+			<ul>
+			<li><strong>Keeps the user in place</strong>- Where the footer anchor jumps suddenly, the toggle menu simply appears in place, which doesn&#8217;t disorient the user.</li>
+			<li><strong>Elegant</strong>- This is definitely one of the more classy approaches. No awkward forms or page jumps, just a smooth animated flyout or basic show/hide.</li>
+			<li><strong>Easy to scale up</strong>- All you need to do is hide the mobile trigger and show the nav list when the appropriate breakpoint is reached and you have yourself a normal large screen nav. All this can be accomplished with CSS.</li>
+			</ul>
+			<h3>Cons</h3>
+			<ul>
+			<li><strong>Animation performance</strong>- Your mileage will vary when doing any sort of animation on mobile devices. Android is notoriously bad with CSS animations and so things might not be as smooth as you&#8217;d like. Also, for what it&#8217;s worth I&#8217;ve recently been animating <a href="http://jsfiddle.net/leaverou/zwvNY/">max-height</a> which seems to work well.</li>
+			<li><strong>Javascript dependency</strong>- Again this approach relies on a bit of Javascript in order to trigger the toggle, but it&#8217;s minimal. I have one Blackberry test device that refuses to listen to any of this stuff, but most browsers, including proxy browsers like Opera Mini and Dolphin Mini, handle it just fine.</li>
+			</ul>
+			<h3>In the Wild</h3>
+			<ul>
+			<li><a href="http://www.starbucks.com/">Starbucks</a></li>
+			<li><a href="http://mobilewebbestpractices.com">Mobile Web Best Practices</a></li>
+			<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+			</ul>
+			<h3>Resources</h3>
+			<ul>
+			<li><a href="http://jasonweaver.name/lab/flexiblenavigation/">FlexNav</a>
+			<li><a href="http://filamentgroup.com/lab/responsive_design_approach_for_navigation/">A Responsive Design Approach for Navigation, Part 1</a> by <a href="http://twitter.com/filamentgroup">@filamentgroup</a></li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

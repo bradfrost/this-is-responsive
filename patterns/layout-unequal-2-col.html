@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+	<title>Responsive Pattern | This Is Responsive</title>
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+</head>
+<body>
+	<!--Pattern CSS-->
+	<style id="s" type="text/css">
+		.c {
+			padding: 1em;
+		}
+		@media screen and (min-width: 56em) {
+			.main {
+				width: 66.666666%;
+				padding-right: 1em;
+				float: left;
+			}
+			.sb {
+				float: right;
+				width: 33.333333%;
+			}
+		}
+	</style>
+	<!--End Pattern CSS-->
+	
+	<!--Pattern HTML-->
+	<div id="pattern" class="pattern">
+		<div class="c">
+			<div class="main">
+				<h2>Here's the Main Content (1st in source order)</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
+				<p>Proin quis dui eros. Morbi fringilla, ligula vitae interdum volutpat, est eros ultricies sem, vitae pellentesque lacus lorem vitae risus. In odio eros, placerat in fermentum sit amet, commodo eget magna. In suscipit velit pharetra neque consequat commodo congue risus eleifend. Aliquam tellus ligula, dapibus sed rutrum at, gravida vitae urna. Praesent volutpat molestie eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nulla urna, hendrerit in egestas ut, ullamcorper quis lectus. Phasellus faucibus metus ac nisl volutpat a lobortis lorem molestie. Ut bibendum vulputate tortor, a faucibus enim tempus ut. Fusce consectetur, ligula quis feugiat luctus, sapien tortor hendrerit enim, et tincidunt sapien augue in nibh. Curabitur ligula odio, ullamcorper ac fermentum eu, luctus vel mauris. Donec vehicula egestas urna, et hendrerit augue ultricies ac. Morbi urna elit, dignissim in sagittis congue, pretium eu eros. Sed blandit varius risus, pellentesque consequat lectus cursus in. Aenean pellentesque nibh ut odio euismod in sollicitudin neque laoreet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
+				<p>Proin quis dui eros. Morbi fringilla, ligula vitae interdum volutpat, est eros ultricies sem, vitae pellentesque lacus lorem vitae risus. In odio eros, placerat in fermentum sit amet, commodo eget magna. In suscipit velit pharetra neque consequat commodo congue risus eleifend. Aliquam tellus ligula, dapibus sed rutrum at, gravida vitae urna. Praesent volutpat molestie eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nulla urna, hendrerit in egestas ut, ullamcorper quis lectus. Phasellus faucibus metus ac nisl volutpat a lobortis lorem molestie. Ut bibendum vulputate tortor, a faucibus enim tempus ut. Fusce consectetur, ligula quis feugiat luctus, sapien tortor hendrerit enim, et tincidunt sapien augue in nibh. Curabitur ligula odio, ullamcorper ac fermentum eu, luctus vel mauris. Donec vehicula egestas urna, et hendrerit augue ultricies ac. Morbi urna elit, dignissim in sagittis congue, pretium eu eros. Sed blandit varius risus, pellentesque consequat lectus cursus in. Aenean pellentesque nibh ut odio euismod in sollicitudin neque laoreet.</p>
+							</div>
+			<div class="sb">
+				<h3>Sidebar  (2nd in source order)</h3>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				<p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque turpis diam, tincidunt nec convallis vitae, dapibus vitae enim. Nam bibendum nisl in risus imperdiet vestibulum.</p>
+				
+			</div>
+		</div>
+	</div>
+	<!--End Pattern HTML-->
+	
+	<div class="container">	
+		<section class="pattern-description">
+			<h1>Main column with sidebar</h1>
+			<p>A basic (and common) layout. A main column of text with sidebar stacked underneath. When space becomes available the sidebar displays next to the main column.</p>
+			<h2>Considerations</h2>
+			<ul>
+				<li>Watch line length</li>
+			</ul>
+		</section>
+		<footer role="contentinfo">   
+			<div>
+				<nav id="menu">
+					<a href="../patterns.html">&larr;More Responsive Patterns</a>
+				</nav>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
