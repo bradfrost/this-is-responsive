@@ -90,6 +90,11 @@ blockquote {
 small {
 	color: #e51837;
 }
+
+input, textarea {
+	border: 1px solid #000;
+}
+
 input[type=search] {
 	-webkit-appearance: none;
 	border-radius: 0;
@@ -234,6 +239,19 @@ footer[role=contentinfo] img {
 	background: rgba(229,24,55,0.22);
 }
 
+/* Button Stlyes */
+.block-btn {
+	color: #fff;
+	background: #000;
+	display: inline-block;
+	margin: 1.5em 0;
+	font-size: 110%;
+	padding: 1em;
+}
+.block-btn:hover, .block-btn:focus {
+	color: #fff;
+	background: #e51837;
+}
 
 /*Patterns*/
 .mod {
@@ -453,6 +471,12 @@ footer[role=contentinfo] img {
 }
 .top:before {
 	content: '▲';
+}
+
+
+/* Wufoo Form */
+.wufoo-form {
+	margin: 2em 0;
 }
 
 /******Media Queries*******/
