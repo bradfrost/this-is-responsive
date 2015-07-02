@@ -1,277 +1,343 @@
 
 .ani div.a1 b {
-	-webkit-animation: box-resize 10s infinite alternate both;
-	-moz-animation: box-resize 10s infinite alternate both;
-	-ms-animation: box-resize 10s infinite alternate both;
-	-o-animation: box-resize 10s infinite alternate both;
+  -webkit-animation: box-resize 10s infinite alternate both;
+  -moz-animation: box-resize 10s infinite alternate both;
+  -ms-animation: box-resize 10s infinite alternate both;
+  -o-animation: box-resize 10s infinite alternate both;
+  animation: box-resize 10s infinite alternate both;
 }
 .ani div.a2 b {
-	-webkit-animation: box-resize2 10s infinite alternate both;
-	-moz-animation: box-resize2 10s infinite alternate both;
-	-ms-animation: box-resize2 10s infinite alternate both;
-	-o-animation: box-resize2 10s infinite alternate both;
-
+  -webkit-animation: box-resize2 10s infinite alternate both;
+  -moz-animation: box-resize2 10s infinite alternate both;
+  -ms-animation: box-resize2 10s infinite alternate both;
+  -o-animation: box-resize2 10s infinite alternate both;
+  animation: box-resize2 10s infinite alternate both;
 }
 .ani div.a3 b {
-	-webkit-animation: box-resize3 10s infinite alternate both;
-	-moz-animation: box-resize3 10s infinite alternate both;
-	-ms-animation: box-resize3 10s infinite alternate both;
-	-o-animation: box-resize3 10s infinite alternate both;
-
+  -webkit-animation: box-resize3 10s infinite alternate both;
+  -moz-animation: box-resize3 10s infinite alternate both;
+  -ms-animation: box-resize3 10s infinite alternate both;
+  -o-animation: box-resize3 10s infinite alternate both;
+  animation: box-resize3 10s infinite alternate both;
 }
 .ani div.a4 b {
-	-webkit-animation: box-resize4 10s infinite alternate both;
-	-moz-animation: box-resize4 10s infinite alternate both;
-	-ms-animation: box-resize4 10s infinite alternate both;
-	-o-animation: box-resize4 10s infinite alternate both;
+  -webkit-animation: box-resize4 10s infinite alternate both;
+  -moz-animation: box-resize4 10s infinite alternate both;
+  -ms-animation: box-resize4 10s infinite alternate both;
+  -o-animation: box-resize4 10s infinite alternate both;
+  animation: box-resize4 10s infinite alternate both;
 }
 .ani div.a5 b {
-	-webkit-animation: box-resize5 10s infinite alternate both;
-	-moz-animation: box-resize5 10s infinite alternate both;
-	-ms-animation: box-resize5 10s infinite alternate both;
-	-o-animation: box-resize5 10s infinite alternate both;
-
+  -webkit-animation: box-resize5 10s infinite alternate both;
+  -moz-animation: box-resize5 10s infinite alternate both;
+  -ms-animation: box-resize5 10s infinite alternate both;
+  -o-animation: box-resize5 10s infinite alternate both;
+  animation: box-resize5 10s infinite alternate both;
 }
 .ani div.a6 b {
-	-webkit-animation: box-resize6 10s infinite alternate both;
-	-moz-animation: box-resize6 10s infinite alternate both;
-	-ms-animation: box-resize6 10s infinite alternate both;
-	-o-animation: box-resize6 10s infinite alternate both;
-
+  -webkit-animation: box-resize6 10s infinite alternate both;
+  -moz-animation: box-resize6 10s infinite alternate both;
+  -ms-animation: box-resize6 10s infinite alternate both;
+  -o-animation: box-resize6 10s infinite alternate both;
+  animation: box-resize6 10s infinite alternate both;
 }
 .ani div.a7 b {
-	-webkit-animation: box-resize7 10s infinite alternate both;
-	-moz-animation: box-resize7 10s infinite alternate both;
-	-ms-animation: box-resize7 10s infinite alternate both;
-	-o-animation: box-resize7 10s infinite alternate both;
-
+  -webkit-animation: box-resize7 10s infinite alternate both;
+  -moz-animation: box-resize7 10s infinite alternate both;
+  -ms-animation: box-resize7 10s infinite alternate both;
+  -o-animation: box-resize7 10s infinite alternate both;
+  animation: box-resize7 10s infinite alternate both;
 }
 .ani div.a8 b {
-	-webkit-animation: box-resize8 10s infinite alternate both;
-	-moz-animation: box-resize8 10s infinite alternate both;
-	-ms-animation: box-resize8 10s infinite alternate both;
-	-o-animation: box-resize8 10s infinite alternate both;
+  -webkit-animation: box-resize8 10s infinite alternate both;
+  -moz-animation: box-resize8 10s infinite alternate both;
+  -ms-animation: box-resize8 10s infinite alternate both;
+  -o-animation: box-resize8 10s infinite alternate both;
+  animation: box-resize8 10s infinite alternate both;
 }
 .ani div.a9 b {
-	-webkit-animation: box-resize9 10s infinite alternate both;
-	-moz-animation: box-resize9 10s infinite alternate both;
-	-ms-animation: box-resize9 10s infinite alternate both;
-	-o-animation: box-resize9 10s infinite alternate both;
+  -webkit-animation: box-resize9 10s infinite alternate both;
+  -moz-animation: box-resize9 10s infinite alternate both;
+  -ms-animation: box-resize9 10s infinite alternate both;
+  -o-animation: box-resize9 10s infinite alternate both;
+  animation: box-resize9 10s infinite alternate both;
 }
 .ani div.a10 b {
-	-webkit-animation: box-resize10 10s infinite alternate both;
-	-moz-animation: box-resize10 10s infinite alternate both;
-	-ms-animation: box-resize10 10s infinite alternate both;
-	-o-animation: box-resize10 10s infinite alternate both;
+  -webkit-animation: box-resize10 10s infinite alternate both;
+  -moz-animation: box-resize10 10s infinite alternate both;
+  -ms-animation: box-resize10 10s infinite alternate both;
+  -o-animation: box-resize10 10s infinite alternate both;
+  animation: box-resize10 10s infinite alternate both;
 }
 
 /*Fluid Animation*/
 @-webkit-keyframes box-resize {
-	0% { top: 5%; right: 5%; bottom: 5%; left: 5%; }
-	50% { top: 1%; right: 15.5; bottom: 1%; left: 15.5%; }
-	100% { top: 1%; right: 6.4%; bottom: 1%; left: 6Î.4%; }
+  0% { transform: scale(.8); }
+  50% { transform: scale(.6); }
+  100% { transform: scale(.7); }
 }
 @-moz-keyframes box-resize {
-  0% { top: 5%; right: 5%; bottom: 5%; left: 5%; }
-	50% { top: 1%; right: 15.5; bottom: 1%; left: 15.5%; }
-	100% { top: 1%; right: 6.4%; bottom: 1%; left: 6Î.4%; }
+  0% { transform: scale(.8); }
+  50% { transform: scale(.6); }
+  100% { transform: scale(.7); }
 }
 @-ms-keyframes box-resize {
-  0% { top: 5%; right: 5%; bottom: 5%; left: 5%; }
-	50% { top: 1%; right: 15.5; bottom: 1%; left: 15.5%; }
-	100% { top: 1%; right: 6.4%; bottom: 1%; left: 6Î.4%; }
+  0% { transform: scale(.8); }
+  50% { transform: scale(.6); }
+  100% { transform: scale(.7); }
 }
 @-o-keyframes box-resize {
-  0% { top: 5%; right: 5%; bottom: 5%; left: 5%; }
-	50% { top: 1%; right: 15.5; bottom: 1%; left: 15.5%; }
-	100% { top: 1%; right: 6.4%; bottom: 1%; left: 6Î.4%; }
+  0% { transform: scale(.8); }
+  50% { transform: scale(.6); }
+  100% { transform: scale(.7); }
 }
+@keyframes box-resize {
+  0% { transform: scale(.8); }
+  50% { transform: scale(.6); }
+  100% { transform: scale(.7); }
+}
+
 
 @-webkit-keyframes box-resize2 {
-	0% { top: 20%; right: 20%; bottom: 20%; left: 20%; }
-	50% { top: 3%; right: 4%; bottom: 3%; left: 4%; }
-	100% { top: 12%; right: 27%; bottom: 12%; left: 27%; }
+  0% { transform: scale(.4, 1); }
+  50% { transform: scale(1, .4); }
+  100% { transform: scale(1); }
 }
 @-moz-keyframes box-resize2 {
-  0% { top: 20%; right: 20%; bottom: 20%; left: 20%; }
-	50% { top: 3%; right: 4%; bottom: 3%; left: 4%; }
-	100% { top: 12%; right: 27%; bottom: 12%; left: 27%; }
+  0% { transform: scale(.4, 1); }
+  50% { transform: scale(1, .4); }
+  100% { transform: scale(1); }
 }
 @-ms-keyframes box-resize2 {
-  0% { top: 20%; right: 20%; bottom: 20%; left: 20%; }
-	50% { top: 3%; right: 4%; bottom: 3%; left: 4%; }
-	100% { top: 12%; right: 27%; bottom: 12%; left: 27%; }
+  0% { transform: scale(.4, 1); }
+  50% { transform: scale(1, .4); }
+  100% { transform: scale(1); }
 }
 @-o-keyframes box-resize2 {
-  0% { top: 20%; right: 20%; bottom: 20%; left: 20%; }
-	50% { top: 3%; right: 4%; bottom: 3%; left: 4%; }
-	100% { top: 12%; right: 27%; bottom: 12%; left: 27%; }
+  0% { transform: scale(.4, 1); }
+  50% { transform: scale(1, .4); }
+  100% { transform: scale(1); }
 }
+@keyframes box-resize2 {
+  0% { transform: scale(.4, 1); }
+  50% { transform: scale(1, .4); }
+  100% { transform: scale(1); }
+}
+
 
 @-webkit-keyframes box-resize3 {
-	0% { top: 0; right: 0; bottom: 0; left: 0; }
-	50% { top: 6%; right: 18%; bottom: 6%; left: 18%; }
-	100% { top: 2%; right: 22%; bottom: 2%; left: 22%; }
+  0% { transform: scale(.7, .9); }
+  50% { transform: scale(.2, .7); }
+  100% { transform: scale(.9, .88); }
 }
 @-moz-keyframes box-resize3 {
-  0% { top: 0; right: 0; bottom: 0; left: 0; }
-	50% { top: 6%; right: 18%; bottom: 6%; left: 18%; }
-	100% { top: 2%; right: 22%; bottom: 2%; left: 22%; }
-
+  0% { transform: scale(.7, .9); }
+  50% { transform: scale(.2, .7); }
+  100% { transform: scale(.9, .88); }
 }
 @-ms-keyframes box-resize3 {
-  0% { top: 0; right: 0; bottom: 0; left: 0; }
-	50% { top: 6%; right: 18%; bottom: 6%; left: 18%; }
-	100% { top: 2%; right: 22%; bottom: 2%; left: 22%; }
-
+  0% { transform: scale(.7, .9); }
+  50% { transform: scale(.2, .7); }
+  100% { transform: scale(.9, .88); }
 }
 @-o-keyframes box-resize3 {
-  0% { top: 0; right: 0; bottom: 0; left: 0; }
-	50% { top: 6%; right: 18%; bottom: 6%; left: 18%; }
-	100% { top: 2%; right: 22%; bottom: 2%; left: 22%; }
-
+  0% { transform: scale(.7, .9); }
+  50% { transform: scale(.2, .7); }
+  100% { transform: scale(.9, .88); }
 }
+@keyframes box-resize3 {
+  0% { transform: scale(.7, .9); }
+  50% { transform: scale(.2, .7); }
+  100% { transform: scale(.9, .88); }
+}
+
+
 @-webkit-keyframes box-resize4 {
-	0% { top: 31%; right: 35%; bottom: 31%; left: 35%; }
-	50% { top: 19.2%; right: 29.333%; bottom: 19.2%; left: 29.333%; }
-	100% { top: 14.7%; right: 13%; bottom: 14.7%; left: 13%; }
+  0% { transform: scale(.4); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.35, .85); }
 }
 @-moz-keyframes box-resize4 {
-  0% { top: 31%; right: 35%; bottom: 31%; left: 35%;  }
-	50% { top: 19.2%; right: 29.333%; bottom: 19.2%; left: 29.333%; }
-	100% { top: 14.7%; right: 13%; bottom: 14.7%; left: 13%; }
+  0% { transform: scale(.4); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.35, .85); }
 }
 @-ms-keyframes box-resize4 {
-  0% { top: 31%; right: 35%; bottom: 31%; left: 35%;  }
-	50% { top: 19.2%; right: 29.333%; bottom: 19.2%; left: 29.333%; }
-	100% { top: 14.7%; right: 13%; bottom: 14.7%; left: 13%; }
+  0% { transform: scale(.4); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.35, .85); }
 }
 @-o-keyframes box-resize4 {
-  0% { top: 31%; right: 35%; bottom: 31%; left: 35%;  }
-	50% { top: 19.2%; right: 29.333%; bottom: 19.2%; left: 29.333%; }
-	100% { top: 14.7%; right: 13%; bottom: 14.7%; left: 13%; }
+  0% { transform: scale(.4); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.35, .85); }
 }
+@keyframes box-resize4 {
+  0% { transform: scale(.4); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.35, .85); }
+}
+
+
 @-webkit-keyframes box-resize5 {
-	0% { top: 24%; right: 24%; bottom: 24%; left: 24%; }
-	50% { top: 10%; right: 8%; bottom: 10%; left: 8%; }
-	100% { top: 3%; right: 18.8%; bottom: 3%; left: 18.8%; }
+  0% { transform: scale(.5, .2); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.5); }
 }
 @-moz-keyframes box-resize5 {
-  0% { top: 24%; right: 24%; bottom: 24%; left: 24%; }
-	50% { top: 10%; right: 8%; bottom: 10%; left: 8%; }
-	100% { top: 3%; right: 18.8%; bottom: 3%; left: 18.8%; }
+  0% { transform: scale(.5, .2); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.5); }
 }
 @-ms-keyframes box-resize5 {
-  0% { top: 24%; right: 24%; bottom: 24%; left: 24%; }
-	50% { top: 10%; right: 8%; bottom: 10%; left: 8%; }
-	100% { top: 3%; right: 18.8%; bottom: 3%; left: 18.8%; }
+  0% { transform: scale(.5, .2); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.5); }
 }
 @-o-keyframes box-resize5 {
-  0% { top: 24%; right: 24%; bottom: 24%; left: 24%; }
-	50% { top: 10%; right: 8%; bottom: 10%; left: 8%; }
-	100% { top: 3%; right: 18.8%; bottom: 3%; left: 18.8%; }
+  0% { transform: scale(.5, .2); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.5); }
 }
+@keyframes box-resize5 {
+  0% { transform: scale(.5, .2); }
+  50% { transform: scale(.3); }
+  100% { transform: scale(.5); }
+}
+
+
 @-webkit-keyframes box-resize6 {
-	0% { top: 5%; right: 25%; bottom: 5%; left: 25%; }
-	50% { top: 2%; right: 35%; bottom: 2%; left: 35%; }
-	100% { top: 4%; right: 33%; bottom: 4%; left: 33%; }
+  0% { transform: scale(.45, .4); }
+  50% { transform: scale(.4, .48); }
+  100% { transform: scale(.8, .95); }
 }
 @-moz-keyframes box-resize6 {
-  0% { top: 5%; right: 25%; bottom: 5%; left: 25%; }
-	50% { top: 2%; right: 35%; bottom: 2%; left: 35%; }
-	100% { top: 4%; right: 33%; bottom: 4%; left: 33%; }
+  0% { transform: scale(.45, .4); }
+  50% { transform: scale(.4, .48); }
+  100% { transform: scale(.8, .95); }
 }
 @-ms-keyframes box-resize6 {
-  0% { top: 5%; right: 25%; bottom: 5%; left: 25%; }
-	50% { top: 2%; right: 35%; bottom: 2%; left: 35%; }
-	100% { top: 4%; right: 33%; bottom: 4%; left: 33%; }
+  0% { transform: scale(.45, .4); }
+  50% { transform: scale(.4, .48); }
+  100% { transform: scale(.8, .95); }
 }
 @-o-keyframes box-resize6 {
-  0% { top: 5%; right: 25%; bottom: 5%; left: 25%; }
-	50% { top: 2%; right: 35%; bottom: 2%; left: 35%; }
-	100% { top: 4%; right: 33%; bottom: 4%; left: 33%; }
+  0% { transform: scale(.45, .4); }
+  50% { transform: scale(.4, .48); }
+  100% { transform: scale(.8, .95); }
 }
+@keyframes box-resize6 {
+  0% { transform: scale(.45, .4); }
+  50% { transform: scale(.4, .48); }
+  100% { transform: scale(.8, .95); }
+}
+
+
 @-webkit-keyframes box-resize7 {
-	0% { top: 23%; right: 23%; bottom: 23%; left: 23%; }
-	50% { top: 13%; right: 21%; bottom: 13%; left: 21%; }
-	100% { top: 8%; right: 40%; bottom: 8%; left: 40%; }
+  0% { transform: scale(.77, .57); }
+  50% { transform: scale(.87, .56); }
+  100% { transform: scale(.72, .55); }
 }
 @-moz-keyframes box-resize7 {
-  0% { top: 23%; right: 23%; bottom: 23%; left: 23%; }
-	50% { top: 13%; right: 21%; bottom: 13%; left: 21%; }
-	100% { top: 8%; right: 40%; bottom: 8%; left: 40%; }
+  0% { transform: scale(.77, .57); }
+  50% { transform: scale(.87, .56); }
+  100% { transform: scale(.72, .55); }
 }
 @-ms-keyframes box-resize7 {
-  0% { top: 23%; right: 23%; bottom: 23%; left: 23%; }
-	50% { top: 13%; right: 21%; bottom: 13%; left: 21%; }
-	100% { top: 8%; right: 40%; bottom: 8%; left: 40%; }
+  0% { transform: scale(.77, .57); }
+  50% { transform: scale(.87, .56); }
+  100% { transform: scale(.72, .55); }
 }
 @-o-keyframes box-resize7 {
-  0% { top: 23%; right: 23%; bottom: 23%; left: 23%; }
-	50% { top: 13%; right: 21%; bottom: 13%; left: 21%; }
-	100% { top: 8%; right: 40%; bottom: 8%; left: 40%; }
+  0% { transform: scale(.77, .57); }
+  50% { transform: scale(.87, .56); }
+  100% { transform: scale(.72, .55); }
 }
+@keyframes box-resize7 {
+  0% { transform: scale(.77, .57); }
+  50% { transform: scale(.87, .56); }
+  100% { transform: scale(.72, .55); }
+}
+
+
 @-webkit-keyframes box-resize8 {
-	0% { top: 17%; right: 40%; bottom: 17%; left: 40%; }
-	50% { top: 24%; right: 44%; bottom: 24%; left: 44%; }
-	100% { top: 21%; right: 30%; bottom: 21%; left: 30%; }
+  0% { transform: scale(.9, .4); }
+  50% { transform: scale(.7, .9); }
+  100% { transform: scale(.33, .44); }
 }
 @-moz-keyframes box-resize8 {
-  0% { top: 17%; right: 40%; bottom: 17%; left: 40%; }
-	50% { top: 24%; right: 44%; bottom: 24%; left: 44%; }
-	100% { top: 21%; right: 30%; bottom: 21%; left: 30%; }
+  0% { transform: scale(.9, .4); }
+  50% { transform: scale(.7, .9); }
+  100% { transform: scale(.33, .44); }
 }
 @-ms-keyframes box-resize8 {
-  0% { top: 17%; right: 40%; bottom: 17%; left: 40%; }
-	50% { top: 24%; right: 44%; bottom: 24%; left: 44%; }
-	100% { top: 21%; right: 30%; bottom: 21%; left: 30%; }
+  0% { transform: scale(.9, .4); }
+  50% { transform: scale(.7, .9); }
+  100% { transform: scale(.33, .44); }
 }
 @-o-keyframes box-resize8 {
-  0% { top: 17%; right: 40%; bottom: 17%; left: 40%; }
-	50% { top: 24%; right: 44%; bottom: 24%; left: 44%; }
-	100% { top: 21%; right: 30%; bottom: 21%; left: 30%; }
+  0% { transform: scale(.9, .4); }
+  50% { transform: scale(.7, .9); }
+  100% { transform: scale(.33, .44); }
 }
+@keyframes box-resize8 {
+  0% { transform: scale(.9, .4); }
+  50% { transform: scale(.7, .9); }
+  100% { transform: scale(.33, .44); }
+}
+
+
 @-webkit-keyframes box-resize9 {
-	0% { top: 12%; right: 12%; bottom: 12%; left: 12%; }
-	50% { top: 23.333%; right: 5%; bottom: 23.333%; left: 5%; }
-	100% { top: 12%; right: 2%; bottom: 12%; left: 2%; }
+  0% { transform: scale(.66, .33); }
+  50% { transform: scale(.4, .2); }
+  100% { transform: scale(.75, .67); }
 }
 @-moz-keyframes box-resize9 {
- 0% { top: 12%; right: 12%; bottom: 12%; left: 12%; }
-	50% { top: 23.333%; right: 5%; bottom: 23.333%; left: 5%; }
-	100% { top: 12%; right: 2%; bottom: 12%; left: 2%; }
-
+  0% { transform: scale(.66, .33); }
+  50% { transform: scale(.4, .2); }
+  100% { transform: scale(.75, .67); }
 }
 @-ms-keyframes box-resize9 {
-  0% { top: 12%; right: 12%; bottom: 12%; left: 12%; }
-	50% { top: 23.333%; right: 5%; bottom: 23.333%; left: 5%; }
-	100% { top: 12%; right: 2%; bottom: 12%; left: 2%; }
-
+  0% { transform: scale(.66, .33); }
+  50% { transform: scale(.4, .2); }
+  100% { transform: scale(.75, .67); }
 }
 @-o-keyframes box-resize9 {
-  0% { top: 12%; right: 12%; bottom: 12%; left: 12%; }
-	50% { top: 23.333%; right: 5%; bottom: 23.333%; left: 5%; }
-	100% { top: 12%; right: 2%; bottom: 12%; left: 2%; }
-
+  0% { transform: scale(.66, .33); }
+  50% { transform: scale(.4, .2); }
+  100% { transform: scale(.75, .67); }
 }
+@keyframes box-resize9 {
+  0% { transform: scale(.66, .33); }
+  50% { transform: scale(.4, .2); }
+  100% { transform: scale(.75, .67); }
+}
+
+
 @-webkit-keyframes box-resize10 {
-	0% { top: 29%; right: 22%; bottom: 29%; left: 22%; }
-	50% { top: 11%; right: 11%; bottom: 11%; left: 11%; }
-	100% { top: 22%; right: 2%; bottom: 22%; left: 2%; }
+  0% { transform: scale(.8, .4); }
+  50% { transform: scale(.93, .66); }
+  100% { transform: scale(.75, .62); }
 }
 @-moz-keyframes box-resize10 {
-  0% { top: 29%; right: 22%; bottom: 29%; left: 22%; }
-	50% { top: 11%; right: 11%; bottom: 11%; left: 11%; }
-	100% { top: 22%; right: 2%; bottom: 22%; left: 2%; }
+  0% { transform: scale(.8, .4); }
+  50% { transform: scale(.93, .66); }
+  100% { transform: scale(.75, .62); }
 }
 @-ms-keyframes box-resize10 {
-  0% { top: 29%; right: 22%; bottom: 29%; left: 22%; }
-	50% { top: 11%; right: 11%; bottom: 11%; left: 11%; }
-	100% { top: 22%; right: 2%; bottom: 22%; left: 2%; }
+  0% { transform: scale(.8, .4); }
+  50% { transform: scale(.93, .66); }
+  100% { transform: scale(.75, .62); }
 }
 @-o-keyframes box-resize10 {
-  0% { top: 29%; right: 22%; bottom: 29%; left: 22%; }
-	50% { top: 11%; right: 11%; bottom: 11%; left: 11%; }
-	100% { top: 22%; right: 2%; bottom: 22%; left: 2%; }
+  0% { transform: scale(.8, .4); }
+  50% { transform: scale(.93, .66); }
+  100% { transform: scale(.75, .62); }
 }
+@keyframes box-resize10 {
+  0% { transform: scale(.8, .4); }
+  50% { transform: scale(.93, .66); }
+  100% { transform: scale(.75, .62); }
+}
+
 /*End Animations*/
