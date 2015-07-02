@@ -79,9 +79,9 @@
 }
 
 @-webkit-keyframes box-resize3 {
-  0% { transform: scale(.7, .8); }
-  50% { transform: scale(.7); }
-  100% { transform: scale(1.2, .9); }
+  0% { transform: scale(.7, .9); }
+  50% { transform: scale(.2, .7); }
+  100% { transform: scale(.9, .88); }
 }
 
 @-webkit-keyframes box-resize4 {
@@ -91,20 +91,20 @@
 }
 
 @-webkit-keyframes box-resize5 {
-  0% { transform: scale(.5, .7); }
-  50% { transform: scale(.6); }
+  0% { transform: scale(.5, .2); }
+  50% { transform: scale(.3); }
   100% { transform: scale(.5); }
 }
 
 @-webkit-keyframes box-resize6 {
-  0% { transform: scale(.45, 1.2); }
-  50% { transform: scale(.4); }
-  100% { transform: scale(.8, .9); }
+  0% { transform: scale(.45, .4); }
+  50% { transform: scale(.4, .48); }
+  100% { transform: scale(.8, .95); }
 }
 
 @-webkit-keyframes box-resize7 {
   0% { transform: scale(.77, .57); }
-  50% { transform: scale(.9, .56); }
+  50% { transform: scale(.87, .56); }
   100% { transform: scale(.72, .55); }
 }
 
@@ -115,14 +115,14 @@
 }
 
 @-webkit-keyframes box-resize9 {
-  0% { transform: scale(.8); }
-  50% { transform: scale(.6); }
+  0% { transform: scale(.66, .33); }
+  50% { transform: scale(.4, .2); }
   100% { transform: scale(.75, .67); }
 }
 
 @-webkit-keyframes box-resize10 {
   0% { transform: scale(.8, .4); }
-  50% { transform: scale(.9, .66); }
+  50% { transform: scale(.93, .66); }
   100% { transform: scale(.75, .62); }
 }
 
