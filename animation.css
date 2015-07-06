@@ -153,27 +153,27 @@
 
 
 @-webkit-keyframes box-resize4 {
-  0% { transform: scale(.4); }
+  0% { transform: scale(.4, .48); }
   50% { transform: scale(.3); }
   100% { transform: scale(.35, .85); }
 }
 @-moz-keyframes box-resize4 {
-  0% { transform: scale(.4); }
+  0% { transform: scale(.4, .48); }
   50% { transform: scale(.3); }
   100% { transform: scale(.35, .85); }
 }
 @-ms-keyframes box-resize4 {
-  0% { transform: scale(.4); }
+  0% { transform: scale(.4, .48); }
   50% { transform: scale(.3); }
   100% { transform: scale(.35, .85); }
 }
 @-o-keyframes box-resize4 {
-  0% { transform: scale(.4); }
+  0% { transform: scale(.4, .48); }
   50% { transform: scale(.3); }
   100% { transform: scale(.35, .85); }
 }
 @keyframes box-resize4 {
-  0% { transform: scale(.4); }
+  0% { transform: scale(.4, .48); }
   50% { transform: scale(.3); }
   100% { transform: scale(.35, .85); }
 }
@@ -181,27 +181,27 @@
 
 @-webkit-keyframes box-resize5 {
   0% { transform: scale(.5, .2); }
-  50% { transform: scale(.3); }
+  50% { transform: scale(.22, .38); }
   100% { transform: scale(.5); }
 }
 @-moz-keyframes box-resize5 {
   0% { transform: scale(.5, .2); }
-  50% { transform: scale(.3); }
+  50% { transform: scale(.22, .38); }
   100% { transform: scale(.5); }
 }
 @-ms-keyframes box-resize5 {
   0% { transform: scale(.5, .2); }
-  50% { transform: scale(.3); }
+  50% { transform: scale(.22, .38); }
   100% { transform: scale(.5); }
 }
 @-o-keyframes box-resize5 {
   0% { transform: scale(.5, .2); }
-  50% { transform: scale(.3); }
+  50% { transform: scale(.22, .38); }
   100% { transform: scale(.5); }
 }
 @keyframes box-resize5 {
   0% { transform: scale(.5, .2); }
-  50% { transform: scale(.3); }
+  50% { transform: scale(.22, .38); }
   100% { transform: scale(.5); }
 }
 
@@ -261,27 +261,27 @@
 
 
 @-webkit-keyframes box-resize8 {
-  0% { transform: scale(.9, .4); }
+  0% { transform: scale(.9, .52); }
   50% { transform: scale(.7, .9); }
   100% { transform: scale(.33, .44); }
 }
 @-moz-keyframes box-resize8 {
-  0% { transform: scale(.9, .4); }
+  0% { transform: scale(.9, .52); }
   50% { transform: scale(.7, .9); }
   100% { transform: scale(.33, .44); }
 }
 @-ms-keyframes box-resize8 {
-  0% { transform: scale(.9, .4); }
+  0% { transform: scale(.9, .52); }
   50% { transform: scale(.7, .9); }
   100% { transform: scale(.33, .44); }
 }
 @-o-keyframes box-resize8 {
-  0% { transform: scale(.9, .4); }
+  0% { transform: scale(.9, .52); }
   50% { transform: scale(.7, .9); }
   100% { transform: scale(.33, .44); }
 }
 @keyframes box-resize8 {
-  0% { transform: scale(.9, .4); }
+  0% { transform: scale(.9, .52); }
   50% { transform: scale(.7, .9); }
   100% { transform: scale(.33, .44); }
 }
@@ -317,27 +317,27 @@
 @-webkit-keyframes box-resize10 {
   0% { transform: scale(.8, .4); }
   50% { transform: scale(.93, .66); }
-  100% { transform: scale(.75, .62); }
+  100% { transform: scale(.45, .77); }
 }
 @-moz-keyframes box-resize10 {
   0% { transform: scale(.8, .4); }
   50% { transform: scale(.93, .66); }
-  100% { transform: scale(.75, .62); }
+  100% { transform: scale(.45, .77); }
 }
 @-ms-keyframes box-resize10 {
   0% { transform: scale(.8, .4); }
   50% { transform: scale(.93, .66); }
-  100% { transform: scale(.75, .62); }
+  100% { transform: scale(.45, .77); }
 }
 @-o-keyframes box-resize10 {
   0% { transform: scale(.8, .4); }
   50% { transform: scale(.93, .66); }
-  100% { transform: scale(.75, .62); }
+  100% { transform: scale(.45, .77); }
 }
 @keyframes box-resize10 {
   0% { transform: scale(.8, .4); }
   50% { transform: scale(.93, .66); }
-  100% { transform: scale(.75, .62); }
+  100% { transform: scale(.45, .77); }
 }
 
 /*End Animations*/
