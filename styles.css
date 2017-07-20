@@ -152,8 +152,9 @@ footer[role=contentinfo] > div {
 footer[role=contentinfo] p {
 	margin: 0;
 }
-footer[role=contentinfo] .nav li a {
+footer[role=contentinfo] .nav a {
 	display: block;
+	color: #808080;
 	border-bottom: 1px solid #808080;
 	padding: 1em;
 	margin: 0 -1em;
