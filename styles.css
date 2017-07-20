@@ -41,10 +41,21 @@ body {
 	-webkit-text-size-adjust: none;
 }
 a {
-	color: #808080;
+	color: #000;
 	text-decoration: none;
 }
 a:hover, a:focus {
+	color: #e51837;
+}
+a:focus {
+	outline: none;
+	background-color: rgba(229,24,55,.1);
+	box-shadow: 0 0 0 4px rgba(229,24,55,.1);
+}
+a[href^="http"]:visited {
+	color: #808080;
+}
+a[href^="http"]:visited:hover, a[href^="http"]:visited:focus {
 	color: #e51837;
 }
 p {
@@ -141,8 +152,9 @@ footer[role=contentinfo] > div {
 footer[role=contentinfo] p {
 	margin: 0;
 }
-footer[role=contentinfo] .nav li a {
+footer[role=contentinfo] .nav a {
 	display: block;
+	color: #808080;
 	border-bottom: 1px solid #808080;
 	padding: 1em;
 	margin: 0 -1em;
@@ -187,15 +199,21 @@ footer[role=contentinfo] img {
     -o-animation: fadeout 5s 1 ease-out;
     animation: fadeout 5s 1 ease-out; 
 }
-.grid ul {
-	overflow: hidden;
+.grid ul::after {
+    display: block;
+    content: "";
+    clear: both;
+	/* overflow: hidden; */
 }
 .grid ul li {
 	margin-bottom: 0.3em;
 }
-.featured:after {
-	content: "*";
+.featured:before {
+	content: "★";
 	color: #e51837;
+	display: inline-block;
+	width: 1.1em;
+	margin-left: -1.1em;
 }
 
 /*Fluid*/
