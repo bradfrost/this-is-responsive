@@ -199,15 +199,21 @@ footer[role=contentinfo] img {
     -o-animation: fadeout 5s 1 ease-out;
     animation: fadeout 5s 1 ease-out; 
 }
-.grid ul {
-	overflow: hidden;
+.grid ul::after {
+    display: block;
+    content: "";
+    clear: both;
+	/* overflow: hidden; */
 }
 .grid ul li {
 	margin-bottom: 0.3em;
 }
-.featured:after {
-	content: "*";
+.featured:before {
+	content: "★";
 	color: #e51837;
+	display: inline-block;
+	width: 1.1em;
+	margin-left: -1.1em;
 }
 
 /*Fluid*/
